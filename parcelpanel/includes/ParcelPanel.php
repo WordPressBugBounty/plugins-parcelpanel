@@ -22,6 +22,7 @@ use ParcelPanel\Api\Configs;
 use ParcelPanel\Api\RestApi;
 use ParcelPanel\Api\Orders;
 use ParcelPanel\Libs\ArrUtils;
+use ParcelPanel\Libs\Cache;
 use ParcelPanel\Libs\HooksTracker;
 use ParcelPanel\Libs\Notice;
 use ParcelPanel\Libs\Singleton;
@@ -85,7 +86,7 @@ final class ParcelPanel
      */
     private function define_constants()
     {
-        // parent slag 
+        // parent slag
         define('ParcelPanel\PP_MENU_SLAG', 'pp-admin');
 
         // template path
@@ -179,6 +180,9 @@ final class ParcelPanel
 
         // APP integration enabled
         define('ParcelPanel\OptionName\INTEGRATION_APP_ENABLED', 'parcelpanel_integration_app_enabled_%d');
+
+        // cache plugins
+        define('ParcelPanel\OptionName\CACHE_PLUGIN_FILE_NAMES', 'parcelpanel_cache_plugin_file_names');
     }
 
     /**
@@ -499,7 +503,7 @@ final class ParcelPanel
             $ref = sanitize_text_field(wp_unslash($_GET['ref'] ?? '')); // phpcs:ignore
             // track_page email
             $utm_medium = sanitize_text_field(wp_unslash($_GET['utm_medium'] ?? '')); // phpcs:ignore
-            // recommend_product product 
+            // recommend_product product
             $utm_campaign = sanitize_text_field(wp_unslash($_GET['utm_campaign'] ?? '')); // phpcs:ignore
             $product = intval(sanitize_text_field(wp_unslash($_GET['pp_product'] ?? ''))); // phpcs:ignore
             $domain = sanitize_text_field(wp_unslash($_GET['domain'] ?? '')); // phpcs:ignore
@@ -568,10 +572,10 @@ final class ParcelPanel
     {
         check_ajax_referer('pp-product-checkout');
 
-        $orderId = wc_clean($_POST['orderId'] ?? '');
-        $orderKey = wc_clean($_POST['orderKey'] ?? '');
-        $products = wc_clean($_POST['products'] ?? '');
-        $url = wc_clean($_POST['url'] ?? '');
+        $orderId = wc_clean(sanitize_text_field(wp_unslash($_POST['orderId'] ?? '')));
+        $orderKey = wc_clean(sanitize_text_field(wp_unslash($_POST['orderKey'] ?? '')));
+        $products = wc_clean(sanitize_text_field(wp_unslash($_POST['products'] ?? '')));
+        $url = wc_clean(sanitize_text_field(wp_unslash($_POST['url'] ?? '')));
         $baseUrl = rest_url('parcelpanel/v1/');
         $domain = wp_parse_url($baseUrl, PHP_URL_HOST);
         // $reason_info = sanitize_textarea_field($_POST['reason_info'] ?? '');
@@ -600,8 +604,6 @@ final class ParcelPanel
 
     public function wc_setting_action($value, $option, $raw_value)
     {
-        // var_dump($option);
-        // die;
         $check = $option['id'] ?? '';
         $checkArr = [
             'wt_sequencial_settings_page', // Sequential Order Numbers for WooCommerce   By WebToffee |
@@ -840,12 +842,7 @@ final class ParcelPanel
         }
 
         // check Object Cache Pro is active
-        $isActiveObjectCacheProD = is_plugin_active('object-cache-pro/object-cache-pro.php');
-        $isActiveObjectCachePro = is_plugin_active('redis-cache-pro/redis-cache-pro.php');
-        $isActiveObjectCacheDevelop = is_plugin_active('redis-cache-develop/redis-cache.php');
-        if ($isActiveObjectCachePro || $isActiveObjectCacheProD || $isActiveObjectCacheDevelop) {
-            wp_cache_flush_group('parcelpanel');
-        }
+        Cache::cache_flush();
     }
 
     /**
@@ -1099,7 +1096,7 @@ final class ParcelPanel
     {
         HooksTracker::init_track_hooks(function () {
             (new ParcelPanelFunction)->parcelpanel_log(wp_json_encode([
-                'http_path' => strstr(wc_clean($_SERVER['REQUEST_URI']), '?', true),
+                'http_path' => strstr(wc_clean(sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI'] ?? ""))), '?', true),
                 'hooks' => HooksTracker::get_hooks(),
             ], 320));
         });
@@ -1144,6 +1141,7 @@ final class ParcelPanel
         add_action('wp_ajax_pp_import_csv', [TrackingNumber::instance(), 'csv_importer']);
         add_action('wp_ajax_pp_tracking_number_import_record', [TrackingNumber::instance(), 'get_records_ajax']);
         add_action('wp_ajax_pp_get_current_user', [$this, 'get_current_user']);
+        add_action('wp_ajax_pp_get_categories_and_tags', [$this, 'get_categories_and_tags']);
         add_action('wp_ajax_pp_get_product_lists', [UserTrackPage::instance(), 'get_products_message']);
 
         // all can tracking
@@ -1183,6 +1181,21 @@ final class ParcelPanel
         (new ParcelPanelFunction)->parcelpanel_json_response($res);
     }
 
+    // 获取分类
+    function get_categories_and_tags()
+    {
+        check_ajax_referer('pp-get-categories-and-tags');
+
+        $parcelPanelFunction = new ParcelPanelFunction();
+        $categories = $parcelPanelFunction->getCategory();
+
+        $parcelPanelFunction->parcelpanel_json_response([
+            'categoryList' => $categories['old_cate'] ?? [],
+            'categoryListNew' => $categories['new_cate'] ?? [],
+            'tagList' => $parcelPanelFunction->get_tags(),
+        ]);
+    }
+
     // sync old order message
     function wp_ajax_pp_comment_old_order()
     {
@@ -1194,7 +1207,6 @@ final class ParcelPanel
             $tables = (array)$wpdb->get_results($wpdb->prepare(
                 "SHOW TABLES"
             ));
-            var_dump($tables);
             return;
         }
 
@@ -1213,13 +1225,10 @@ final class ParcelPanel
                 ));
             }
 
-
-            var_dump($shipments);
             return;
         }
 
         if (empty($_GET['commentId'])) {
-            var_dump('no start commentId');
             return;
         }
         // @codingStandardsIgnoreEnd
@@ -1229,7 +1238,6 @@ final class ParcelPanel
         $from = $_GET['from'] ?? 0; // phpcs:ignore
 
         if (empty($from)) {
-            var_dump('no app from');
             return;
         }
 
@@ -1243,7 +1251,6 @@ final class ParcelPanel
 
             if ($from == 1003) {
                 if (!AdminIntegration::get_app_integrated($from)) {
-                    var_dump($from . ' no open');
                     return;
                 }
                 $this->init_app_1003_integration_action($comment);
@@ -1251,7 +1258,6 @@ final class ParcelPanel
 
             if (in_array($from, [1004, 1005, 1006])) {
                 if (!AdminIntegration::get_app_integrated($from)) {
-                    var_dump($from . ' no open');
                     return;
                 }
                 $this->init_app_integration_action($comment, $from);
@@ -1269,12 +1275,10 @@ final class ParcelPanel
         $comment_content = $_GET['content'] ?? ''; // phpcs:ignore
 
         if (empty($order_id)) {
-            var_dump('order_id is empty');
             return;
         }
 
         if (empty($comment_content)) {
-            var_dump('content is empty');
             return;
         }
 
@@ -1298,7 +1302,6 @@ final class ParcelPanel
         );
         $comment_id = wp_insert_comment($args);
 
-        var_dump($comment_id);
         return;
     }
 
@@ -1680,18 +1683,20 @@ SQL;
     {
         global $post;
 
+        $parcelPanelFunction = new ParcelPanelFunction();
+
         $screen = get_current_screen();
         $screen_id = $screen ? $screen->id : '';
 
         wp_enqueue_style('parcelpanel-admin');
 
         if ('parcelpanel_page_parcelpanel' == $screen_id) {
-            $add_js_css = (new ParcelPanelFunction)->get_add_js_css();
+            $add_js_css = $parcelPanelFunction->get_add_js_css();
 
             $check_js = $add_js_css['js'] ?? array();
             $check_css = $add_js_css['css'] ?? array();
 
-            $url_css = (new ParcelPanelFunction)->get_dir_path('dist', 'index.css');
+            $url_css = $parcelPanelFunction->get_dir_path('dist', 'index.css');
             $css_version = VERSION;
             if (!empty($check_css) && !empty($check_css['url'])) {
                 $url_css = $check_css['url'];
@@ -1718,7 +1723,7 @@ SQL;
             } else {
                 wp_enqueue_script(
                     'parcelpanel-script',
-                    (new ParcelPanelFunction)->get_dir_path('dist', 'index.js'),
+                    $parcelPanelFunction->get_dir_path('dist', 'index.js'),
                     array('wp-element'),
                     VERSION,
                     true
@@ -1726,11 +1731,7 @@ SQL;
             }
             add_filter('script_loader_tag', [$this, 'add_id_to_script'], 10, 3);
 
-            $langMessage = (new ParcelPanelFunction)->getAdminLangList();
-            $categoryArr = (new ParcelPanelFunction)->getCategory();
-            $categoryMessage = $categoryArr['old_cate'] ?? [];
-            $categoryMessageNew = $categoryArr['new_cate'] ?? [];
-            $tagsMessage = (new ParcelPanelFunction)->get_tags();
+            $langMessage = $parcelPanelFunction->getAdminLangList();
             $timezone = get_option('timezone_string');
             $timezone_offset = get_option('gmt_offset');
             $timezone_default = date_default_timezone_get();
@@ -1740,17 +1741,24 @@ SQL;
             $preview_email_url = add_query_arg('_wpnonce', wp_create_nonce('pp-preview-mail-wc'), admin_url('?pp_preview_mail_wc=1'));
             $api_url = 'https://wp-api.parcelpanel.com/api/v1';
             $api_go_url = 'https://pc-go-pro.parcelpanel.com';
+
+            $token = get_option(\ParcelPanel\OptionName\API_KEY);
+            if (empty($token)) {
+                // 生成一个 Token
+                update_option(\ParcelPanel\OptionName\API_KEY, $this->generateToken());
+            }
+
             wp_localize_script('parcelpanel-script', 'ppCommonData', [
                 'path' => "/wp-content/plugins/parcelpanel/dist",
                 'langMessage' => $langMessage,
-                'categoryList' => $categoryMessage,
-                'categoryListNew' => $categoryMessageNew,
-                'tagList' => $tagsMessage,
+                'categoryList' => [],
+                'categoryListNew' => [],
+                'tagList' => [],
                 'timezone' => $timezone,
                 'timezone_offset' => $timezone_offset,
                 'timezone_default' => $timezone_default,
                 'currency' => get_woocommerce_currency(),
-                'token' => get_option(\ParcelPanel\OptionName\API_KEY),
+                'token' => $token,
                 'preview_email_url' => $preview_email_url,
                 'site_url' => site_url(),
                 'pp_api_url' => apply_filters('parcelpanel_server_api_url', $api_url) . '/wordpress',
@@ -1759,18 +1767,19 @@ SQL;
             ]);
 
             $pp_param = [
-                'import_template_file_link' => (new ParcelPanelFunction)->parcelpanel_get_assets_path('templates/sample-template.csv'),
+                'import_template_file_link' => $parcelPanelFunction->parcelpanel_get_assets_path('templates/sample-template.csv'),
                 'upload_nonce' => wp_create_nonce('pp-upload-csv'),
                 'import_nonce' => wp_create_nonce('pp-import-csv-tracking-number'),
                 'get_history_nonce' => wp_create_nonce('pp-get-import-tracking-number-records'),
                 'export_nonce' => wp_create_nonce('pp-export-csv'),
                 'resync_nonce' => wp_create_nonce('pp-resync'),
                 'ajax_nonce' => wp_create_nonce('pp-ajax'),
-                'shipments_page_link' => (new ParcelPanelFunction)->parcelpanel_get_admin_shipments_url(),
+                'shipments_page_link' => $parcelPanelFunction->parcelpanel_get_admin_shipments_url(),
                 'pp_bind_account' => wp_create_nonce('pp-bind-account'),
                 'pp_update_plan' => wp_create_nonce('pp-get-plan'),
                 'pp_get_product_lists' => wp_create_nonce('pp-get-product-lists'),
                 'pp_get_current_user' => wp_create_nonce('pp-get-current-user'),
+                'pp_get_categories_and_tags' => wp_create_nonce('pp-get-categories-and-tags'),
             ];
 
             wp_localize_script('parcelpanel-script', 'pp_param', $pp_param);
@@ -1778,12 +1787,12 @@ SQL;
 
         // if is user admin page
         // Just add a public header
-        if ((new ParcelPanelFunction)->is_parcelpanel_plugin_page()) {
+        if ($parcelPanelFunction->is_parcelpanel_plugin_page()) {
 
             // public css
             wp_enqueue_style('pp-admin');
 
-            // add class in body 
+            // add class in body
             add_filter('admin_body_class', [__CLASS__, 'add_admin_body_classes']);
 
             // add Toast plugin
@@ -1801,8 +1810,8 @@ SQL;
 
             wp_localize_script('pp-common', 'parcelpanel_param', [
                 'site_status' => [
-                    'is_offline_mode' => (new ParcelPanelFunction)->parcelpanel_is_local_site(),
-                    'is_connected' => (new ParcelPanelFunction)->parcelpanel_is_connected(),
+                    'is_offline_mode' => $parcelPanelFunction->parcelpanel_is_local_site(),
+                    'is_connected' => $parcelPanelFunction->parcelpanel_is_connected(),
                     'is_upgraded' => !version_compare($plugin_version, \ParcelPanel\VERSION),
                 ],
                 'connect_server_nonce' => wp_create_nonce('pp-connect-parcelpanel'),
@@ -1837,7 +1846,7 @@ SQL;
                     'other_carriers' => __('OTHER CARRIERS', 'parcelpanel'),
                 ],
                 'urls' => [
-                    'import_tracking_number' => (new ParcelPanelFunction)->parcelpanel_get_admin_home_url() . '#/import',
+                    'import_tracking_number' => $parcelPanelFunction->parcelpanel_get_admin_home_url() . '#/import',
                 ],
             ]);
 
@@ -1850,7 +1859,7 @@ SQL;
             $params['import_type'] = 'shop_order';
             wp_localize_script('pp-admin-wc', 'parcelpanel_admin_wc_meta_boxes', $params);
 
-            $courier_list = array_values(get_object_vars((new ParcelPanelFunction)->parcelpanel_get_courier_list('ASC')));
+            $courier_list = array_values(get_object_vars($parcelPanelFunction->parcelpanel_get_courier_list('ASC')));
             // Frequently used carriers
             $selected_courier = (array)get_option(\ParcelPanel\OptionName\SELECTED_COURIER, []);
             $enabledList = [];
@@ -1897,7 +1906,7 @@ SQL;
                     'other_carriers' => __('OTHER CARRIERS', 'parcelpanel'),
                 ],
                 'urls' => [
-                    'import_tracking_number' => (new ParcelPanelFunction)->parcelpanel_get_admin_home_url() . '#/import',
+                    'import_tracking_number' => $parcelPanelFunction->parcelpanel_get_admin_home_url() . '#/import',
                 ],
             ]);
 
@@ -1911,7 +1920,7 @@ SQL;
             wp_localize_script('pp-admin-wc', 'parcelpanel_admin_wc_meta_boxes', $params);
 
 
-            $courier_list = array_values(get_object_vars((new ParcelPanelFunction)->parcelpanel_get_courier_list('ASC')));
+            $courier_list = array_values(get_object_vars($parcelPanelFunction->parcelpanel_get_courier_list('ASC')));
             wp_localize_script('pp-admin-wc', 'parcelpanel_courier_list', $courier_list);
 
             // check change complete to shipped 1
@@ -2099,9 +2108,9 @@ SQL;
         Api::check_api_key();
 
         $from = function () {
-            if (strpos($_SERVER['HTTP_REFERER'] ?? '', 'wp-admin/plugins.php') !== false) {
+            if (strpos(sanitize_text_field(wp_unslash($_SERVER['HTTP_REFERER'] ?? '')), 'wp-admin/plugins.php') !== false) {
                 return 'plugin';  // From an installed plugin Install
-            } elseif (strpos($_SERVER['HTTP_REFERER'] ?? '', 'wp-admin/plugin-install.php') !== false) {
+            } elseif (strpos(sanitize_text_field(wp_unslash($_SERVER['HTTP_REFERER'] ?? '')), 'wp-admin/plugin-install.php') !== false) {
                 return 'store';  // Install from plugin store
             }
 
@@ -2252,6 +2261,8 @@ SQL;
      */
     private function connect_endpoint()
     {
+        $parcelPanelFunction = new ParcelPanelFunction();
+
         if (!current_user_can('manage_woocommerce')) {
             return new \WP_Error('user_auth_error', 'You are not allowed');
         }
@@ -2259,10 +2270,12 @@ SQL;
         $user = wp_get_current_user();
 
         $user_api_key = wc_rand_hash();
-        $user_api_key_hash = (new ParcelPanelFunction)->parcelpanel_api_hash($user_api_key);
+        $user_api_key_hash = $parcelPanelFunction->parcelpanel_api_hash($user_api_key);
         update_user_meta($user->ID, 'parcelpanel_api_key', $user_api_key_hash);
 
-        $resp_data = Api::connect($user_api_key);
+        $ppToken = get_option(\ParcelPanel\OptionName\API_KEY);
+
+        $resp_data = Api::connect($user_api_key, $ppToken);
 
         if (is_wp_error($resp_data)) {
             // API err
@@ -2295,7 +2308,7 @@ SQL;
         update_option(\ParcelPanel\OptionName\API_BID, $resp_bid);
 
         // update quota
-        (new ParcelPanelFunction)->parcelpanel_update_quota_info($resp_data);
+        $parcelPanelFunction->parcelpanel_update_quota_info($resp_data);
 
         !empty($resp_registered_at) && update_option(\ParcelPanel\OptionName\REGISTERED_AT, $resp_registered_at, false);
 
@@ -2341,7 +2354,7 @@ SQL;
         if ($action == 'open:1' && $date) {
             update_user_option(get_current_user_id(), 'parcelpanel_free_upgrade_last_popup_date', $date, true);
         }
-        $post_data['ua'] = wc_clean($_SERVER['HTTP_USER_AGENT'] ?? '');
+        $post_data['ua'] = wc_clean(sanitize_text_field(wp_unslash($_SERVER['HTTP_USER_AGENT'] ?? '')));
         Api::popup_action($post_data);
 
         die;
@@ -2473,33 +2486,35 @@ SQL;
      */
     function admin_register_assets()
     {
-        wp_register_style('parcelpanel-admin', (new ParcelPanelFunction)->parcelpanel_get_assets_path('css/parcelpanel-admin.css'), [], VERSION);
+        $parcelPanelFunction = new ParcelPanelFunction();
+
+        wp_register_style('parcelpanel-admin', $parcelPanelFunction->parcelpanel_get_assets_path('css/parcelpanel-admin.css'), [], VERSION);
 
         // wp_register_style('pp-admin', (new ParcelPanelFunction)->parcelpanel_get_assets_path('css/parcelpanel.css'), ['pp-gutenberg'], VERSION);
-        wp_register_style('pp-admin', (new ParcelPanelFunction)->parcelpanel_get_assets_path('css/parcelpanel.css'), [], VERSION);
+        wp_register_style('pp-admin', $parcelPanelFunction->parcelpanel_get_assets_path('css/parcelpanel.css'), [], VERSION);
 
-        wp_register_style('pp-admin-plugins', (new ParcelPanelFunction)->parcelpanel_get_assets_path('css/admin-plugins.css'), ['pp-gutenberg'], VERSION);
+        wp_register_style('pp-admin-plugins', $parcelPanelFunction->parcelpanel_get_assets_path('css/admin-plugins.css'), ['pp-gutenberg'], VERSION);
 
         // setting email check enabled
-        wp_register_script('pp-email-wc', (new ParcelPanelFunction)->parcelpanel_get_assets_path('js/email-wc.js'), ['jquery'], time()); // phpcs:ignore
+        wp_register_script('pp-email-wc', $parcelPanelFunction->parcelpanel_get_assets_path('js/email-wc.js'), ['jquery'], time()); // phpcs:ignore
 
         // gutenberg css
         $gutenberg_version = '12.8.0';
-        wp_register_style('pp-gutenberg', (new ParcelPanelFunction)->parcelpanel_get_assets_path("plugins/gutenberg@{$gutenberg_version}/style.css"), [], null); // phpcs:ignore
+        wp_register_style('pp-gutenberg', $parcelPanelFunction->parcelpanel_get_assets_path("plugins/gutenberg@{$gutenberg_version}/style.css"), [], null); // phpcs:ignore
 
         // PP common JS
-        wp_register_script('pp-common', (new ParcelPanelFunction)->parcelpanel_get_assets_path('js/common.min.js'), ['jquery'], VERSION); // phpcs:ignore
+        wp_register_script('pp-common', $parcelPanelFunction->parcelpanel_get_assets_path('js/common.min.js'), ['jquery'], VERSION); // phpcs:ignore
 
         // WooCommerce Admin
-        wp_register_style('pp-admin-wc', (new ParcelPanelFunction)->parcelpanel_get_assets_path('css/admin-wc.css'), ['pp-gutenberg'], VERSION);
+        wp_register_style('pp-admin-wc', $parcelPanelFunction->parcelpanel_get_assets_path('css/admin-wc.css'), ['pp-gutenberg'], VERSION);
         // wp_register_script('pp-admin-wc', (new ParcelPanelFunction)->parcelpanel_get_assets_path('js/admin-wc.js'), ['jquery', 'selectWoo'], time());
-        wp_register_script('pp-admin-wc', (new ParcelPanelFunction)->parcelpanel_get_assets_path('js/admin-wc.min.js'), ['jquery', 'selectWoo'], VERSION); // phpcs:ignore
+        wp_register_script('pp-admin-wc', $parcelPanelFunction->parcelpanel_get_assets_path('js/admin-wc.min.js'), ['jquery', 'selectWoo'], VERSION); // phpcs:ignore
 
         // Toastr
         $toastr_version = '2.0';
-        wp_register_style('pp-toastr', (new ParcelPanelFunction)->parcelpanel_get_assets_path("plugins/toastr@{$toastr_version}/toastr.min.css"), [], null); // phpcs:ignore
-        wp_register_script('pp-toastr-change', (new ParcelPanelFunction)->parcelpanel_get_assets_path("plugins/toastr@{$toastr_version}/toastrChange.js"), ['jquery'], null); // phpcs:ignore
-        wp_register_script('pp-toastr', (new ParcelPanelFunction)->parcelpanel_get_assets_path("plugins/toastr@{$toastr_version}/toastr.min.js"), ['jquery', 'pp-toastr-change'], null); // phpcs:ignore
+        wp_register_style('pp-toastr', $parcelPanelFunction->parcelpanel_get_assets_path("plugins/toastr@{$toastr_version}/toastr.min.css"), [], null); // phpcs:ignore
+        wp_register_script('pp-toastr-change', $parcelPanelFunction->parcelpanel_get_assets_path("plugins/toastr@{$toastr_version}/toastrChange.js"), ['jquery'], null); // phpcs:ignore
+        wp_register_script('pp-toastr', $parcelPanelFunction->parcelpanel_get_assets_path("plugins/toastr@{$toastr_version}/toastr.min.js"), ['jquery', 'pp-toastr-change'], null); // phpcs:ignore
     }
 
     /**
@@ -2883,8 +2898,8 @@ SQL;
 
         $current_user = wp_get_current_user();
 
-        $reason_flag = wc_clean($_POST['reason_id'] ?? '');
-        $reason_info = sanitize_textarea_field($_POST['reason_info'] ?? '');
+        $reason_flag = wc_clean(sanitize_text_field(wp_unslash($_POST['reason_id'] ?? '')));
+        $reason_info = sanitize_textarea_field(wp_unslash($_POST['reason_info'] ?? ''));
 
         $reasons = array_column($this->get_uninstall_reasons(), null, 'id');
         $reason = $reasons[$reason_flag] ?? [];
@@ -2920,10 +2935,10 @@ SQL;
     {
         check_ajax_referer('pp-feedback-confirm');
 
-        $msg = sanitize_textarea_field($_REQUEST['msg']);
-        $email = sanitize_email($_REQUEST['email']);
-        $rating = absint($_REQUEST['rating']);
-        $type = absint($_REQUEST['type']);
+        $msg = sanitize_textarea_field(wp_unslash($_REQUEST['msg'] ?? ""));
+        $email = sanitize_email(wp_unslash($_REQUEST['email'] ?? ""));
+        $rating = absint($_REQUEST['rating'] ?? 0);
+        $type = absint($_REQUEST['type'] ?? 1);
 
         if (empty($msg) || empty($email) || empty($rating)) {
             parcelpanel_json_response([], __('Required fields cannot be empty.', 'parcelpanel'), false);
@@ -3977,5 +3992,10 @@ SQL;
     public function currency_updated($old_value, $value)
     {
         $this->update_config_option('currency_updated', $old_value, $value);
+    }
+
+    public function generateToken()
+    {
+        return sprintf('%04x%04x%04x%04x%04x%04x%04x%04x', mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(16384, 20479), mt_rand(32768, 49151), mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535)); // phpcs:ignore
     }
 }

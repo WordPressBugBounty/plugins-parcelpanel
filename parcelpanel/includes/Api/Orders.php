@@ -6,6 +6,7 @@ use DateTime;
 use DateTimeZone;
 use ParcelPanel\Action\TrackingNumber;
 use ParcelPanel\Action\UserTrackPage;
+use ParcelPanel\Libs\Cache;
 use ParcelPanel\Libs\Singleton;
 use ParcelPanel\Models\Table;
 use ParcelPanel\ParcelPanelFunction;
@@ -32,13 +33,7 @@ class Orders
             $limit = 200;
         }
 
-        // check Object Cache Pro is active
-        $isActiveObjectCacheProD = is_plugin_active('object-cache-pro/object-cache-pro.php');
-        $isActiveObjectCachePro = is_plugin_active('redis-cache-pro/redis-cache-pro.php');
-        $isActiveObjectCacheDevelop = is_plugin_active('redis-cache-develop/redis-cache.php');
-        if ($isActiveObjectCachePro || $isActiveObjectCacheProD || $isActiveObjectCacheDevelop) {
-            wp_cache_flush_group('parcelpanel');
-        }
+        Cache::cache_flush();
 
         $check_create_time = time() - $day * 86400;
 
@@ -372,7 +367,7 @@ class Orders
     static function up_wc_order_meta($wpdb, $table_name, $order_id, $meta_key, $new_meta_value)
     {
         // @codingStandardsIgnoreStart
-        // check table is exist 
+        // check table is exist
         $table_exists = $wpdb->get_var("SHOW TABLES LIKE '$table_name'") === $table_name;
 
         if ($table_exists) {

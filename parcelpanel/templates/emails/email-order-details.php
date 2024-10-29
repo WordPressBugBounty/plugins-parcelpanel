@@ -70,7 +70,7 @@ if ( ! empty( $shipment_items ) ):
           $after = '';
       }
       /* translators: %s: Order ID. */
-      echo wp_kses_post( $before . sprintf( __( '[Order #%s]', 'woocommerce' ) . $after . ' (<time datetime="%s">%s</time>)', $order->get_order_number(), $order->get_date_created()->format( 'c' ), wc_format_datetime( $order->get_date_created() ) ) );
+      echo wp_kses_post( $before . sprintf( __( '[Order #%s]', 'parcelpanel' ) . $after . ' (<time datetime="%s">%s</time>)', $order->get_order_number(), $order->get_date_created()->format( 'c' ), wc_format_datetime( $order->get_date_created() ) ) );
       ?>
   </h2>
 
@@ -78,8 +78,8 @@ if ( ! empty( $shipment_items ) ):
     <table class="td" cellspacing="0" cellpadding="6" style="width:100%;border-collapse:collapse">
       <thead>
       <tr>
-        <th class="td" scope="col" style="text-align:<?php echo esc_attr( $text_align ); ?>"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
-        <th class="td" scope="col" style="text-align:<?php echo esc_attr( $text_align ); ?>"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
+        <th class="td" scope="col" style="text-align:<?php echo esc_attr( $text_align ); ?>"><?php esc_html_e( 'Product', 'parcelpanel' ); ?></th>
+        <th class="td" scope="col" style="text-align:<?php echo esc_attr( $text_align ); ?>"><?php esc_html_e( 'Quantity', 'parcelpanel' ); ?></th>
       </tr>
       </thead>
       <tbody>

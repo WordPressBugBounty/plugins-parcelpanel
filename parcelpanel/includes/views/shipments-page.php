@@ -41,7 +41,7 @@ $pp_param = wp_json_encode([
     <form method="get">
       <input type="hidden" name="page" value="pp-shipments" />
 
-      <input type="hidden" name="status" value="<?php echo esc_attr($_REQUEST['status'] ?? ''); // phpcs:ignore 
+      <input type="hidden" name="status" value="<?php echo esc_attr($_REQUEST['status'] ?? ''); // phpcs:ignore
                                                 ?>" />
 
       <?php $wp_list_table->display(); ?>
@@ -49,7 +49,7 @@ $pp_param = wp_json_encode([
 
     <!-- export shipments -->
     <modal :open="isOpenExportModal" @cancel="isOpenExportModal=false" title="Export shipments" cancel="" confirm="">
-      <p><strong>{{ totalShipments }}</strong> <?php esc_html_e('shipments data will be exported a CSV table,', 'parcelpanel') ?></p>
+      <p><strong>{{ totalShipments }}</strong> <?php esc_html_e('shipments data will be exported a CSV table.', 'parcelpanel') ?></p>
       <p class="pp-m-t-4">
         <?php
         // translators: %1$s is html %2$s is html.

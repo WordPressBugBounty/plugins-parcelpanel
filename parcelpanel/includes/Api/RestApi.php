@@ -299,12 +299,13 @@ class RestApi extends \WP_REST_Controller
      */
     static function authenticate($user_id)
     {
+        $parcelPanelFunction = new ParcelPanelFunction();
         // Do not authenticate twice and check if is a request to our endpoint in the WP REST API.
         if ($user_id) {
             return $user_id;
         }
 
-        $headers = json_decode(wp_json_encode((new ParcelPanelFunction())->getallheaders()), 1);
+        $headers = json_decode(wp_json_encode($parcelPanelFunction->getallheaders()), 1);
         $api_key = null;
 
         // @codingStandardsIgnoreStart

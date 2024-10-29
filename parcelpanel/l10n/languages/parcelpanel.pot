@@ -2907,7 +2907,7 @@ msgid "Export shipments"
 msgstr ""
 
 #: includes/Action/Lang.php:2324
-msgid "<0> shipments data will be exported a CSV table,"
+msgid "<0> shipments data will be exported a CSV table."
 msgstr ""
 
 #: includes/Action/Lang.php:2325
@@ -4134,7 +4134,7 @@ msgid "Key features to start your business"
 msgstr ""
 
 #: includes/Action/Lang.php:2709
-msgid "Access to 1,200+ carriers"
+msgid "Access to 1,300+ carriers"
 msgstr ""
 
 #: includes/Action/Lang.php:2710
@@ -4166,7 +4166,7 @@ msgid "Must-have features for growing brands"
 msgstr ""
 
 #: includes/Action/Lang.php:2724
-msgid "Advanced analytics: transit time, tracking page and shipping notifications."
+msgid "Advanced analytics: transit time, tracking page and shipping notifications"
 msgstr ""
 
 #: includes/Action/Lang.php:2725
@@ -5333,7 +5333,7 @@ msgid "%1$s selected"
 msgstr ""
 
 #: includes/views/shipments-page.php:51
-msgid "shipments data will be exported a CSV table,"
+msgid "shipments data will be exported a CSV table."
 msgstr ""
 
 #: includes/views/shipments-page.php:53

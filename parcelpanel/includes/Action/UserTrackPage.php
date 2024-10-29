@@ -379,7 +379,7 @@ class UserTrackPage
 
             foreach ($changeLang as $k => $v) {
                 if (is_string($v)) {
-                    $changeLangWC[$k] = esc_html__($v, 'pancelpanel'); // phpcs:ignore
+                    $changeLangWC[$k] = esc_html__($v, 'parcelpanel'); // phpcs:ignore
                 }
             }
         }
@@ -637,7 +637,7 @@ class UserTrackPage
             # 1 : Based on order items
             $recommend_products = self::base_pro_one($data);
         } else if (2 == $base_pro) {
-            # 2: Based on specific category 
+            # 2: Based on specific category
             if (1 == $base_select) {
                 $cate_pros_res = self::get_products_by_cate_ids($order_products, $select_ids);
                 $pro_list = $cate_pros_res['recommend_products'] ?? array();
@@ -962,7 +962,7 @@ class UserTrackPage
                 if (!isset($changeLang[$k])) {
                     continue;
                 }
-                $tranLangStr = esc_html__($changeLang[$k], 'pancelpanel'); // phpcs:ignore
+                $tranLangStr = esc_html__($changeLang[$k], 'parcelpanel'); // phpcs:ignore
                 if ($tranLangStr == $changeLang[$k] && in_array($k, $checkText)) {
                     $tracking_page_translations_new[$k] = $v;
                     continue;
@@ -995,7 +995,7 @@ class UserTrackPage
             $tracking_page_translations_new = [];
             foreach ($tracking_page_translations as $k => $v) {
                 if (isset($changeLang[$k])) {
-                    $tracking_page_translations_new[$k] = esc_html__($changeLang[$k], 'pancelpanel'); // phpcs:ignore
+                    $tracking_page_translations_new[$k] = esc_html__($changeLang[$k], 'parcelpanel'); // phpcs:ignore
                 }
             }
             $tracking_config['tracking_page_translations'] = $tracking_page_translations_new;
@@ -1084,7 +1084,7 @@ class UserTrackPage
                     if (empty($key_tran)) {
                         continue;
                     }
-                    $wp_r = esc_html__($changeLang[$key_tran], 'pancelpanel'); // phpcs:ignore
+                    $wp_r = esc_html__($changeLang[$key_tran], 'parcelpanel'); // phpcs:ignore
                     if ($wp_r != $changeLang[$key_tran]) {
                         $node['name'] = $wp_r;
                     }
@@ -1094,7 +1094,7 @@ class UserTrackPage
             $status_num_name = !empty($track['status_num']['name']) ? $track['status_num']['name'] : '';
             $status_num_name_key = $this->checkTranKey($tracking_page_translations, $status_num_name);
             if (!empty($status_num_name_key)) {
-                $wp_r = esc_html__($changeLang[$status_num_name_key], 'pancelpanel'); // phpcs:ignore
+                $wp_r = esc_html__($changeLang[$status_num_name_key], 'parcelpanel'); // phpcs:ignore
                 if ($wp_r != $changeLang[$status_num_name_key]) {
                     $track['status_num']['name'] = $wp_r;
                 }
@@ -1103,7 +1103,7 @@ class UserTrackPage
             $status_num_name_d = !empty($track['status_num']['status_description']) ? $track['status_num']['status_description'] : '';
             $status_num_name_d_key = $this->checkTranKey($tracking_page_translations, $status_num_name_d);
             if (!empty($status_num_name_d_key)) {
-                $wp_r = esc_html__($changeLang[$status_num_name_d_key], 'pancelpanel'); // phpcs:ignore
+                $wp_r = esc_html__($changeLang[$status_num_name_d_key], 'parcelpanel'); // phpcs:ignore
                 if ($wp_r != $changeLang[$status_num_name_key]) {
                     $track['status_num']['status_description'] = $wp_r;
                 }
@@ -1112,7 +1112,7 @@ class UserTrackPage
             $status_n = !empty($track['status']) ? $track['status'] : '';
             $status_k = $this->checkTranKey($tracking_page_translations, $status_n);
             if (!empty($status_k)) {
-                $wp_r = esc_html__($changeLang[$status_k], 'pancelpanel'); // phpcs:ignore
+                $wp_r = esc_html__($changeLang[$status_k], 'parcelpanel'); // phpcs:ignore
                 if ($wp_r != $changeLang[$status_k]) {
                     $track['status'] = $wp_r;
                 }
@@ -1336,7 +1336,7 @@ class UserTrackPage
         ];
     }
 
-    // get product get params 
+    // get product get params
     // type : recommend_product product
     public static function getProductGetParam($permalink, $productId, $type = "product", $from = "tracking_page")
     {
@@ -1344,6 +1344,12 @@ class UserTrackPage
         $link = !empty($link_res) ? $link_res[0] : $permalink;
         $baseUrl = rest_url('parcelpanel/v1/');
         $domain = wp_parse_url($baseUrl, PHP_URL_HOST);
+
+        // 针对 nightlightglow.com 这个网站去除 utm_source=parcelpanel，增加这个参数会导致他们的样式出现问题
+        if (strpos($domain, 'nightlightglow.com') !== false) {
+            return $link . "?ref=parcelpanel&utm_medium=" . $from . "&utm_campaign=" . $type . "&pp_product=" . $productId . "&domain=" . $domain;
+        }
+
         return $link . "?ref=parcelpanel&utm_source=parcelpanel&utm_medium=" . $from . "&utm_campaign=" . $type . "&pp_product=" . $productId . "&domain=" . $domain;
     }
 

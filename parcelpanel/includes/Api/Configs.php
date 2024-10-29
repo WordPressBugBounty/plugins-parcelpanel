@@ -29,6 +29,9 @@ class Configs
             } else if ($up_type == 3) {
                 // update notice
                 self::get_pp_notice_config();
+            } else if ($up_type == 4) {
+                // update notice
+                self::update_pp_cache_file_names();
             }
         } else {
             // update configs
@@ -326,6 +329,23 @@ class Configs
             $is_unlimited_plan = empty($req_data['is_unlimited_plan']) ? false : $req_data['is_unlimited_plan'];
             update_option(\ParcelPanel\OptionName\IS_UNLIMITED_PLAN, intval(!!$is_unlimited_plan));
         }
+    }
+
+    // 更新缓存列表
+    public static function update_pp_cache_file_names(): void
+    {
+        $userCacheFileNames = Api::cacheFileNames();
+        if (is_wp_error($userCacheFileNames)) {
+            return;
+        }
+
+        $req_data = $userCacheFileNames['data'] ?? [];
+
+        if (empty($req_data)) {
+            return;
+        }
+
+        update_option(\ParcelPanel\OptionName\CACHE_PLUGIN_FILE_NAMES, wp_json_encode($req_data));
     }
 
     // update plugin to pp

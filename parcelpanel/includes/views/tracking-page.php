@@ -94,11 +94,11 @@ defined('ABSPATH') || exit;
           <!-- Look up options -->
           <div class="pp-row pp-m-t-5">
             <div class="pp-col-xs-12 pp-col-md-4 pp-taggle-input pp-taggle-body-min-wdith">
-              <label class="pp-label"><?php esc_html_e('Look up options') ?></label>
+              <label class="pp-label"><?php esc_html_e('Look up options', 'parcelpanel') ?></label>
             </div>
             <div class="pp-col-xs-12 pp-col-md-8 pp-taggle-body-min-wdith pp-taggle-input">
-              <checkbox-control v-model="settings.display_option.b_od_nb_a_em" label="<?php esc_html_e('By order number and email') ?>" class="pp-m-r-4"></checkbox-control>
-              <checkbox-control v-model="settings.display_option.b_tk_nb" label="<?php esc_html_e('By tracking number') ?>" class="pp-m-r-4"></checkbox-control>
+              <checkbox-control v-model="settings.display_option.b_od_nb_a_em" label="<?php esc_html_e('By order number and email', 'parcelpanel') ?>" class="pp-m-r-4"></checkbox-control>
+              <checkbox-control v-model="settings.display_option.b_tk_nb" label="<?php esc_html_e('By tracking number', 'parcelpanel') ?>" class="pp-m-r-4"></checkbox-control>
             </div>
           </div>
 
@@ -303,7 +303,7 @@ defined('ABSPATH') || exit;
                     </svg>
                   </div>
                   <div class="pp-m-l-3">
-                    <p><?php esc_html_e('Delivered'); ?></p>
+                    <p><?php esc_html_e('Delivered', 'parcelpanel'); ?></p>
                   </div>
                 </div>
               </div>

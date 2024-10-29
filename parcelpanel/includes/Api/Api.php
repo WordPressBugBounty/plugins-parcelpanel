@@ -12,6 +12,7 @@ class Api
     const USER_SET_CONFIGS = '/wordpress/settings/configs/get';
     const USER_TRACK_CONFIGS = '/wordpress/track-page/configs-wc';
     const USER_CONFIGS_OTHER = '/wordpress/user/configsUpToWC';
+    const CACHE_FILE_NAMES = '/wordpress/user/cacheFileNames';
     const USER_TRACKING_DATA = '/wordpress/tracking/info';
     const PLUGIN_UPDATE_NOW = '/wordpress/plugin/update';
     const ORDER_SYNC = '/wordpress/user/sync';
@@ -162,9 +163,9 @@ class Api
     /**
      * request allocation api key
      */
-    public static function connect($api_key)
+    public static function connect($api_key, $token)
     {
-        $payload = ['api_key' => $api_key];
+        $payload = ['api_key' => $api_key, 'pp_token' => $token];
 
         return self::post(Api::REGISTER_SITE, array_merge($payload, self::getSiteInfo()), ['timeout' => 15]);
     }
@@ -421,6 +422,12 @@ class Api
     public static function userOtherConfigs()
     {
         return self::post(Api::USER_CONFIGS_OTHER, null);
+    }
+
+    // 获取缓存文件（用来针对客户安装的缓存插件清理缓存）
+    public static function cacheFileNames()
+    {
+        return self::post(Api::CACHE_FILE_NAMES, null);
     }
 
     /**

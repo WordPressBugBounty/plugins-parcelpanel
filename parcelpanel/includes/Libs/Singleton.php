@@ -46,7 +46,7 @@ trait Singleton
      */
     final public function __wakeup()
     {
-        wc_doing_it_wrong( __FUNCTION__, __( 'Unserializing instances of this class is forbidden.', 'woocommerce' ), '4.6' );
+        wc_doing_it_wrong( __FUNCTION__, __( 'Unserializing instances of this class is forbidden.', 'parcelpanel' ), '4.6' );
         die();
     }
 }

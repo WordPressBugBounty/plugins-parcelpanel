@@ -1775,7 +1775,7 @@ class TrackingNumberCSVImporter
 
             if (!wp_attachment_is_image($id)) {
                 /* translators: %s: image URL */
-                throw new Exception(esc_url(sprintf(__('Not able to attach "%s".', 'woocommerce'), $url)), 400);
+                throw new Exception(esc_url(sprintf(__('Not able to attach "%s".', 'parcelpanel'), $url)), 400);
             }
 
             // Save attachment source for future reference.
@@ -1784,7 +1784,7 @@ class TrackingNumberCSVImporter
 
         if (!$id) {
             /* translators: %s: image URL */
-            throw new Exception(esc_url(sprintf(__('Unable to use image "%s".', 'woocommerce'), $url)), 400);
+            throw new Exception(esc_url(sprintf(__('Unable to use image "%s".', 'parcelpanel'), $url)), 400);
         }
 
         return $id;

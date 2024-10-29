@@ -38,47 +38,47 @@ class Lang
     // text for WPML translate string
     private static function defaultWPML()
     {
-        esc_html__('Order Number', 'pancelpanel');
-        esc_html__('Email or Phone Number', 'pancelpanel');
-        esc_html__('Or', 'pancelpanel');
-        esc_html__('Tracking Number', 'pancelpanel');
-        esc_html__('Track', 'pancelpanel');
-        esc_html__('Order', 'pancelpanel');
-        esc_html__('Status', 'pancelpanel');
-        esc_html__('Shipping To', 'pancelpanel');
-        esc_html__('Current Location', 'pancelpanel');
-        esc_html__('Carrier', 'pancelpanel');
-        esc_html__('Product', 'pancelpanel');
-        esc_html__('These items have not yet shipped.', 'pancelpanel');
-        esc_html__('Waiting for carrier to update tracking information, please try again later.', 'pancelpanel');
-        esc_html__('Ordered', 'pancelpanel');
-        esc_html__('Order Ready', 'pancelpanel');
-        esc_html__('Pending', 'pancelpanel');
-        esc_html__('Info Received', 'pancelpanel');
-        esc_html__('In Transit', 'pancelpanel');
-        esc_html__('Out for Delivery', 'pancelpanel');
-        esc_html__('Delivered', 'pancelpanel');
-        esc_html__('Exception', 'pancelpanel');
-        esc_html__('Failed Attempt', 'pancelpanel');
-        esc_html__('Expired', 'pancelpanel');
-        esc_html__('Estimated delivery date', 'pancelpanel');
-        esc_html__('You may also like...', 'pancelpanel');
+        esc_html__('Order Number', 'parcelpanel');
+        esc_html__('Email or Phone Number', 'parcelpanel');
+        esc_html__('Or', 'parcelpanel');
+        esc_html__('Tracking Number', 'parcelpanel');
+        esc_html__('Track', 'parcelpanel');
+        esc_html__('Order', 'parcelpanel');
+        esc_html__('Status', 'parcelpanel');
+        esc_html__('Shipping To', 'parcelpanel');
+        esc_html__('Current Location', 'parcelpanel');
+        esc_html__('Carrier', 'parcelpanel');
+        esc_html__('Product', 'parcelpanel');
+        esc_html__('These items have not yet shipped.', 'parcelpanel');
+        esc_html__('Waiting for carrier to update tracking information, please try again later.', 'parcelpanel');
+        esc_html__('Ordered', 'parcelpanel');
+        esc_html__('Order Ready', 'parcelpanel');
+        esc_html__('Pending', 'parcelpanel');
+        esc_html__('Info Received', 'parcelpanel');
+        esc_html__('In Transit', 'parcelpanel');
+        esc_html__('Out for Delivery', 'parcelpanel');
+        esc_html__('Delivered', 'parcelpanel');
+        esc_html__('Exception', 'parcelpanel');
+        esc_html__('Failed Attempt', 'parcelpanel');
+        esc_html__('Expired', 'parcelpanel');
+        esc_html__('Estimated delivery date', 'parcelpanel');
+        esc_html__('You may also like...', 'parcelpanel');
 
         // test text
-        esc_html__('Additional text above', 'pancelpanel');
-        esc_html__('Additional text below', 'pancelpanel');
-        esc_html__('Custom shipment status name 1', 'pancelpanel');
-        esc_html__('Custom shipment status info 1', 'pancelpanel');
-        esc_html__('Custom shipment status name 2', 'pancelpanel');
-        esc_html__('Custom shipment status info 2', 'pancelpanel');
-        esc_html__('Custom shipment status name 3', 'pancelpanel');
-        esc_html__('Custom shipment status info 3', 'pancelpanel');
-        esc_html__('Custom tracking info', 'pancelpanel');
+        esc_html__('Additional text above', 'parcelpanel');
+        esc_html__('Additional text below', 'parcelpanel');
+        esc_html__('Custom shipment status name 1', 'parcelpanel');
+        esc_html__('Custom shipment status info 1', 'parcelpanel');
+        esc_html__('Custom shipment status name 2', 'parcelpanel');
+        esc_html__('Custom shipment status info 2', 'parcelpanel');
+        esc_html__('Custom shipment status name 3', 'parcelpanel');
+        esc_html__('Custom shipment status info 3', 'parcelpanel');
+        esc_html__('Custom tracking info', 'parcelpanel');
 
-        esc_html__('Could Not Find Order', 'pancelpanel');
-        esc_html__('Please enter your order number', 'pancelpanel');
-        esc_html__('Please enter your email or phone number', 'pancelpanel');
-        esc_html__('Please enter your tracking number', 'pancelpanel');
+        esc_html__('Could Not Find Order', 'parcelpanel');
+        esc_html__('Please enter your order number', 'parcelpanel');
+        esc_html__('Please enter your email or phone number', 'parcelpanel');
+        esc_html__('Please enter your tracking number', 'parcelpanel');
     }
 
     private static function defaultLangList()
@@ -955,7 +955,7 @@ class Lang
                 'shipment_status' => 'Shipment status',
 
                 'export_shipments' => 'Export shipments',
-                'export_con' => '<0> shipments data will be exported a CSV table,',
+                'export_con' => '<0> shipments data will be exported a CSV table.',
                 'export_learn_more' => 'Learn more about <0>CSV table headers<1>.',
                 'exporting' => 'Exporting:',
                 'exporting_con' => 'Please DO NOT close or refresh this page before it was completed.',
@@ -1338,7 +1338,7 @@ class Lang
 
                 'free' => 'Free',
                 'free_con' => 'Key features to start your business',
-                'free_plan_1' => 'Access to 1,200+ carriers',
+                'free_plan_1' => 'Access to 1,300+ carriers',
                 'free_plan_2' => 'Real-time sync & tracking',
                 'free_plan_3' => 'Bulk Import via CSV & Manually add tracking numbers',
                 'free_plan_4' => 'Branded tracking page',
@@ -1354,7 +1354,7 @@ class Lang
                 'essential_plan_4' => 'ParcelPanel shipping notifications',
                 // 'essential_plan_5' => 'Advanced analytics',
                 'essential_plan_5' => 'Advanced analytics: Delivery days by destinations, Delivery days by couriers and more...', // v3.9.1
-                'essential_plan_5_1' => 'Advanced analytics: transit time, tracking page and shipping notifications.', // v-analysis_version
+                'essential_plan_5_1' => 'Advanced analytics: transit time, tracking page and shipping notifications', // v-analysis_version
                 'essential_plan_6' => 'Includes delivery days by destinations, delivery days by couriers, and more coming...',
                 'professional' => 'Professional',
                 'professional_con' => 'Full feature set to power your business',
@@ -2321,7 +2321,7 @@ class Lang
         __('Shipment status', 'parcelpanel');
 
         __('Export shipments', 'parcelpanel');
-        __('<0> shipments data will be exported a CSV table,', 'parcelpanel');
+        __('<0> shipments data will be exported a CSV table.', 'parcelpanel');
         __('Learn more about <0>CSV table headers<1>.', 'parcelpanel');
         __('Exporting:', 'parcelpanel');
         __('Please DO NOT close or refresh this page before it was completed.', 'parcelpanel');
@@ -2671,7 +2671,7 @@ class Lang
         __('No, ParcelPanel counts the quota based on the number of your orders synced to ParcelPanel, and provides unlimited order lookups.', 'parcelpanel');
         __('Can I change my plan in the middle of a billing cycle?', 'parcelpanel');
         __('Yes, you can change your plan at any time based on your needs. If you want to change the plan, the remaining quotas of current plan will be added to the new one automatically.', 'parcelpanel');
-        __('Yes, you can change your plan at any time based on your needs. If you want to upgrade the plan, the remaining quotas of current plan will be added to the new one automatically. <0>Learn more<1>.');
+        __('Yes, you can change your plan at any time based on your needs. If you want to upgrade the plan, the remaining quotas of current plan will be added to the new one automatically. <0>Learn more<1>.', 'parcelpanel');
         __('Why is ParcelPanel launching an unlimited plan? When will ParcelPanel charge?', 'parcelpanel');
         __('We\'ve provided service for over 120,000 Shopify and WooCommerce stores, but we are still pretty new to WooCommerce for now. We want to give more special offers for WooCommerce merchants.', 'parcelpanel');
         __('ParcelPanel will not charge for a short time. But please rest assured that if we decide to charge, we will definitely inform you in advance, and there will be no hidden charges.', 'parcelpanel');
@@ -2706,7 +2706,7 @@ class Lang
         // account ---------- plan
         __('Free', 'parcelpanel');
         __('Key features to start your business', 'parcelpanel');
-        __('Access to 1,200+ carriers', 'parcelpanel');
+        __('Access to 1,300+ carriers', 'parcelpanel');
         __('Real-time sync & tracking', 'parcelpanel');
         __('Bulk Import via CSV & Manually add tracking numbers', 'parcelpanel');
         __('Branded tracking page', 'parcelpanel');
@@ -2721,7 +2721,7 @@ class Lang
         __('ParcelPanel shipping notifications', 'parcelpanel');
         // __('Advanced analytics', 'parcelpanel');
         __('Post-purchase EDD', 'parcelpanel'); // v-analysis_version
-        __('Advanced analytics: transit time, tracking page and shipping notifications.', 'parcelpanel'); // v-analysis_version
+        __('Advanced analytics: transit time, tracking page and shipping notifications', 'parcelpanel'); // v-analysis_version
         __('CSV & PDF export', 'parcelpanel'); // v-analysis_version
         __('Advanced analytics: Delivery days by destinations, Delivery days by couriers and more...', 'parcelpanel');
         __('Includes delivery days by destinations, delivery days by couriers, and more coming...', 'parcelpanel');

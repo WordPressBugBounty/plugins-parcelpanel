@@ -1,7 +1,7 @@
 === ParcelPanel (Free to install) - Shipment Tracking, Tracking, and Order Tracking for WooCommerce ===
 Contributors: parcelpanel
 Tags: tracking, shipment tracking, order tracking, track order, woocommerce shipment tracking
-Stable Tag: 4.3.9
+Stable Tag: 4.4.0
 Requires at least: 5.9
 Tested up to: 6.6.1
 Requires PHP: 7.2
@@ -20,7 +20,7 @@ Tracking, Order tracking, Shipment tracking, Track order, The best Order Tracker
 - Since our initial launch in 2021, ParcelPanel Tracking has remained 100% FREE up to the present day. However, due to the continuous increase of various costs, we have decided to launch the paid version V3.6 starting in Sept, 2023.
 - Free plan Including:
     - 20 orders/month, and provides unlimited order lookups
-    - Access to 1,200+ carriers
+    - Access to 1,300+ carriers
     - Real-time sync & tracking
     - Branded tracking page
     - ...
@@ -48,7 +48,7 @@ Before purchase, you control the customer experience. However, after ordering, s
 
 ### Why Parcel Panel Order Tracking for WooCommerce?
 - Parcel Panel Order Tracking can solve all the above shipment tracking and tracking issues and even bring in additional revenue.
-- We've been focused on parcel tracking for years, provides advanced shipment tracking, and make sure accurate results for track orders, better than AST (Advanced Shipment Tracking), Trackship, 17track, Aftership, TrackingMore, Yith, Orders tracking, covering [1,200+ carriers](https://www.parcelpanel.com/couriers/) worldwide including USPS, Cainiao, Royal Mail, YunExpress, 4PX, YANWEN, etc.
+- We've been focused on parcel tracking for years, provides advanced shipment tracking, and make sure accurate results for track orders, better than AST (Advanced Shipment Tracking), Trackship, 17track, Aftership, TrackingMore, Yith, Orders tracking, covering [1,300+ carriers](https://www.parcelpanel.com/couriers/) worldwide including USPS, Cainiao, Royal Mail, YunExpress, 4PX, YANWEN, etc.
 - Perhaps we may not yet be as renowned as those well-known plugins on WordPress, such as Elementor, Yoast SEO, Rank Math SEO, Popup Builder, or the essential WordPress plugins like Contact Form, Classic Editor, Akismet Anti-Spam: Spam Protection, Jetpack, WP Mail SMTP, nor do we fall under the trendy categories like SEO, Email Marketing, Translate, Popup, or Google Analytics. However, our brand is built on being the top eCommerce tracking solution, dedicated to providing the best post-purchase experience for your customers with our ultimate product and service approach.
 - Our team believes in efficiency and doing what's right. We're here to help merchants with order tracking challenges.
 - Discover our exclusive order tracking features and understand why ParcelPanel shipment tracking is possibly the best WooCommerce tracking plugin.
@@ -64,14 +64,14 @@ ParcelPanel Tracking offers features to optimize your order fulfillment process,
 - Once a WooCommerce order is placed, it syncs up with Parcel Panel Shipment Tracking automatically. From there, tracking your shipments on our branded page is a breeze.
 
 ### Auto-matching courier
-- We ensure accurate tracking results for all orders, covering [1,200+ mainstream carriers](https://www.parcelpanel.com/couriers/) worldwide.
+- We ensure accurate tracking results for all orders, covering [1,300+ mainstream carriers](https://www.parcelpanel.com/couriers/) worldwide.
 - Parcel Panel Shipment Tracking's smart system automatically identifies the correct couriers, retrieves tracking details from their official websites, and displays them on the tracking page.
 
 ### Add tracking numbers to orders
 - Use the tracking number widget: Individually add tracking numbers on the Edit order page. Once added, they'll sync to the ParcelPanel Shipments page.
 - Bulk import via CSV: Utilize our smart field-mapping tool to import multiple tracking numbers from a CSV file, minimizing repetitive tasks.
 - API Integration: Easily manage shipment tracking information in orders through ParcelPanel WooCommerce Tracking API (API). Refer to our [API doc](https://docs.parcelpanel.com/woocommerce/api/pp-woo-api/) for details.
-- Third-Party Fulfillment: For dropshipping and shipping plugins, tracking numbers are auto-synced to ParcelPanel without any additional effort required on your part! 
+- Third-Party Fulfillment: For dropshipping and shipping plugins, tracking numbers are auto-synced to ParcelPanel without any additional effort required on your part!
 
 ### Integration
 Parcel Panel Shipment Tracking integration includes the following plugins:
@@ -86,7 +86,7 @@ Parcel Panel Shipment Tracking integration includes the following plugins:
     - Sendcloud
     - ShipStation
     - Dianxiaomi
-    - Pirateship 
+    - Pirateship
 - Email marketing
     - Klaviyo
     - Omnisend
@@ -96,7 +96,7 @@ Parcel Panel Shipment Tracking integration includes the following plugins:
     - WPML
     - Weglot
 - Email customizer
-    - YayMail – WooCommerce Email Customizer 
+    - YayMail – WooCommerce Email Customizer
 - Custom order number
     - Sequential Order Number for WooCommerce by WebToffee
     - ...
@@ -172,7 +172,7 @@ Automatically insert Parcel Panel Shipment Tracking section to email notificatio
 - Manually update order status, ideal for merchants with their own shipping or local delivery teams.
 
 ### Shipping providers
-- Parcel Panel Order Tracking support [1,200+ carriers](https://www.parcelpanel.com/couriers/) worldwide:
+- Parcel Panel Order Tracking support [1,300+ carriers](https://www.parcelpanel.com/couriers/) worldwide:
 USPS, Yun Express, AliExpress Standard Shipping, 4PX, UPS, DHL, Fedex, Delhivery, DHL Express, Australia Post, YANWEN, Brazil Correios, UK Royal Mail, CNE Express, YDH, China Post, La Poste and many more....
 
 ### Translations
@@ -186,8 +186,8 @@ USPS, Yun Express, AliExpress Standard Shipping, 4PX, UPS, DHL, Fedex, Delhivery
 - [Support Forum](https://wordpress.org/support/plugin/parcelpanel/) is an excellent resource for discussing and solving problems.
 - [ParcelPanel help center](https://docs.parcelpanel.com/woocommerce/) is another valuable resource where you can find more information and detailed tutorials.
 
-### 6,000+ Happy Customers
-Join over 6,000 happy customers and elevate your post-purchase experience with Parcel Panel today. Here's what our customers have to say:
+### 7,000+ Happy Customers
+Join over 7,000 happy customers and elevate your post-purchase experience with Parcel Panel today. Here's what our customers have to say:
 
 ⭐⭐⭐⭐⭐
 > "I'd install this tracking plugin in any store without hesitation. It's incredibly useful, easy to use, customizable, and does its job perfectly. Plus, the support team is fast and friendly. Give it a try—you won't regret it!"
@@ -221,7 +221,7 @@ Join over 6,000 happy customers and elevate your post-purchase experience with P
 
 **How many couriers does ParcelPanel Shipment Tracking support?**
 
-ParcelPanel Shipment Tracking supports over [1,200+ carriers](https://www.parcelpanel.com/couriers/) worldwide, including well-known logistics companies such as USPS, UPS, DHL, FedEx, Australia Post, Royal Mail, UBI, CNE, Yanwen, DPD, La Poste, GLS, and others. It also covers commonly used couriers by dropshipping merchants, like AliExpress Standard Shipping (Cainiao tracking), YunExpress, 4PX, CJ Packet, ePacket tracking (China Post, China EMS), and more.
+ParcelPanel Shipment Tracking supports over [1,300+ carriers](https://www.parcelpanel.com/couriers/) worldwide, including well-known logistics companies such as USPS, UPS, DHL, FedEx, Australia Post, Royal Mail, UBI, CNE, Yanwen, DPD, La Poste, GLS, and others. It also covers commonly used couriers by dropshipping merchants, like AliExpress Standard Shipping (Cainiao tracking), YunExpress, 4PX, CJ Packet, ePacket tracking (China Post, China EMS), and more.
 
 **Where can my customers track their shipments?**
 

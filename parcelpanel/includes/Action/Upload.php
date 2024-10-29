@@ -25,7 +25,7 @@ class Upload
             (new ParcelPanelFunction)->parcelpanel_json_response( [], __( 'File is empty. Please upload something more substantial. This error could also be caused by uploads being disabled in your php.ini or by post_max_size being defined as smaller than upload_max_filesize in php.ini.', 'parcelpanel' ), false );
         }
 
-        if ( ! wc_is_file_valid_csv( wc_clean( wp_unslash( $_FILES[ 'import' ][ 'name' ] ) ), false ) ) {
+        if ( ! wc_is_file_valid_csv( wc_clean( sanitize_text_field( wp_unslash( $_FILES[ 'import' ][ 'name' ] ?? "" ) ) ), false ) ) {
             (new ParcelPanelFunction)->parcelpanel_json_response( [], __( 'Invalid file type. The importer supports CSV and TXT file formats.', 'parcelpanel' ), false );
         }
 

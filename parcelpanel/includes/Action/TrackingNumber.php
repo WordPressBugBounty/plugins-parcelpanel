@@ -35,9 +35,9 @@ class TrackingNumber
 
         check_ajax_referer('pp-import-csv-tracking-number');
 
-        $file = wc_clean(wp_unslash($_REQUEST['file'] ?? ''));
-        $delimiter = !empty($_REQUEST['delimiter']) ? wc_clean(wp_unslash($_REQUEST['delimiter'])) : ',';
-        $map_preferences = isset($_REQUEST['map_preferences']) && wc_string_to_bool($_REQUEST['map_preferences']);
+        $file = wc_clean(sanitize_text_field(wp_unslash($_REQUEST['file'] ?? '')));
+        $delimiter = !empty($_REQUEST['delimiter']) ? wc_clean(sanitize_text_field(wp_unslash($_REQUEST['delimiter']))) : ',';
+        $map_preferences = isset($_REQUEST['map_preferences']) && wc_string_to_bool(sanitize_text_field(wp_unslash($_REQUEST['map_preferences'])));
 
         if ($map_preferences) {
             add_filter('parcelpanel_csv_tracking_number_import_mapped_columns', [$this, 'auto_map_user_preferences'], 9999, 2);

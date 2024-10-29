@@ -17,5 +17,5 @@ defined('ABSPATH') || exit;
                         '_pp_notice_nonce'
                     )
                 );
-                ?>" class="notice-dismiss"><span class="screen-reader-text"><?php esc_html_e('Dismiss') ?></span></a>
+                ?>" class="notice-dismiss"><span class="screen-reader-text"><?php esc_html_e('Dismiss', 'parcelpanel') ?></span></a>
 </div>

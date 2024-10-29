@@ -843,7 +843,7 @@ final class ParcelPanelFunction
 
         foreach ($fields as $field) {
             if (!empty($_SERVER[$field])) {
-                $result[$field] = wc_clean($_SERVER[$field]);
+                $result[$field] = wc_clean(sanitize_text_field(wp_unslash($_SERVER[$field])));
             }
         }
 
@@ -887,6 +887,7 @@ final class ParcelPanelFunction
                 'taxonomy' => 'product_tag',
                 'pad_counts' => false,
                 'hide_empty' => false,
+                'number' => 500,
             )
         );
         return $this->get_tags_data_new($category_names);
@@ -901,6 +902,7 @@ final class ParcelPanelFunction
                 'hide_empty' => false,
                 // 'include'  => $category_ids,
                 // 'fields'   => 'names',
+                'number' => 500,
             )
         );
         $old_cate = $this->getCategoryData($category_names);
@@ -943,7 +945,7 @@ final class ParcelPanelFunction
      * @param array $res Res.
      * @param int $pid Pid.
      * @param int $deep Deep.
-     * 
+     *
      * @return array Res.
      */
     private function get_tags_data_new($list, $res = [], $pid = 0, $deep = 0)
@@ -1052,7 +1054,7 @@ final class ParcelPanelFunction
 
     /**
      * Func using wp_cache_get() / wp_cache_set() or wp_cache_delete().
-     * 
+     *
      * @param $key name of cache.
      * @param $data data of cache.
      * @param $type type of cache 1 get 2 set 3 del.

@@ -25,7 +25,7 @@ defined('ABSPATH') || exit;
       <div class="pp-card-body list-box" style="padding-bottom:32px" v-if="activatedTabIndex === 0">
         <div style="display:flex;">
           <a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=AliExpress Dropshipping with Ali2Woo Lite" target="_blank" rel="noopener noreferrer">
-            <img class="plugin-list-plugin-icon" src="https://ps.w.org/ali2woo-lite/assets/icon-128x128.png?rev=2469557">
+            <img class="plugin-list-plugin-icon" src="">
           </a>
           <div style="flex:1" class="pp-m-l-4">
             <p><a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=AliExpress Dropshipping with Ali2Woo Lite" target="_blank" rel="noopener noreferrer"><?php esc_html_e('AliExpress Dropshipping with Ali2Woo Lite', 'parcelpanel') ?></a></p>
@@ -37,7 +37,7 @@ defined('ABSPATH') || exit;
         <hr class="pp-divider">
         <div style="display:flex;">
           <a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=ALD – Dropshipping and Fulfillment for AliExpress and WooCommerce" target="_blank" rel="noopener noreferrer">
-            <img class="plugin-list-plugin-icon" src="https://ps.w.org/woo-alidropship/assets/icon-128x128.png?rev=2418475">
+            <img class="plugin-list-plugin-icon" src="">
           </a>
           <div style="flex:1" class="pp-m-l-4">
             <p><a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=ALD – Dropshipping and Fulfillment for AliExpress and WooCommerce" target="_blank" rel="noopener noreferrer"><?php esc_html_e('ALD – Dropshipping and Fulfillment for AliExpress and WooCommerce', 'parcelpanel') ?></a></p>
@@ -48,7 +48,7 @@ defined('ABSPATH') || exit;
         </div>
         <hr class="pp-divider">
         <div style="display:flex;">
-          <img class="plugin-list-plugin-icon" src="https://ps.w.org/dsers/assets/icon-256x256.png">
+          <img class="plugin-list-plugin-icon" src="">
           <div style="flex:1" class="pp-m-l-4">
             <p><span><?php esc_html_e('DSers Dropshipping Solution: Find products on AliExpress for WooCommerce', 'parcelpanel') ?></span></p>
             <p class="pp-m-t-1"><?php esc_html_e('DSers is AliExpress official dropshipping partner. It\'s the best way to place 100s of orders at once to AliExpress, find products, and more!', 'parcelpanel') ?></p>
@@ -63,7 +63,7 @@ defined('ABSPATH') || exit;
         <hr class="pp-divider">
         <div style="display:flex;">
           <a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=Sequential Order Number for WooCommerce" target="_blank" rel="noopener noreferrer">
-            <img class="plugin-list-plugin-icon" src="https://ps.w.org/wt-woocommerce-sequential-order-numbers/assets/icon-128x128.png?rev=2599891">
+            <img class="plugin-list-plugin-icon" src="">
           </a>
           <div style="flex:1" class="pp-m-l-4">
             <p><a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=Sequential Order Number for WooCommerce" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Sequential Order Number for WooCommerce', 'parcelpanel') ?></a></p>
@@ -73,7 +73,7 @@ defined('ABSPATH') || exit;
         <hr class="pp-divider">
         <div style="display:flex;">
           <a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=Sequential Order Number for WooCommerce" target="_blank" rel="noopener noreferrer">
-            <img class="plugin-list-plugin-icon" src="https://ps.w.org/woocommerce-sequential-order-numbers/assets/icon-256x256.png?rev=2436799">
+            <img class="plugin-list-plugin-icon" src="">
           </a>
           <div style="flex:1" class="pp-m-l-4">
             <p><a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=Sequential Order Number for WooCommerce" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Sequential Order Number for WooCommerce', 'parcelpanel') ?></a></p>
@@ -83,7 +83,7 @@ defined('ABSPATH') || exit;
         <hr class="pp-divider">
         <div style="display:flex;">
           <a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=Custom Order Numbers for WooCommerce" target="_blank" rel="noopener noreferrer">
-            <img class="plugin-list-plugin-icon" src="https://ps.w.org/custom-order-numbers-for-woocommerce/assets/icon-128x128.jpg?rev=2825614">
+            <img class="plugin-list-plugin-icon" src="">
           </a>
           <div style="flex:1" class="pp-m-l-4">
             <p><a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=Custom Order Numbers for WooCommerce" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Custom Order Numbers for WooCommerce', 'parcelpanel') ?></a></p>
@@ -93,7 +93,7 @@ defined('ABSPATH') || exit;
         <hr class="pp-divider">
         <div style="display:flex;">
           <a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=Booster for WooCommerce" target="_blank" rel="noopener noreferrer">
-            <img class="plugin-list-plugin-icon" src="https://ps.w.org/woocommerce-jetpack/assets/icon-128x128.png?rev=1813426">
+            <img class="plugin-list-plugin-icon" src="">
           </a>
           <div style="flex:1" class="pp-m-l-4">
             <p><a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=Booster for WooCommerce" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Booster for WooCommerce', 'parcelpanel') ?></a></p>

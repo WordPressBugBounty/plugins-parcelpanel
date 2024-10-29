@@ -6,6 +6,7 @@ use ParcelPanel\Api\Api;
 use ParcelPanel\Api\Orders;
 use ParcelPanel\Exceptions\ShipmentNotFoundException;
 use ParcelPanel\Libs\ArrUtils;
+use ParcelPanel\Libs\Cache;
 use ParcelPanel\Libs\Singleton;
 use ParcelPanel\Models\Table;
 use ParcelPanel\ParcelPanelFunction;
@@ -39,7 +40,7 @@ class ShopOrder
         $partial_shipped = AdminSettings::get_status_pp_partial_shipped_field();
         $delivered = AdminSettings::get_status_pp_delivered_field();
 
-        $completed_status_label = _x('Completed', 'Order status', 'woocommerce');
+        $completed_status_label = _x('Completed', 'Order status', 'parcelpanel');
         $shipped_status_label = __('Shipped', 'parcelpanel');
         $partially_shipped_status_label = __('Partially Shipped', 'parcelpanel');
         $completed_shipped = __('Shipped (equals \'Completed\')', 'parcelpanel');
@@ -226,9 +227,9 @@ class ShopOrder
 
         // translators: %1$d is param.
         echo '<div style="display:flex;margin-bottom:8px;justify-content:space-between;"><div>' . sprintf(esc_html__('Shipment %1$d', 'parcelpanel'), 1) . '</div><div><a class="edit-tracking">';
-        esc_html_e('Edit', 'woocommerce');
+        esc_html_e('Edit', 'parcelpanel');
         echo '</a><a class="delete-tracking">';
-        esc_html_e('Delete', 'woocommerce');
+        esc_html_e('Delete', 'parcelpanel');
         echo '</a></div></div>';
 
         echo '<div class="tracking-content"><div class="tracking-number"><strong class="courier" data-value="' . esc_attr($item->courier_code) . '">' . esc_html($courier_name) . '</strong> - ';
@@ -865,12 +866,7 @@ class ShopOrder
         }
 
         // check Object Cache Pro is active
-        $isActiveObjectCacheProD = is_plugin_active('object-cache-pro/object-cache-pro.php');
-        $isActiveObjectCachePro = is_plugin_active('redis-cache-pro/redis-cache-pro.php');
-        $isActiveObjectCacheDevelop = is_plugin_active('redis-cache-develop/redis-cache.php');
-        if ($isActiveObjectCachePro || $isActiveObjectCacheProD || $isActiveObjectCacheDevelop) {
-            wp_cache_flush_group('parcelpanel');
-        }
+        Cache::cache_flush();
 
         TrackingNumber::schedule_tracking_sync_action(-1);
 
@@ -1010,7 +1006,7 @@ class ShopOrder
     {
         check_ajax_referer('pp-get-shipment-item');
 
-        $order_id = absint($_GET['order_id']);
+        $order_id = absint($_GET['order_id'] ?? 0);
 
         $wc_order = wc_get_order($order_id);
 
@@ -1643,12 +1639,7 @@ class ShopOrder
             $res = $wpdb->delete($TABLE_TRACKING_ITEMS, ['order_id' => $order_id, 'tracking_id' => $tracking_id]);
 
             // check Object Cache Pro is active
-            $isActiveObjectCacheProD = is_plugin_active('object-cache-pro/object-cache-pro.php');
-            $isActiveObjectCachePro = is_plugin_active('redis-cache-pro/redis-cache-pro.php');
-            $isActiveObjectCacheDevelop = is_plugin_active('redis-cache-develop/redis-cache.php');
-            if ($isActiveObjectCachePro || $isActiveObjectCacheProD || $isActiveObjectCacheDevelop) {
-                wp_cache_flush_group('parcelpanel');
-            }
+            Cache::cache_flush();
 
             self::adjust_unfulfilled_shipment_items($order_id);
 
@@ -1969,7 +1960,7 @@ class ShopOrder
             $shipment_statuses = (new ParcelPanelFunction)->parcelpanel_get_shipment_statuses(true);
 
             echo '<select name="_pp_shop_order_shipment_status" id="pp-dropdown_shop_order_shipment_status"><option value="">';
-            esc_html_e('Shipment status', 'pancelpanel');
+            esc_html_e('Shipment status', 'parcelpanel');
             echo '</option>';
 
             foreach ($shipment_statuses as $shipment_status) {
@@ -1990,7 +1981,7 @@ class ShopOrder
             $shipment_statuses = (new ParcelPanelFunction)->parcelpanel_get_shipment_statuses(true);
 
             echo '<select name="_pp_shop_order_shipment_status" id="pp-dropdown_shop_order_shipment_status"><option value="">';
-            esc_html_e('Shipment status', 'pancelpanel');
+            esc_html_e('Shipment status', 'parcelpanel');
             echo '</option>';
 
             foreach ($shipment_statuses as $shipment_status) {
@@ -2292,7 +2283,7 @@ class ShopOrder
     /**
      * del ShopOrder
      *
-     * delete order sync update to pp wc 
+     * delete order sync update to pp wc
      */
     static function delete_shop_order($postId, $post = null)
     {

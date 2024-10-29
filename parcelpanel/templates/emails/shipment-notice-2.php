@@ -26,7 +26,7 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
   <p>
       <?php
       /* translators: %s Order date */
-      printf( esc_html__( 'Here are the details of your order placed on %s:', 'woocommerce' ), esc_html( wc_format_datetime( $order->get_date_created() ) ) );
+      printf( esc_html__( 'Here are the details of your order placed on %s:', 'parcelpanel' ), esc_html( wc_format_datetime( $order->get_date_created() ) ) );
       ?>
   </p>
 <?php
