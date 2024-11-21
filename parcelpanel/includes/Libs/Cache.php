@@ -17,6 +17,10 @@ class Cache {
             "flush_type" => "flush_group",
         ],
         [
+            "name" => "redis-cache/redis-cache.php",
+            "flush_type" => "flush_group",
+        ],
+        [
             "name" => "pressable-cache-management/pressable-cache-management.php",
             "flush_type" => "flush_all",
         ],

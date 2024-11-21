@@ -470,7 +470,7 @@ class Tracking
                     ));
                 }
 
-                // change sql 
+                // change sql
                 $res = $wpdb->query(
                     $wpdb->prepare(
                         "UPDATE `{$TABLE_TRACKING}`

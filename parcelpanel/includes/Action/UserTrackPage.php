@@ -366,7 +366,7 @@ class UserTrackPage
             return rest_ensure_response($resp_data);
         }
 
-        $pluginsTagger = !empty($data_request['pluginsTagger']) ? $data_request['pluginsTagger'] : [];
+        $pluginsTagger = !empty($dataRequest['pluginsTagger']) ? $dataRequest['pluginsTagger'] : [];
 
         $changeLang = [];
         $changeLangWC = [];
@@ -374,21 +374,20 @@ class UserTrackPage
         $isActivePlugins = is_plugin_active('wpml-string-translation/plugin.php'); // check wpml is active
         $isActiveCMSPlugins = is_plugin_active('sitepress-multilingual-cms/sitepress.php'); // check wpml cms is active
         if (!empty($pluginsTagger) && !empty($pluginsTagger['wpml']) && !empty($isActivePlugins) && !empty($isActiveCMSPlugins)) {
+            if (!empty($request['lang'])) {
+                do_action('wpml_switch_language', $request['lang']);
+            }
+
             $tracking_page_translations = !empty($dataRequest['languages']['translate']) ? $dataRequest['languages']['translate'] : [];
             $changeLang = $this->getTranWPMLNew($tracking_page_translations);
-
-            foreach ($changeLang as $k => $v) {
-                if (is_string($v)) {
-                    $changeLangWC[$k] = esc_html__($v, 'parcelpanel'); // phpcs:ignore
-                }
-            }
+            // Use $changeLang directly to avoid multiple translations
         }
 
         $resp_data = [
             'code' => RestApi::CODE_SUCCESS,
             'data' => [
                 'changeLang' => $changeLang,
-                'changeLangWC' => $changeLangWC,
+                'changeLangWC' => $changeLang,
             ],
         ];
 
@@ -962,11 +961,13 @@ class UserTrackPage
                 if (!isset($changeLang[$k])) {
                     continue;
                 }
-                $tranLangStr = esc_html__($changeLang[$k], 'parcelpanel'); // phpcs:ignore
-                if ($tranLangStr == $changeLang[$k] && in_array($k, $checkText)) {
-                    $tracking_page_translations_new[$k] = $v;
-                    continue;
+
+                if (in_array($k, $checkText)) {
+                    $tranLangStr = esc_html__($v, 'parcelpanel'); // phpcs:ignore
+                } else {
+                    $tranLangStr = esc_html__($changeLang[$k], 'parcelpanel'); // phpcs:ignore
                 }
+
                 $tracking_page_translations_new[$k] = $tranLangStr;
             }
             $tracking_page_translations = $tracking_page_translations_new;
@@ -1276,11 +1277,9 @@ class UserTrackPage
 
         if (!empty($order)) {
             /* @var \WC_Order_Item_Product $item */
-            foreach ($order->get_items() as $item) {
-
+            foreach ($order->get_items() as $item_id => $item) {
                 /* @var \WC_Product $product */
                 $product = $item->get_product();
-
                 if (empty($product)) {
                     continue;
                 }
@@ -1314,8 +1313,15 @@ class UserTrackPage
                     }
                 }
 
+                // Variant removal scene support
+                $productId = $product->get_id();
+                $variationId = wc_get_order_item_meta($item_id, "_variation_id", true);
+                if (!empty($variationId) && !is_array($variationId)) {
+                    $productId = $variationId;
+                }
+
                 $products[] = [
-                    'pro_id' => $product->get_id(),
+                    'pro_id' => $productId,
                     'id' => $item->get_id(),
                     'name' => $item->get_name(),
                     'sku' => $product->get_sku(),

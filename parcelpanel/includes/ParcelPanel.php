@@ -243,7 +243,7 @@ final class ParcelPanel
         add_filter('set_screen_option_parcelpanel_page_pp_shipments_per_page', [$this, 'set_screen_option'], 10, 3);
 
         add_action('rest_api_init', [$this, 'rest_api_init']);
-        add_filter('determine_current_user', [RestApi::class, 'authenticate']);
+        //add_filter('determine_current_user', [RestApi::class, 'authenticate']);
         add_filter('rest_authentication_errors', [RestApi::class, 'authentication_fallback']);
         add_filter('rest_authentication_errors', [RestApi::class, 'check_authentication_error'], 15);
 
@@ -1204,9 +1204,9 @@ final class ParcelPanel
 
         // @codingStandardsIgnoreStart
         if (!empty($_GET['commentGetTable'])) {
-            $tables = (array)$wpdb->get_results($wpdb->prepare(
+            $tables = (array)$wpdb->get_results(
                 "SHOW TABLES"
-            ));
+            );
             return;
         }
 
@@ -1217,12 +1217,12 @@ final class ParcelPanel
             if (!empty($_GET['checkId'])) {
                 $comment_ID = $_GET['checkId'];
                 $shipments = (array)$wpdb->get_results($wpdb->prepare(
-                    "SELECT * FROM {$commentTable} WHERE comment_ID = {$comment_ID}"
+                    "SELECT * FROM {$commentTable} WHERE comment_ID = %d", $comment_ID
                 ));
             } else {
-                $shipments = (array)$wpdb->get_results($wpdb->prepare(
+                $shipments = (array)$wpdb->get_results(
                     "SELECT * FROM {$commentTable} ORDER BY comment_ID DESC LIMIT 1"
-                ));
+                );
             }
 
             return;
@@ -1243,7 +1243,7 @@ final class ParcelPanel
 
         // @codingStandardsIgnoreStart
         $shipments = (array)$wpdb->get_results($wpdb->prepare(
-            "SELECT * FROM {$commentTable} where comment_ID > {$comment_ID} LIMIT {$comment_Limit}"
+            "SELECT * FROM {$commentTable} where comment_ID > %d LIMIT %d", $comment_ID, $comment_Limit
         ));
         // @codingStandardsIgnoreEnd
 
@@ -1449,6 +1449,35 @@ SQL;
     #########################
     #########################
 
+    public function load_parcelpanel_plugin_textdomain()
+    {
+        // 定义语言选项名称常量
+        if (!defined('ParcelPanel\OptionName\PP_LANG_NOW')) {
+            define('ParcelPanel\OptionName\PP_LANG_NOW', 'parcelpanel_pp_wc_admin_language');
+        }
+
+        // 过滤插件的本地化语言环境
+        add_filter('plugin_locale', function ($determined_locale, $domain) {
+            if ($domain === 'parcelpanel') {
+                $determined_locale = Common::instance()->getNowLang();
+            }
+            return $determined_locale;
+        }, 10, 2);
+
+        // 获取当前语言环境
+        $locale = apply_filters('plugin_locale', get_locale(), 'parcelpanel');
+
+        // 加载系统级别的翻译文件
+        load_textdomain('parcelpanel', WP_LANG_DIR . '/plugins/parcelpanel-' . $locale . '.mo');
+
+        // 加载插件内的翻译文件
+        load_plugin_textdomain(
+            'parcelpanel',
+            false,
+            (new ParcelPanelFunction())->parcelpanel_get_plugin_base_path('l10n/languages')
+        );
+    }
+
     /**
      * Load text field
      *
@@ -1457,23 +1486,7 @@ SQL;
      */
     private function load_plugin_textdomain()
     {
-
-        // pp lang ID
-        define('ParcelPanel\OptionName\PP_LANG_NOW', 'parcelpanel_pp_wc_admin_language');
-        add_filter('plugin_locale', function ($determined_locale, $domain) {
-            if ($domain !== 'parcelpanel') {
-                return $determined_locale;
-            }
-            return Common::instance()->getNowLang();
-        }, 10, 2);
-
-        $locale = apply_filters('plugin_locale', get_locale(), 'parcelpanel');
-
-        // Load system text fields
-        load_textdomain('parcelpanel', WP_LANG_DIR . '/plugins/parcelpanel-' . $locale . '.mo');
-
-        // Text field to load the plugin
-        load_plugin_textdomain('parcelpanel', false, (new ParcelPanelFunction)->parcelpanel_get_plugin_base_path('/l10n/languages'));
+        add_action('plugins_loaded', [$this, 'load_parcelpanel_plugin_textdomain']);
     }
 
     /**

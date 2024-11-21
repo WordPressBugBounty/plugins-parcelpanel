@@ -1,7 +1,7 @@
 === ParcelPanel (Free to install) - Shipment Tracking, Tracking, and Order Tracking for WooCommerce ===
 Contributors: parcelpanel
 Tags: tracking, shipment tracking, order tracking, track order, woocommerce shipment tracking
-Stable Tag: 4.4.0
+Stable Tag: 4.4.1
 Requires at least: 5.9
 Tested up to: 6.6.1
 Requires PHP: 7.2
@@ -287,6 +287,14 @@ You might also want to refer to the following video:
 
 
 == Changelog ==
+
+= 4.4.1 - 2024-11-21 =
+
+- Fix – Fixed some known issues
+
+= 4.4.0 - 2024-10-29 =
+
+- Fix – Fixed some known issues
 
 = 4.3.9 - 2024-09-05 =
 

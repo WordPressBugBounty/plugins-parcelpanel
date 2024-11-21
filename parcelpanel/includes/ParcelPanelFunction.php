@@ -801,27 +801,43 @@ final class ParcelPanelFunction
             ];
         }
 
+        $isHpos = $this->orderStorageIsHpos();
         if (0 === $sync_status) {
-            $wp_query_args['meta_query'] = [
-                'relation' => 'OR',
-                [
-                    'key' => '_parcelpanel_sync_status',
-                    'compare_key' => 'NOT EXISTS',
-                ],
-                [
-                    'key' => '_parcelpanel_sync_status',
-                    'value' => '1',
-                    'compare' => '!=',
-                ],
-            ];
+            if ($isHpos) {
+                $wp_query_args['meta_query'] = [
+                    'relation' => 'OR',
+                    [
+                        'key' => '_parcelpanel_sync_status',
+                        'compare_key' => 'NOT EXISTS',
+                    ],
+                    [
+                        'key' => '_parcelpanel_sync_status',
+                        'value' => '1',
+                        'compare' => '!=',
+                    ],
+                ];
+            } else {
+                $wp_query_args['pp_order_query'] = 0;
+            }
         } elseif (1 === $sync_status) {
-            $wp_query_args['meta_query'] = [
-                [
-                    'key' => '_parcelpanel_sync_status',
-                    'value' => '1',
-                ],
-            ];
+            if ($isHpos) {
+                $wp_query_args['meta_query'] = [
+                    [
+                        'key' => '_parcelpanel_sync_status',
+                        'value' => '1',
+                    ],
+                ];
+            } else {
+                $wp_query_args['pp_order_query'] = 1;
+            }
         }
+
+        if (!$isHpos && isset($wp_query_args['pp_order_query'])) {
+            add_filter('posts_join', [$this, 'modify_order_query'], 10, 2);
+            add_filter('posts_where', [$this, 'modify_order_where'], 10, 2);
+            add_filter('posts_groupby', [$this, 'modify_order_group_by'], 10, 2);
+        }
+
         // @codingStandardsIgnoreEnd
         return $wp_query_args;
     }
@@ -1096,4 +1112,75 @@ final class ParcelPanelFunction
     //     return $couriers;
     // }
 
+    // Determine whether the current order storage mode is HPOS
+    public function orderStorageIsHpos()
+    {
+        return (get_option( 'woocommerce_feature_custom_order_tables_enabled' ) === 'yes' || get_option( 'woocommerce_custom_orders_table_enabled' ) === 'yes' ) && get_option( 'woocommerce_custom_orders_table_data_sync_enabled','no' ) === 'no';
+    }
+
+    public function modify_order_query($join, $query)
+    {
+        if (!$this->checkModifyFilter($query)) {
+            return $join;
+        }
+
+        global $wpdb;
+
+        $queryType = $query->query_vars['pp_order_query'];
+
+        if ($queryType == 0) {
+            $join .= " INNER JOIN {$wpdb->postmeta} pm1 ON {$wpdb->posts}.ID = pm1.post_id";
+            $join .= " INNER JOIN {$wpdb->postmeta} pm2 ON {$wpdb->posts}.ID = pm2.post_id";
+        } elseif ($query == 1) {
+            $join .= " INNER JOIN {$wpdb->postmeta} pm1 ON {$wpdb->posts}.ID = pm1.post_id";
+        }
+
+        return $join;
+    }
+
+    public function modify_order_where($where, $query)
+    {
+        if (!$this->checkModifyFilter($query)) {
+            return $where;
+        }
+
+        global $wpdb;
+
+        $queryType = $query->query_vars['pp_order_query'];
+
+        if ($queryType == 0) {
+            return $where . " AND (NOT EXISTS ( SELECT 1 FROM {$wpdb->postmeta} mt1 WHERE mt1.post_ID = pm1.post_ID AND mt1.meta_key = '_parcelpanel_sync_status' LIMIT 1 )
+		OR ( pm2.meta_key = '_parcelpanel_sync_status' AND pm2.meta_value != '1' ) )";
+        } elseif ($queryType == 1) {
+            return $where . " AND pm1.meta_key = '_parcelpanel_sync_status' AND pm1.meta_value = '1'";
+        }
+
+        return $where;
+    }
+
+    public function modify_order_group_by($where, $query)
+    {
+        if (!$this->checkModifyFilter($query)) {
+            return $where;
+        }
+
+        global $wpdb;
+
+        return $where . "{$wpdb->posts}.ID";
+    }
+
+    public function checkModifyFilter($query)
+    {
+        if (!isset($query->query_vars['pp_order_query'])) {
+            return false;
+        }
+
+        $post_type = $query->query_vars['post_type'] ?? '';
+
+        if ($post_type != 'shop_order') {
+            return false;
+        }
+
+        return true;
+    }
 }

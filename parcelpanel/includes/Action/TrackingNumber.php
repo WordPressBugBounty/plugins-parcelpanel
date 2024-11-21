@@ -5,6 +5,7 @@ namespace ParcelPanel\Action;
 use ParcelPanel\Api\Api;
 use ParcelPanel\Api\Orders;
 use ParcelPanel\Libs\ArrUtils;
+use ParcelPanel\Libs\Cache;
 use ParcelPanel\Libs\HooksTracker;
 use ParcelPanel\Libs\Import\TrackingNumberCSVImporter;
 use ParcelPanel\Libs\Singleton;
@@ -189,6 +190,8 @@ class TrackingNumber
         } else {
             $res['id'] = $record_data['id'];
         }
+
+        Cache::cache_flush();
 
         (new ParcelPanelFunction)->parcelpanel_json_response($res);
     }
@@ -458,7 +461,7 @@ class TrackingNumber
         $TABLE_TRACKING = Table::$tracking;
 
         // Obtain the single number data of successful synchronization
-        $tracking_number_list = $wpdb->get_col($wpdb->prepare("SELECT tracking_number FROM $TABLE_TRACKING WHERE sync_times=-1 AND courier_code=''")); // phpcs:ignore
+        $tracking_number_list = $wpdb->get_col("SELECT tracking_number FROM $TABLE_TRACKING WHERE sync_times=-1 AND courier_code=''"); // phpcs:ignore
 
         $tracking_numbers_chunk = array_chunk($tracking_number_list, 100);
 

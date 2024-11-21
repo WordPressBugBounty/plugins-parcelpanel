@@ -44,8 +44,10 @@ class Orders
             $tracking_order_ids = $this->get_not_synced_tracking_ids($page, $limit);
         }
 
+        $ppFunction = new ParcelPanelFunction();
+
         // 查询id集合
-        $query_args = (new ParcelPanelFunction)->parcelpanel_get_shop_order_query_args([], $day, $sync_status, $limit);
+        $query_args = $ppFunction->parcelpanel_get_shop_order_query_args([], $day, $sync_status, $limit);
 
         $query_args['paged'] = $page;
 
@@ -55,10 +57,23 @@ class Orders
 
         // wc orders list
         $order_ids_wc = [];
-        $wc_query = wc_get_orders($query_args);
-        foreach ($wc_query as $v) {
-            $order_ids_wc[] = $v->get_id();
+        $isHpos = $ppFunction->orderStorageIsHpos();
+
+        // In legacy mode, you need to set the return type to ids, otherwise an exception will be triggered.
+        if (!$isHpos) {
+            $query_args['return'] = 'ids';
         }
+
+        $wc_query = wc_get_orders($query_args);
+
+        if (!$isHpos) {
+            $order_ids_wc = array_merge($order_ids_wc, $wc_query);
+        } else {
+            foreach ($wc_query as $v) {
+                $order_ids_wc[] = $v->get_id();
+            }
+        }
+
         $order_ids = array_unique(array_merge($order_ids, $order_ids_wc), SORT_NUMERIC);
 
         $orders = [];
@@ -420,21 +435,26 @@ class Orders
             }
         }
 
-        // Add SKU and PRICE to products.
-        if (is_callable([$item, 'get_product'])) {
-            $data['sku']   = $item->get_product() ? $item->get_product()->get_sku() : null;
-            $data['price'] = $item->get_quantity() ? $item->get_total() / $item->get_quantity() : 0;
-        }
+        $getProductIsCallable = is_callable([$item, 'get_product']);
 
-        // Add parent_name if the product is a variation.
-        if (is_callable([$item, 'get_product'])) {
+        // Add SKU and PRICE to products.
+        if ($getProductIsCallable) {
             $product = $item->get_product();
 
+            $data['sku'] = null;
+            $data['parent_name'] = null;
+
+            // ADD SKU
+            if (is_callable([$product, 'get_sku'])) {
+                $data['sku'] = $product->get_sku();
+            }
+
+            // Add parent_name if the product is a variation.
             if (is_callable([$product, 'get_parent_data'])) {
                 $data['parent_name'] = $product->get_title();
-            } else {
-                $data['parent_name'] = null;
             }
+
+            $data['price'] = $item->get_quantity() ? $item->get_total() / $item->get_quantity() : 0;
         }
 
         // Format taxes.
@@ -469,6 +489,18 @@ class Orders
             $data['meta_data'],
             array_fill(0, count($data['meta_data']), $formatted_meta_data)
         );
+
+        // Variant removal scene support
+        if ($getProductIsCallable && !empty($product) && $data['variation_id'] == 0) {
+            if (is_callable([$product, 'get_type'])) {
+                if ($product->get_type() == "variable") {
+                    $variationId = wc_get_order_item_meta($item->get_id(), "_variation_id", true);
+                    if (!empty($variationId) && !is_array($variationId)) {
+                        $data['variation_id'] = (int) $variationId;
+                    }
+                }
+            }
+        }
 
         return $data;
     }

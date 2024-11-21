@@ -189,9 +189,9 @@ class Email
 
             if ($product->is_virtual()) {
                 $is_no_virtual = false;
-                // This product is virtual 
+                // This product is virtual
             } else {
-                // This product is not virtual 
+                // This product is not virtual
                 $is_no_virtual = true;
                 break;
             }
@@ -218,9 +218,7 @@ class Email
             if ($orderM === false) {
                 // @codingStandardsIgnoreStart
                 $orderM = $wpdb->get_col(
-                    $wpdb->prepare(
-                        "SELECT ppti.order_id FROM $TABLE_TRACKING_ITEMS as ppti ORDER BY ppti.order_id DESC LIMIT 1"
-                    )
+                    "SELECT ppti.order_id FROM $TABLE_TRACKING_ITEMS as ppti ORDER BY ppti.order_id DESC LIMIT 1"
                 );
                 // @codingStandardsIgnoreEnd
                 (new ParcelPanelFunction)->catch_data_all($key, $orderM, 2, HOUR_IN_SECONDS);
@@ -346,25 +344,25 @@ class Email
 		<tbody>
 			<tr class="order_item">
                 <td class="td" style="color: #636363; border: 1px solid #e5e5e5; padding: 12px; text-align: left; vertical-align: middle; font-family: \'Helvetica Neue\', Helvetica, Roboto, Arial, sans-serif; word-wrap: break-word;" align="left">
-                    Oversized Single-breasted Jacket		
+                    Oversized Single-breasted Jacket
                 </td>
                 <td class="td" style="color: #636363; border: 1px solid #e5e5e5; padding: 12px; text-align: left; vertical-align: middle; font-family: \'Helvetica Neue\', Helvetica, Roboto, Arial, sans-serif;" align="left">
-                    2		
+                    2
                 </td>
                 <td class="td" style="color: #636363; border: 1px solid #e5e5e5; padding: 12px; text-align: left; vertical-align: middle; font-family: \'Helvetica Neue\', Helvetica, Roboto, Arial, sans-serif;" align="left">
-                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>99.80</span>		
+                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>99.80</span>
                 </td>
             </tr>
-	
+
             <tr class="order_item">
                 <td class="td" style="color: #636363; border: 1px solid #e5e5e5; padding: 12px; text-align: left; vertical-align: middle; font-family: \'Helvetica Neue\', Helvetica, Roboto, Arial, sans-serif; word-wrap: break-word;" align="left">
-                    Striped Cotton Jumper	
+                    Striped Cotton Jumper
                 </td>
                 <td class="td" style="color: #636363; border: 1px solid #e5e5e5; padding: 12px; text-align: left; vertical-align: middle; font-family: \'Helvetica Neue\', Helvetica, Roboto, Arial, sans-serif;" align="left">
-                    1		
+                    1
                 </td>
                 <td class="td" style="color: #636363; border: 1px solid #e5e5e5; padding: 12px; text-align: left; vertical-align: middle; font-family: \'Helvetica Neue\', Helvetica, Roboto, Arial, sans-serif;" align="left">
-                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>59.90</span>		
+                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>59.90</span>
                 </td>
             </tr>
 
@@ -376,7 +374,7 @@ class Email
                     </p>
                 </td>
             </tr>
-		
+
 		</tbody>
 		<tfoot>
 			<tr>
