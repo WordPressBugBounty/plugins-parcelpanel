@@ -491,14 +491,10 @@ class Orders
         );
 
         // Variant removal scene support
-        if ($getProductIsCallable && !empty($product) && $data['variation_id'] == 0) {
-            if (is_callable([$product, 'get_type'])) {
-                if ($product->get_type() == "variable") {
-                    $variationId = wc_get_order_item_meta($item->get_id(), "_variation_id", true);
-                    if (!empty($variationId) && !is_array($variationId)) {
-                        $data['variation_id'] = (int) $variationId;
-                    }
-                }
+        if (isset($data['variation_id']) && $data['variation_id'] == 0) {
+            $variationId = wc_get_order_item_meta($item->get_id(), "_variation_id", true);
+            if (!empty($variationId) && !is_array($variationId)) {
+                $data['variation_id'] = (int) $variationId;
             }
         }
 
