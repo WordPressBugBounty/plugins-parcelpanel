@@ -365,6 +365,11 @@ final class ParcelPanel
             add_filter('weglot_get_regex_checkers', [$this, 'custom_weglot_add_regex_checkers']);
         }
 
+        $wooBundleIsActivePlugins = is_plugin_active('woo-product-bundle/wpc-product-bundles.php');
+        if ($wooBundleIsActivePlugins) {
+            add_filter('parcelpanel_order_get_items', [$this, 'filter_bundle_children_products']);
+        }
+
         // listen updated_option change
         add_action('updated_option', [$this, 'check_option_change_to_pp'], 10, 3);
 
@@ -422,6 +427,22 @@ final class ParcelPanel
     {
         $regex_checkers[] = new \Weglot\Parser\Check\Regex\RegexChecker('#window.pp_track_weglot = ((.|\s)+?);#', 'JSON', 1, array('translate', 'order_number', 'email', 'or', 'tracking_number', 'track', 'order', 'status', 'shipping_to', 'current_location', 'carrier', 'product', 'not_yet_shipped', 'waiting_updated', 'ordered', 'order_ready', 'pending', 'info_received', 'in_transit', 'out_for_delivery', 'delivered', 'exception', 'failed_attempt', 'expired', 'expected_delivery', 'may_like', 'additional_text_above', 'additional_text_below', 'custom_shipment_status_name_1', 'custom_shipment_status_info_1', 'custom_shipment_status_name_2', 'custom_shipment_status_info_2', 'custom_shipment_status_name_3', 'custom_shipment_status_info_3', 'custom_tracking_info', 'order_not_found', 'enter_your_order', 'enter_your_email', 'enter_your_tracking_number'));
         return $regex_checkers;
+    }
+
+    // Filter out sub-products of bundled items
+    public function filter_bundle_children_products($items)
+    {
+        return array_values(array_filter( $items, function ( $item ) {
+            // Check if the line item contains the parent product's metadata
+            if ( $item->meta_exists( '_woosb_parent_id' ) ||
+                $item->meta_exists( 'woosb_parent_id' ) ||
+                $item->meta_exists( 'wooco_parent_id' ) ||
+                $item->meta_exists( '_wooco_parent_id' ) ) {
+                return false;  // Exclude this product
+            }
+
+            return true;   // Included in this product
+        }));
     }
 
     // product GY product get url & storage (product attribution)
@@ -3622,7 +3643,8 @@ SQL;
             }
             if (!empty($proRes)) {
                 $order = wc_get_order($order_id);
-                foreach ($order->get_items() as $item_key => $item) {
+                $items = (new ParcelPanelFunction())->getOrderItems($order);
+                foreach ($items as $item_key => $item) {
                     $data = $item->get_data();
                     $line_items[] = $data;
                 }

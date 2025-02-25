@@ -1093,7 +1093,9 @@ class ShopOrder
         if (empty($order)) {
             return $line_items;
         }
-        foreach ($order->get_items() as $item_key => $item) {
+
+        $items = (new ParcelPanelFunction())->getOrderItems($order);
+        foreach ($items as $item_key => $item) {
             $data = $item->get_data();
             $format_decimal = ['subtotal', 'subtotal_tax', 'total', 'total_tax', 'tax_total', 'shipping_tax_total'];
 
@@ -1597,7 +1599,8 @@ class ShopOrder
     {
         $wc_order = wc_get_order($order_id);
         $order_items_quantity = [];
-        foreach ($wc_order->get_items() as $item) {
+        $items = (new ParcelPanelFunction())->getOrderItems($wc_order);
+        foreach ($items as $item) {
             $order_items_quantity[$item->get_id()] = $item->get_quantity();
         }
 

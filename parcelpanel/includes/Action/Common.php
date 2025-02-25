@@ -75,8 +75,8 @@ class Common
         // ];
 
         // update&add "shipment_line_items":[{"id":11,"name":'test',"quantity":2}]
-        // update&add csv 
-        // update&add api 
+        // update&add csv
+        // update&add api
 
         // type 1 add 2 update 3 del
         if (empty($order_message) || empty($type)) {
@@ -202,9 +202,10 @@ class Common
     // get pro messages
     private function get_shipment_pro($shipment_line_items, $order)
     {
+        $ppFunction = new ParcelPanelFunction();
 
         $pro_list = [];
-        $line_item = $order->get_items();
+        $line_item = $ppFunction->getOrderItems($order);
         foreach ($line_item as $item) {
             /* @var \WC_Product $product */
             $item_id = $item->get_id();

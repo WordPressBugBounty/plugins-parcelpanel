@@ -182,7 +182,7 @@ class Email
     public function check_pro_virtual($order)
     {
         // tracking detail all pro is virtual
-        $items = $order->get_items();
+        $items = (new ParcelPanelFunction())->getOrderItems($order);
         $is_no_virtual = true;
         foreach ($items as $item_id => $item) {
             $product = $item->get_product();

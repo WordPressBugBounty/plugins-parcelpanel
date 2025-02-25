@@ -491,10 +491,14 @@ class Orders
         );
 
         // Variant removal scene support
-        if (isset($data['variation_id']) && $data['variation_id'] == 0) {
-            $variationId = wc_get_order_item_meta($item->get_id(), "_variation_id", true);
-            if (!empty($variationId) && !is_array($variationId)) {
-                $data['variation_id'] = (int) $variationId;
+        if ($getProductIsCallable && !empty($product) && $data['variation_id'] == 0) {
+            if (is_callable([$product, 'get_type'])) {
+                if ($product->get_type() == "variable") {
+                    $variationId = wc_get_order_item_meta($item->get_id(), "_variation_id", true);
+                    if (!empty($variationId) && !is_array($variationId)) {
+                        $data['variation_id'] = (int) $variationId;
+                    }
+                }
             }
         }
 
@@ -615,6 +619,8 @@ class Orders
 
         $data = $order->get_base_data();
 
+        $ppFunction = new ParcelPanelFunction();
+
         // Add extra data as necessary.
         foreach ($extra_fields as $field) {
             switch ($field) {
@@ -622,19 +628,19 @@ class Orders
                     $data['meta_data'] = $order->get_meta_data();
                     break;
                 case 'line_items':
-                    $data['line_items'] = $order->get_items('line_item');
+                    $data['line_items'] = $ppFunction->getOrderItems($order, 'line_item');
                     break;
                 case 'tax_lines':
-                    $data['tax_lines'] = $order->get_items('tax');
+                    $data['tax_lines'] = $ppFunction->getOrderItems($order, 'tax');
                     break;
                 case 'shipping_lines':
-                    $data['shipping_lines'] = $order->get_items('shipping');
+                    $data['shipping_lines'] = $ppFunction->getOrderItems($order, 'shipping');
                     break;
                 case 'fee_lines':
-                    $data['fee_lines'] = $order->get_items('fee');
+                    $data['fee_lines'] = $ppFunction->getOrderItems($order, 'fee');
                     break;
                 case 'coupon_lines':
-                    $data['coupon_lines'] = $order->get_items('coupon');
+                    $data['coupon_lines'] = $ppFunction->getOrderItems($order, 'coupon');
                     break;
                 case 'refunds':
                     $data['refunds'] = [];
@@ -678,11 +684,14 @@ class Orders
 
         // $data = array_intersect_key( $data, array_flip( $fields ) );
 
+        $ppFunction = new ParcelPanelFunction();
+
         // get pro images & link
         if (!empty($data['line_items'])) {
             try {
                 $line_items_pro = [];
-                foreach ($order->get_items() as $item) {
+                $items = $ppFunction->getOrderItems($order);
+                foreach ($items as $item) {
                     /* @var \WC_Product $product */
                     $product = $item->get_product();
 

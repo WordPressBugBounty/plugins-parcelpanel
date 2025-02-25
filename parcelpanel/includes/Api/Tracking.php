@@ -295,6 +295,8 @@ class Tracking
         $TABLE_TRACKING = Table::$tracking;
         $TABLE_TRACKING_ITEMS = Table::$tracking_items;
 
+        $ppFunction = new ParcelPanelFunction();
+
         // Exception order number
         $errors = [];
 
@@ -302,7 +304,7 @@ class Tracking
         $NOW_TIME = time();
 
         // Shipping status
-        $shipment_statuses = (new ParcelPanelFunction)->parcelpanel_get_shipment_statuses();
+        $shipment_statuses = $ppFunction->parcelpanel_get_shipment_statuses();
 
         // state mapping
         $DELIVERY_STATUS_MAP = [
@@ -331,7 +333,7 @@ class Tracking
         }
 
         // Generate SQL placeholders
-        $placeholder = (new ParcelPanelFunction)->parcelpanel_get_prepare_placeholder_str($tracking_numbers);
+        $placeholder = $ppFunction->parcelpanel_get_prepare_placeholder_str($tracking_numbers);
 
         if (!empty($placeholder)) {
             // @codingStandardsIgnoreStart
@@ -432,7 +434,7 @@ class Tracking
                     )
                 );
                 // @codingStandardsIgnoreEnd
-                $delivery_status = (new ParcelPanelFunction)->parcelpanel_get_shipment_status($shipment_status);
+                $delivery_status = $ppFunction->parcelpanel_get_shipment_status($shipment_status);
                 do_action("parcelpanel_shipment_status_{$delivery_status}_notification", $order_id, false, [0]);
 
                 continue;
@@ -630,7 +632,7 @@ class Tracking
 
                     // @codingStandardsIgnoreStart
                     // check tracking is Delivered
-                    $placeholder_str = (new ParcelPanelFunction)->parcelpanel_get_prepare_placeholder_str($trackingIds);
+                    $placeholder_str = $ppFunction->parcelpanel_get_prepare_placeholder_str($trackingIds);
 
                     $_trackings = $wpdb->get_results($wpdb->prepare(
                         "SELECT *
@@ -666,7 +668,8 @@ class Tracking
 
                     $itemHasAllShipped = true;
                     $order = wc_get_order($orderId);
-                    $items = $order->get_items();
+                    $items = $ppFunction->getOrderItems($order);
+
                     foreach ($items as $item_id => $item) {
                         $product_quantity = $item->get_quantity();
                         if (isset($items_f[$item_id]) && ($items_f[$item_id] == $product_quantity || $items_f[$item_id] == 0)) {

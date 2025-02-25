@@ -754,6 +754,11 @@ final class ParcelPanelFunction
             }
         }
 
+        // Special treatment for specific customers
+        if (!empty($order_id) && strpos((string) $order_id, 'MV') === 0) {
+            $order_id = substr($order_id, 2);
+        }
+
         return $order_id;
     }
 
@@ -1182,5 +1187,16 @@ final class ParcelPanelFunction
         }
 
         return true;
+    }
+
+    public function getOrderItems($order, $params = "")
+    {
+        $items = empty($params) ? $order->get_items() : $order->get_items($params);
+
+        if (!has_filter("parcelpanel_order_get_items")) {
+            return $items;
+        }
+
+        return apply_filters("parcelpanel_order_get_items", $items, $order);
     }
 }

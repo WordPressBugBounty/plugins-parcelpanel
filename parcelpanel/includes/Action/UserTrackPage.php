@@ -1276,8 +1276,9 @@ class UserTrackPage
         $products_tags = [];
 
         if (!empty($order)) {
+            $items = (new ParcelPanelFunction())->getOrderItems($order);
             /* @var \WC_Order_Item_Product $item */
-            foreach ($order->get_items() as $item_id => $item) {
+            foreach ($items as $item_id => $item) {
                 /* @var \WC_Product $product */
                 $product = $item->get_product();
                 if (empty($product)) {

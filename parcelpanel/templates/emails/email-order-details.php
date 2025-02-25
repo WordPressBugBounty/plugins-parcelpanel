@@ -27,6 +27,8 @@ $text_align = is_rtl() ? 'right' : 'left';
 if ( ! empty( $shipment_items ) ):
     $line_items = [];
     $is_full_qty_item_ids = [];
+    $ppFunction = new \ParcelPanel\ParcelPanelFunction();
+
     /** @var object[] $shipment_items */
     foreach ( $shipment_items as $shipment_item ) {
         foreach ( $shipment_item->product as $item ) {
@@ -35,7 +37,8 @@ if ( ! empty( $shipment_items ) ):
             }
             if ( $item->id == 0 ) {
                 $line_items = [];
-                foreach ( $order->get_items() as $order_item ) {
+                $orderItems = $ppFunction->getOrderItems($order);
+                foreach ( $orderItems as $order_item ) {
                     $line_items[ $order_item->get_id() ] = $order_item->get_quantity();
                 }
                 $is_full_shipped = true;

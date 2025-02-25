@@ -1115,6 +1115,7 @@ class TrackingNumberCSVImporter
 
         $success_order_ids = [];
 
+        $ppFunction = new ParcelPanelFunction();
 
         $wpdb->show_errors = false;
         foreach ($this->parsed_data as $parsed_data) {
@@ -1171,7 +1172,7 @@ class TrackingNumberCSVImporter
 
                 $order_line_items_quantity_by_id = [];
                 /** @var \WC_Order_Item_Product[] $items */
-                $items = $order->get_items('line_item');
+                $items = $ppFunction->getOrderItems($order, 'line_item');
                 foreach ($items as $item) {
                     $order_line_items_quantity_by_id[$item->get_id()] = $item->get_quantity('edit');
                 }
