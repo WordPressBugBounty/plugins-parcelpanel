@@ -456,9 +456,9 @@ class AdminShipment
                 if (0 !== $mark_order_as_completed) {
                     if ($mark_order_as_completed == 2) {
                         if (!empty($tracking_ids)) {
-                            update_option(sprintf(\ParcelPanel\OptionName\NO_EMAIL_TRACKING, $order_id), array_values($tracking_ids));
+                            update_option(sprintf(\ParcelPanel\OptionName\NO_EMAIL_TRACKING, $order_id), array_values($tracking_ids), 'no');
                         } else {
-                            update_option(sprintf(\ParcelPanel\OptionName\NO_EMAIL_TRACKING, $order_id), []);
+                            delete_option(sprintf(\ParcelPanel\OptionName\NO_EMAIL_TRACKING, $order_id));
                         }
                         // order to partial_shipped
                         ShopOrder::update_order_status_to_partial_shipped($order_id);

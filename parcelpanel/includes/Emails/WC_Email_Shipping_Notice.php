@@ -62,7 +62,7 @@ class WC_Email_Shipping_Notice extends \WC_Email
         // }
 
         $tracking_ids = get_option(sprintf(\ParcelPanel\OptionName\NO_EMAIL_TRACKING, $order_id));
-        update_option(sprintf(\ParcelPanel\OptionName\NO_EMAIL_TRACKING, $order_id), []);
+        delete_option(sprintf(\ParcelPanel\OptionName\NO_EMAIL_TRACKING, $order_id));
 
         $tracking_ids = is_array($tracking_ids) ? array_unique($tracking_ids, SORT_NUMERIC) : [];
 

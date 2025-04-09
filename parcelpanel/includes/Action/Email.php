@@ -54,7 +54,7 @@ class Email
 
         // only send this tracking
         $tracking_ids = get_option(sprintf(\ParcelPanel\OptionName\NO_EMAIL_TRACKING, $order_id));
-        update_option(sprintf(\ParcelPanel\OptionName\NO_EMAIL_TRACKING, $order_id), []);
+        delete_option(sprintf(\ParcelPanel\OptionName\NO_EMAIL_TRACKING, $order_id));
         foreach ($tracking_items as $key => $item) {
             // no tracking id send email
             if (!empty($tracking_ids) && !in_array($item->id, $tracking_ids)) {

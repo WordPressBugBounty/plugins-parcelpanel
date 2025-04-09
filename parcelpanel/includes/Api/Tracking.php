@@ -326,6 +326,8 @@ class Tracking
             $tracks = [$tracks];
         }
 
+        $add_delivered_orders = [];
+
         // filter input
         $tracking_numbers = array_filter(array_column($tracks, 'tracking_number'));
         if (empty($tracking_numbers)) {
@@ -366,6 +368,7 @@ class Tracking
 
         // order id arr
         $order_id_arr = [];
+        $delivered_orders = [];
 
         // Process order number update data
         foreach ($tracks as $track) {
@@ -389,6 +392,10 @@ class Tracking
             $custom_track_time = $track['custom_track_time'] ?? [];
             if (!empty($custom_track_time) && !empty($custom_track_status)) {
                 $custom_track_time = is_array($custom_track_time) ? $custom_track_time : json_decode($custom_track_time, true);
+            }
+
+            if (($track['delivered'] ?? false)) {
+                $delivered_orders[] = $order_id;
             }
 
             if (!in_array($order_id, $order_id_arr)) {
@@ -559,11 +566,13 @@ class Tracking
         // order change status to Delivered function
         if (!empty($order_id_arr)) {
             foreach ($order_id_arr as $orderId) {
-
-                $checkChange = get_option(sprintf(\ParcelPanel\OptionName\CHENGE_DELIVERED, $orderId));
-                if (!empty($checkChange)) {
+                if (in_array($orderId, $delivered_orders)) {
                     continue;
                 }
+//                $checkChange = get_option(sprintf(\ParcelPanel\OptionName\CHENGE_DELIVERED, $orderId));
+//                if (!empty($checkChange)) {
+//                    continue;
+//                }
 
                 // is all product has shipped
                 // @codingStandardsIgnoreStart
@@ -692,7 +701,8 @@ class Tracking
                         // delivered
                         ShopOrder::update_order_status_to_delivered($orderId, $parcelpanel_fulfill_workflow);
                         // only first do change
-                        update_option(sprintf(\ParcelPanel\OptionName\CHENGE_DELIVERED, $orderId), 1);
+                        $add_delivered_orders[] = $orderId;
+                        // update_option(sprintf(\ParcelPanel\OptionName\CHENGE_DELIVERED, $orderId), 1, 'no');
                     } else if ($delivered_type == 2 && $delivered_enable_email_com) {
 
                         // if ($shipped_type == 1) {
@@ -705,7 +715,8 @@ class Tracking
                         // completed
                         ShopOrder::update_order_status_to_completed($orderId);
                         // only first do change
-                        update_option(sprintf(\ParcelPanel\OptionName\CHENGE_DELIVERED, $orderId), 1);
+                        $add_delivered_orders[] = $orderId;
+                        // update_option(sprintf(\ParcelPanel\OptionName\CHENGE_DELIVERED, $orderId), 1, 'no');
                     }
                 }
             }
@@ -717,6 +728,7 @@ class Tracking
         $resp_data = [
             'code' => RestApi::CODE_SUCCESS,
             'errors' => $errors,
+            'delivered_orders' => $add_delivered_orders,
             'res' => $res ?? '',
             'delivery_status' => $delivery_status ?? '',
             'order_id' => $order_id ?? '',

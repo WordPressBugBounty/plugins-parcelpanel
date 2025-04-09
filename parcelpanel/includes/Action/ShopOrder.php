@@ -1918,9 +1918,9 @@ class ShopOrder
         }
 
         if ($status == 'partial-shipped' && !empty($tracking_ids)) {
-            update_option(sprintf(\ParcelPanel\OptionName\NO_EMAIL_TRACKING, $order_id), array_values($tracking_ids));
+            update_option(sprintf(\ParcelPanel\OptionName\NO_EMAIL_TRACKING, $order_id), array_values($tracking_ids), 'no');
         } else {
-            update_option(sprintf(\ParcelPanel\OptionName\NO_EMAIL_TRACKING, $order_id), []);
+            delete_option(sprintf(\ParcelPanel\OptionName\NO_EMAIL_TRACKING, $order_id));
         }
 
         $previous_order_status = '';
