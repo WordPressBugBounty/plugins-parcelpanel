@@ -1216,13 +1216,15 @@ class UserTrackPage
             'name' => $TRANSLATIONS['track'],
         ];
 
-?>
-        <script>
-            jQuery(document).ready(function() {
-                jQuery('.pp-track').attr('target', '_blank')
-            })
-        </script>
-<?php
+        add_action('wp_footer', function() {
+            ?>
+            <script>
+                jQuery(document).ready(function($) {
+                    $('.pp-track').attr('target', '_blank');
+                });
+            </script>
+            <?php
+        });
 
         return $actions;
     }

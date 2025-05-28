@@ -1593,12 +1593,12 @@ SQL;
                 'menu_slug' => 'parcelpanel#/billing',
                 'function' => [$this, 'ParcelPanel_admin_page'],
             ],
-            [
-                'page_title' => __('Feature request - ParcelPanel', 'parcelpanel'),
-                'menu_title' => __('Feature request', 'parcelpanel'),
-                'menu_slug' => 'parcelpanel#/feature-request',
-                'function' => [$this, 'ParcelPanel_admin_page'],
-            ],
+//            [
+//                'page_title' => __('Feature request - ParcelPanel', 'parcelpanel'),
+//                'menu_title' => __('Feature request', 'parcelpanel'),
+//                'menu_slug' => 'parcelpanel#/feature-request',
+//                'function' => [$this, 'ParcelPanel_admin_page'],
+//            ],
 
 
             // old (hidden) for 302  (last menu remove by react)
