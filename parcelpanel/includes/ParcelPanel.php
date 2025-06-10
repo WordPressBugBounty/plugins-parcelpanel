@@ -432,7 +432,7 @@ final class ParcelPanel
     // Filter out sub-products of bundled items
     public function filter_bundle_children_products($items)
     {
-        return array_values(array_filter( $items, function ( $item ) {
+        return array_filter( $items, function ( $item ) {
             // Check if the line item contains the parent product's metadata
             if ( $item->meta_exists( '_woosb_parent_id' ) ||
                 $item->meta_exists( 'woosb_parent_id' ) ||
@@ -442,7 +442,7 @@ final class ParcelPanel
             }
 
             return true;   // Included in this product
-        }));
+        });
     }
 
     // product GY product get url & storage (product attribution)
