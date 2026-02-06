@@ -8,7 +8,7 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <header id="pp-header-root" class="pp-layout__header">
   <div class="logo">
-    <img src="<?php echo esc_url( parcelpanel_get_assets_path( 'imgs/logo.png' ) ); ?>" alt="<?php esc_attr_e( 'ParcelPanel logo', 'parcelpanel' ) ?>"/>
+    <img src="<?php echo esc_url( parcelpanel_get_assets_path( 'imgs/logo.png' ) ); ?>" alt="<?php esc_attr_e( 'ParcelWILL logo', 'parcelpanel' ) ?>"/>
   </div>
   <div class="tool-operate">
     <button id="PP-Header-Btn-GetHelp" class="pp-header__tool-operate-item">
@@ -38,7 +38,7 @@ defined( 'ABSPATH' ) || exit;
           <path d="M896 64H234.656C157.728 64 96 128.8 96 208c0 5.472.992 10.688 1.536 16H96v576c0 88.032 68.544 160 153.92 160H896V288H234.656C193.792 288 160 252.512 160 208s33.792-80 74.656-80H896V64zM464 352h176v172.192l-68.192-53.696a31.968 31.968 0 0 0-39.584 0L464 524.192V352zm-229.344 0H400v238.112a32 32 0 0 0 51.808 25.152L552 536.352l100.192 78.912A32 32 0 0 0 704 590.112V352h128v544H249.92c-49.312 0-89.92-42.656-89.92-96V329.024C181.536 343.392 207.04 352 234.656 352z"/>
           <path d="M255.776 176H832v64H255.776z"/>
         </svg>
-        <span class="text"><?php esc_html_e( 'ParcelPanel Help Docs', 'parcelpanel' ) ?></span>
+        <span class="text"><?php esc_html_e( 'ParcelWILL Help Docs', 'parcelpanel' ) ?></span>
       </a>
     </li>
     <li>

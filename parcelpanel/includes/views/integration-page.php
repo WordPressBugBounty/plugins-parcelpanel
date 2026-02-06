@@ -59,7 +59,7 @@ defined('ABSPATH') || exit;
       </div>
 
       <div class="pp-card-body list-box" style="padding-bottom:32px" v-if="activatedTabIndex === 1">
-        <div><?php esc_html_e('You do not have to do anything, ParcelPanel works with the below plugins by default.', 'parcelpanel') ?> <a href="https://docs.parcelpanel.com/woocommerce/article/how-integration-with-custom-order-numbers-plugins-works/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Learn more.', 'parcelpanel') ?></a></div>
+        <div><?php esc_html_e('You do not have to do anything, ParcelWILL works with the below plugins by default.', 'parcelpanel') ?> <a href="https://docs.parcelpanel.com/woocommerce/article/how-integration-with-custom-order-numbers-plugins-works/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Learn more.', 'parcelpanel') ?></a></div>
         <hr class="pp-divider">
         <div style="display:flex;">
           <a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=Sequential Order Number for WooCommerce" target="_blank" rel="noopener noreferrer">
@@ -106,7 +106,7 @@ defined('ABSPATH') || exit;
     <div class="pp-card">
       <h3 class="pp-card-title pp-p-b-2"><?php esc_html_e('Will there be more plugins integrated?', 'parcelpanel') ?></h3>
       <div class="pp-card-body pp-p-b-4">
-        <p><?php esc_html_e('Yes, ParcelPanel will continue to integrate with more plugins to improve the user experience. Stay tuned!', 'parcelpanel') ?></p>
+        <p><?php esc_html_e('Yes, ParcelWILL will continue to integrate with more plugins to improve the user experience. Stay tuned!', 'parcelpanel') ?></p>
       </div>
     </div>
 

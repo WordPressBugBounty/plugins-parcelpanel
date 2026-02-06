@@ -47,11 +47,11 @@ defined('ABSPATH') || exit;
 
         <div class="pp-row">
           <div>
-            <p class="pp-label"><?php esc_html_e('ParcelPanel shipping email notifications', 'parcelpanel') ?></p>
+            <p class="pp-label"><?php esc_html_e('ParcelWILL shipping email notifications', 'parcelpanel') ?></p>
           </div>
         </div>
         <div class="pp-row pp-m-t-1">
-          <p class="pp-text-subdued"><?php esc_html_e('This feature will allow you to send email notifications based on ParcelPanel shipment status.', 'parcelpanel') ?></p>
+          <p class="pp-text-subdued"><?php esc_html_e('This feature will allow you to send email notifications based on ParcelWILL shipment status.', 'parcelpanel') ?></p>
         </div>
 
         <div class="pp-row" style="display: flex;height: 56px; border-bottom: 1px solid #F0F0F0;">
@@ -359,12 +359,12 @@ defined('ABSPATH') || exit;
     </div>
 
     <modal :open="isOpenViewExampleModalOrderTrackButton" title="<?php esc_html_e('How it works?', 'parcelpanel') ?>" cancel="Close" @cancel="isOpenViewExampleModalOrderTrackButton=false">
-      <p><?php esc_html_e('After enabled, ParcelPanel will add a track button to the orders history page (Actions column), so your customers can track their orders with one click directed to your store tracking page.', 'parcelpanel') ?></p>
+      <p><?php esc_html_e('After enabled, ParcelWILL will add a track button to the orders history page (Actions column), so your customers can track their orders with one click directed to your store tracking page.', 'parcelpanel') ?></p>
       <img src="<?php echo esc_url(parcelpanel_get_assets_path('imgs/settings/my-orders.png')); ?>" alt="My orders" width="100%" class="pp-m-t-4" />
     </modal>
 
     <modal :open="isOpenViewExampleModalAdminOrdersAddTrackButton" title="<?php esc_html_e('How it works?', 'parcelpanel') ?>" cancel="Close" @cancel="isOpenViewExampleModalAdminOrdersAddTrackButton=false">
-      <p><?php esc_html_e('After enabled, ParcelPanel will add a track button to orders admin (Actions column), you can add tracking info easily without clicking into order details.', 'parcelpanel') ?></p>
+      <p><?php esc_html_e('After enabled, ParcelWILL will add a track button to orders admin (Actions column), you can add tracking info easily without clicking into order details.', 'parcelpanel') ?></p>
       <img src="<?php echo esc_url(parcelpanel_get_assets_path('imgs/settings/admin-orders.png')); ?>" alt="Admin orders" width="100%" class="pp-m-t-4" />
     </modal>
 

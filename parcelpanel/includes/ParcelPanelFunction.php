@@ -762,6 +762,178 @@ final class ParcelPanelFunction
         return $order_id;
     }
 
+    public function parcelpanel_get_formatted_order_id_by_hpos($order_id)
+    {
+        include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+
+        if (is_plugin_active('custom-order-numbers-for-woocommerce/custom-order-numbers-for-woocommerce.php')) {
+            $alg_wc_custom_order_numbers_enabled = get_option('alg_wc_custom_order_numbers_enabled');
+            $alg_wc_custom_order_numbers_prefix = get_option('alg_wc_custom_order_numbers_prefix');
+            $new_order_id = str_replace($alg_wc_custom_order_numbers_prefix, '', $order_id);
+
+            if ('yes' == $alg_wc_custom_order_numbers_enabled) {
+                // @codingStandardsIgnoreStart
+                $order_ids = wc_get_orders([
+                    'limit'      => 1,
+                    'meta_query' => [
+                        'relation' => 'OR',
+                        [
+                            'key'   => '_alg_wc_custom_order_number',
+                            'value' => $new_order_id,
+                        ],
+                        [
+                            'key'   => '_alg_wc_full_custom_order_number',
+                            'value' => $order_id,
+                        ],
+                    ],
+                    'status' => array_keys(wc_get_order_statuses()),
+                    'return' => 'ids',
+                ]);
+                // @codingStandardsIgnoreEnd
+
+                if (!empty($order_ids)) {
+                    [$order_id] = $order_ids;
+                }
+            }
+        }
+
+        if (is_plugin_active('woocommerce-sequential-order-numbers/woocommerce-sequential-order-numbers.php')) {
+
+            $s_order_id = wc_sequential_order_numbers()->find_order_by_order_number($order_id);
+            if ($s_order_id) {
+                $order_id = $s_order_id;
+            }
+        }
+
+        if (is_plugin_active('woocommerce-sequential-order-numbers-pro/woocommerce-sequential-order-numbers-pro.php')) {
+
+            // @codingStandardsIgnoreStart
+            // search for the order by custom order number
+            $order_ids = wc_get_orders([
+                'limit'      => 1,
+                'meta_key'   => '_order_number_formatted',
+                'meta_value' => $order_id,
+                'status'     => 'any',
+                'return'     => 'ids',
+            ]);
+            // @codingStandardsIgnoreEnd
+            if (!empty($order_ids)) {
+                [$order_id] = $order_ids;
+            }
+        }
+
+        if (is_plugin_active('woocommerce-jetpack/woocommerce-jetpack.php')) {
+
+            $wcj_order_numbers_enabled = get_option('wcj_order_numbers_enabled');
+
+            if ('yes' == $wcj_order_numbers_enabled) {
+                // Get prefix and suffix options
+                $prefix = do_shortcode(get_option('wcj_order_number_prefix', ''));
+                $prefix .= date_i18n(get_option('wcj_order_number_date_prefix', ''));
+                $suffix = do_shortcode(get_option('wcj_order_number_suffix', ''));
+                $suffix .= date_i18n(get_option('wcj_order_number_date_suffix', ''));
+
+                // Ignore suffix and prefix from search input
+                $search_no_suffix = preg_replace("/\A{$prefix}/i", '', $order_id);
+                $search_no_suffix_and_prefix = preg_replace("/{$suffix}\z/i", '', $search_no_suffix);
+                $final_search = $search_no_suffix_and_prefix ?: $order_id;
+                // @codingStandardsIgnoreStart
+                $order_ids = wc_get_orders([
+                    'limit'      => 1,
+                    'meta_key'   => '_wcj_order_number',
+                    'meta_value' => $final_search,
+                    'status'     => 'any',
+                    'return'     => 'ids',
+                ]);
+                // @codingStandardsIgnoreEnd
+                if (!empty($order_ids)) {
+                    [$order_id] = $order_ids;
+                }
+            }
+        }
+
+        if (is_plugin_active('wp-lister-amazon/wp-lister-amazon.php')) {
+            $wpla_use_amazon_order_number = get_option('wpla_use_amazon_order_number');
+            if (1 == $wpla_use_amazon_order_number) {
+                // @codingStandardsIgnoreStart
+                $order_ids = wc_get_orders([
+                    'limit'      => 1,
+                    'meta_key'   => '_wpla_amazon_order_id',
+                    'meta_value' => $order_id,
+                    'status'     => 'any',
+                    'return'     => 'ids',
+                ]);
+                // @codingStandardsIgnoreEnd
+                if (!empty($order_ids)) {
+                    [$order_id] = $order_ids;
+                }
+            }
+        }
+
+        if (is_plugin_active('wp-lister/wp-lister.php') || is_plugin_active('wp-lister-for-ebay/wp-lister.php')) {
+            // @codingStandardsIgnoreStart
+            $order_ids = wc_get_orders([
+                'limit'      => 1,
+                'meta_query' => [
+                    'relation' => 'OR',
+                    [
+                        'key'   => '_ebay_extended_order_id',
+                        'value' => $order_id,
+                    ],
+                    [
+                        'key'   => '_ebay_order_id',
+                        'value' => $order_id,
+                    ],
+                ],
+                'status' => 'any',
+                'return' => 'ids',
+            ]);
+            // @codingStandardsIgnoreEnd
+
+            if (!empty($order_ids)) {
+                [$order_id] = $order_ids;
+            }
+        }
+
+        if (is_plugin_active('yith-woocommerce-sequential-order-number-premium/init.php')) {
+            // @codingStandardsIgnoreStart
+            $order_ids = wc_get_orders([
+                'limit'      => 1,
+                'meta_key'   => '_ywson_custom_number_order_complete',
+                'meta_value' => $order_id,
+                'status'     => 'any',
+                'return'     => 'ids',
+            ]);
+            // @codingStandardsIgnoreEnd
+            if (!empty($order_ids)) {
+                [$order_id] = $order_ids;
+            }
+        }
+
+        if (is_plugin_active('wt-woocommerce-sequential-order-numbers/wt-advanced-order-number.php')) {
+            // @codingStandardsIgnoreStart
+            $order_ids = wc_get_orders([
+                'limit'      => 1,
+                'meta_key'   => '_order_number',
+                'meta_value' => $order_id,
+                'status'     => 'any',
+                'return'     => 'ids',
+            ]);
+            // @codingStandardsIgnoreEnd
+
+            if (!empty($order_ids)) {
+                [$order_id] = $order_ids;
+            }
+        }
+
+        // Special treatment for specific customers
+        if (!empty($order_id) && strpos((string) $order_id, 'MV') === 0) {
+            $order_id = substr($order_id, 2);
+        }
+
+        return $order_id;
+    }
+
     /**
      * Post ShopOrder query params
      *

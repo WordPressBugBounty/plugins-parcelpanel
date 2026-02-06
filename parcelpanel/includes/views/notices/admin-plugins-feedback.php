@@ -63,7 +63,7 @@ $current_user = wp_get_current_user();
     <p>
         <?php
         // translators: %1$s is url html %2$s is url html.
-        echo sprintf(esc_html__('Hi there! Your feedback means a lot to us! Take a minute to share your experience with %1$sParcelPanel Order Tracking for WooCommerce%2$s will inspire us to keep going.', 'parcelpanel'), '<b>', '</b>') ?>
+        echo sprintf(esc_html__('Hi there! Your feedback means a lot to us! Take a minute to share your experience with %1$sParcelWILL Order Tracking for WooCommerce%2$s will inspire us to keep going.', 'parcelpanel'), '<b>', '</b>') ?>
     </p>
     <div class="pp-rate"><i data-value="5"></i><i data-value="4"></i><i data-value="3"></i><i data-value="2"></i><i data-value="1"></i></div>
     <a href="<?php echo esc_url($url_dismiss) ?>" class="notice-dismiss" style="text-decoration:none"><span class="screen-reader-text"><?php esc_html_e('Dismiss this notice.', 'parcelpanel') ?></span></a>

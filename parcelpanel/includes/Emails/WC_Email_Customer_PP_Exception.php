@@ -7,8 +7,8 @@ class WC_Email_Customer_PP_Exception extends WC_Email_Shipping_Notice
     public function __construct()
     {
         $this->id          = 'customer_pp_exception_shipment';
-        $this->title       = __( 'ParcelPanel Exception', 'parcelpanel' );
-        $this->description = __( 'ParcelPanel Exception emails are sent to customers when the shipment might have been sent back to the sender, damaged, or lost.', 'parcelpanel' );
+        $this->title       = __( 'ParcelWILL Exception', 'parcelpanel' );
+        $this->description = __( 'ParcelWILL Exception emails are sent to customers when the shipment might have been sent back to the sender, damaged, or lost.', 'parcelpanel' );
 
         // Triggers for this email.
         add_action( 'parcelpanel_shipment_status_exception_notification', [ $this, 'trigger' ], 10, 3 );

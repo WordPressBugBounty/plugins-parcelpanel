@@ -4,7 +4,7 @@ defined('ABSPATH') || exit;
 <div class="notice notice-error is-dismissible parcelpanel-message" id="pp-notice-plan-upgrade">
     <p>
         <?php
-        _e(sprintf('[ParcelPanel] Howdy partner, there are only %1$d quota available in your account, upgrade to sync & track more orders. <a href="%2$s">Upgrade now.</a>', get_option(\ParcelPanel\OptionName\PLAN_QUOTA_REMAIN, -1), admin_url('admin.php?page=pp-account')), 'parcelpanel')  // phpcs:ignore
+        _e(sprintf('[ParcelWILL] Howdy partner, there are only %1$d quota available in your account, upgrade to sync & track more orders. <a href="%2$s">Upgrade now.</a>', get_option(\ParcelPanel\OptionName\PLAN_QUOTA_REMAIN, -1), admin_url('admin.php?page=pp-account')), 'parcelpanel')  // phpcs:ignore
         ?>
     </p>
     <a href="<?php echo esc_url(

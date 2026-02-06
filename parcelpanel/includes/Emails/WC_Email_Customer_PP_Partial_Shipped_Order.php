@@ -7,7 +7,7 @@ class WC_Email_Customer_PP_Partial_Shipped_Order extends WC_Email_Shipping_Notic
     public function __construct()
     {
         $this->id = 'customer_partial_shipped_order';
-        $this->title = __('ParcelPanel Partially Shipped order', 'parcelpanel');
+        $this->title = __('ParcelWILL Partially Shipped order', 'parcelpanel');
         $this->description = __('Order partially shipped emails are sent to customers when their orders are marked partially shipped and usually indicate that their orders have been partially shipped.', 'parcelpanel');
 
         // Triggers for this email.

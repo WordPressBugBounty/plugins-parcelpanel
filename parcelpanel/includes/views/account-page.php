@@ -20,7 +20,7 @@ defined('ABSPATH') || exit;
 
     <modal :open="isOpenRatingModal" title="<?php esc_html_e('Free upgrade completed. Congratulations!! 🎉', 'parcelpanel') ?>" confirm="" cancel="" @cancel="isOpenRatingModal=false">
       <div class="free-upgrade-completed__body">
-        <p><?php esc_html_e('Would you mind letting us know what you think about ParcelPanel', 'parcelpanel') ?></p>
+        <p><?php esc_html_e('Would you mind letting us know what you think about ParcelWILL', 'parcelpanel') ?></p>
         <div class="pp-rate">
           <i v-for="i of 5" :key="i" @click="onRatingClick(6-i)"></i>
         </div>
@@ -54,7 +54,7 @@ defined('ABSPATH') || exit;
             <?php
             echo sprintf(
               // translators: %1$s is plan %2$s is order count.
-              esc_html__('You are on the ParcelPanel %1$s plan and have %2$s cycle.', 'parcelpanel'),
+              esc_html__('You are on the ParcelWILL %1$s plan and have %2$s cycle.', 'parcelpanel'),
               'Unlimited',
               'unlimited quota per month'
             ) ?>
@@ -63,7 +63,7 @@ defined('ABSPATH') || exit;
             <?php
             echo sprintf(
               // translators: %1$s is plan %2$s is order count %3$s is time.
-              esc_html__('You are on the ParcelPanel %1$s plan and have %2$s cycle. Next cycle will reset on %3$s.', 'parcelpanel'),
+              esc_html__('You are on the ParcelWILL %1$s plan and have %2$s cycle. Next cycle will reset on %3$s.', 'parcelpanel'),
               '{{planName}}',
               '{{summary}}',
               '{{expiredDate}}'
@@ -71,7 +71,7 @@ defined('ABSPATH') || exit;
           </p>
         </template>
 
-        <p v-else><?php esc_html_e('The ParcelPanel server is busy. Please try again later!', 'parcelpanel') ?></p>
+        <p v-else><?php esc_html_e('The ParcelWILL server is busy. Please try again later!', 'parcelpanel') ?></p>
       </div>
       <div class="right">
         <div class="pp-card" v-if="statusRequest.LOADING === reqStatus">
@@ -135,7 +135,7 @@ defined('ABSPATH') || exit;
       <div class="left pp-card-light">
         <h3 class="pp-card-title"><?php esc_html_e('Plan', 'parcelpanel') ?></h3>
         <p><?php esc_html_e('If you want to change your plan, the remaining quota of current plan will be added to the new plan.', 'parcelpanel') ?></p>
-        <p class="pp-m-t-2 pp-card-title-note"><?php esc_html_e('Note: ParcelPanel counts the quota based on the number of your orders synced to ParcelPanel and offers unlimited order lookups.', 'parcelpanel'); ?></p>
+        <p class="pp-m-t-2 pp-card-title-note"><?php esc_html_e('Note: ParcelWILL counts the quota based on the number of your orders synced to ParcelWILL and offers unlimited order lookups.', 'parcelpanel'); ?></p>
       </div>
       <div class="right">
         <!-- skeleton screen -->

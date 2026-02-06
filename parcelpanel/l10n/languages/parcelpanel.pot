@@ -170,7 +170,7 @@ msgid "Too many requests, please try again later"
 msgstr ""
 
 #: includes/Action/Lang.php:1532
-msgid "Thanks for your trust and welcome to ParcelPanel!"
+msgid "Thanks for your trust and welcome to ParcelWILL!"
 msgstr ""
 
 #: includes/Action/Lang.php:1534
@@ -214,7 +214,7 @@ msgid "Free upgrade now"
 msgstr ""
 
 #: includes/Action/Lang.php:1551
-msgid "Remove ParcelPanel branding for Free 😘"
+msgid "Remove ParcelWILL branding for Free 😘"
 msgstr ""
 
 #: includes/Action/Lang.php:1552
@@ -253,7 +253,7 @@ msgid "Even better - free sync & track your last-30-day orders 🎉"
 msgstr ""
 
 #: includes/Action/Lang.php:1559
-msgid "This will help you know how ParcelPanel performs and provide your old customers with a seamless order tracking experience."
+msgid "This will help you know how ParcelWILL performs and provide your old customers with a seamless order tracking experience."
 msgstr ""
 
 #: includes/Action/Lang.php:1560
@@ -262,7 +262,7 @@ msgstr ""
 
 #: includes/Action/Lang.php:1561
 #: includes/views/notices/nps-banner-admin.php:8
-msgid "A Quick Word on your ParcelPanel Experience (Only 2 questions ) 🌻"
+msgid "A Quick Word on your ParcelWILL Experience (Only 2 questions ) 🌻"
 msgstr ""
 
 #: includes/Action/Lang.php:1562
@@ -276,11 +276,11 @@ msgid "Take the survey →"
 msgstr ""
 
 #: includes/Action/Lang.php:1564
-msgid "ParcelPanel Paid version V3.6 is coming in September"
+msgid "ParcelWILL Paid version V3.6 is coming in September"
 msgstr ""
 
 #: includes/Action/Lang.php:1565
-msgid "Due to rising costs, ParcelPanel Paid version V3.6 is coming in <0>September!<1> Some previously free features will no longer be available. To give back to loyal users, we will provide you with a <2>20% discount<3> on our paid version."
+msgid "Due to rising costs, ParcelWILL Paid version V3.6 is coming in <0>September!<1> Some previously free features will no longer be available. To give back to loyal users, we will provide you with a <2>20% discount<3> on our paid version."
 msgstr ""
 
 #: includes/Action/Lang.php:1568
@@ -316,11 +316,11 @@ msgid "Customizable shipping notification template editor is now live!"
 msgstr ""
 
 #: includes/Action/Lang.php:1576
-msgid "With this new functionality, you can now customize ParcelPanel shipping notifications that align with your brand and even create more sales with coupon upsell. Rest assured, all your previous settings are fully compatible, simply navigate to WooCommerce settings to access your familiar setup with ease. Please note that if you have set up the same shipping notifications in both WooCommerce and ParcelPanel, emails will be sent redundantly. <0>Learn more<1>."
+msgid "With this new functionality, you can now customize ParcelWILL shipping notifications that align with your brand and even create more sales with coupon upsell. Rest assured, all your previous settings are fully compatible, simply navigate to WooCommerce settings to access your familiar setup with ease. Please note that if you have set up the same shipping notifications in both WooCommerce and ParcelWILL, emails will be sent redundantly. <0>Learn more<1>."
 msgstr ""
 
 #: includes/Action/Lang.php:1578
-msgid "Contact support to remove the branding (worth $49/month) from ParcelPanel shipping notifications."
+msgid "Contact support to remove the branding (worth $49/month) from ParcelWILL shipping notifications."
 msgstr ""
 
 #: includes/Action/Lang.php:1579
@@ -363,7 +363,7 @@ msgid "Your opinion matters! Complete the survey for a 10% discount! 🙌"
 msgstr ""
 
 #: includes/Action/Lang.php:1590
-msgid "ParcelPanel Order Tracking for WooCommerce invites you to participate in our annual user survey (takes less than 1 minute) to help us enhance our services. Complete the survey for a 10% discount!! 🤩"
+msgid "ParcelWILL Order Tracking for WooCommerce invites you to participate in our annual user survey (takes less than 1 minute) to help us enhance our services. Complete the survey for a 10% discount!! 🤩"
 msgstr ""
 
 #: includes/Action/Lang.php:1591
@@ -380,7 +380,7 @@ msgid "Your free trial has ended. Choose a plan to restore your settings with <0
 msgstr ""
 
 #: includes/Action/Lang.php:1595
-msgid "ParcelPanel Payment Plan Update"
+msgid "ParcelWILL Payment Plan Update"
 msgstr ""
 
 #: includes/Action/Lang.php:1596
@@ -404,7 +404,7 @@ msgid "Howdy partner, you have only <0> available quotas in your account."
 msgstr ""
 
 #: includes/Action/Lang.php:1601
-msgid "To ensure ParcelPanel can provide the best post-purchase experience for your customers, upgrade to sync and track more orders at a lower per-quota price."
+msgid "To ensure ParcelWILL can provide the best post-purchase experience for your customers, upgrade to sync and track more orders at a lower per-quota price."
 msgstr ""
 
 #: includes/Action/Lang.php:1602
@@ -635,7 +635,7 @@ msgid "View example"
 msgstr ""
 
 #: includes/Action/Lang.php:1654
-msgid "Learn more about <0>ParcelPanel<1>"
+msgid "Learn more about <0>ParcelWILL<1>"
 msgstr ""
 
 #: includes/Action/Lang.php:1655
@@ -679,7 +679,7 @@ msgid "Don't want to use live chat? Contact us via <0>support forum<1> or email:
 msgstr ""
 
 #: includes/Action/Lang.php:1666
-msgid "<0>Jessie<1> from ParcelPanel"
+msgid "<0>Jessie<1> from ParcelWILL"
 msgstr ""
 
 #: includes/Action/Lang.php:1667
@@ -688,7 +688,7 @@ msgid "Active"
 msgstr ""
 
 #: includes/Action/Lang.php:1668
-msgid "Welcome to ParcelPanel"
+msgid "Welcome to ParcelWILL"
 msgstr ""
 
 #: includes/Action/Lang.php:1669
@@ -728,7 +728,7 @@ msgstr ""
 #: includes/Action/Lang.php:1678
 #: includes/Action/Lang.php:1924
 #: includes/views/common/header.php:41
-msgid "ParcelPanel Help Docs"
+msgid "ParcelWILL Help Docs"
 msgstr ""
 
 #: includes/Action/Lang.php:1679
@@ -773,7 +773,7 @@ msgid "<0><1><2>Branded<3> <4>tracking page<5>"
 msgstr ""
 
 #: includes/Action/Lang.php:1690
-msgid "<0><1><2><3><4>Remove ParcelPanel branding<5>"
+msgid "<0><1><2><3><4>Remove ParcelWILL branding<5>"
 msgstr ""
 
 #: includes/Action/Lang.php:1691
@@ -995,7 +995,7 @@ msgid "Accept & Start"
 msgstr ""
 
 #: includes/Action/Lang.php:1752
-msgid "Welcome to ParcelPanel! ✨"
+msgid "Welcome to ParcelWILL! ✨"
 msgstr ""
 
 #: includes/Action/Lang.php:1753
@@ -1008,7 +1008,7 @@ msgstr ""
 
 #: includes/Action/Lang.php:1755
 #: includes/ParcelPanel.php:1467
-msgid "ParcelPanel"
+msgid "ParcelWILL"
 msgstr ""
 
 #: includes/Action/Lang.php:1756
@@ -1024,7 +1024,7 @@ msgid "Privacy details"
 msgstr ""
 
 #: includes/Action/Lang.php:1759
-msgid "What access does ParcelPanel need in your store:"
+msgid "What access does ParcelWILL need in your store:"
 msgstr ""
 
 #: includes/Action/Lang.php:1760
@@ -1032,7 +1032,7 @@ msgid "Permission details"
 msgstr ""
 
 #: includes/Action/Lang.php:1761
-msgid "What will ParcelPanel do with these data:"
+msgid "What will ParcelWILL do with these data:"
 msgstr ""
 
 #: includes/Action/Lang.php:1762
@@ -1040,7 +1040,7 @@ msgid "View and manage orders: Essential for seamless integration and efficient 
 msgstr ""
 
 #: includes/Action/Lang.php:1763
-msgid "View and manage customers: Necessary for sending ParcelPanel shipping notifications."
+msgid "View and manage customers: Necessary for sending ParcelWILL shipping notifications."
 msgstr ""
 
 #: includes/Action/Lang.php:1764
@@ -1299,11 +1299,11 @@ msgid "Saturday"
 msgstr ""
 
 #: includes/Action/Lang.php:1842
-msgid "Welcome to ParcelPanel 👋"
+msgid "Welcome to ParcelWILL 👋"
 msgstr ""
 
 #: includes/Action/Lang.php:1843
-msgid "Welcome!! Get started with ParcelPanel"
+msgid "Welcome!! Get started with ParcelWILL"
 msgstr ""
 
 #: includes/Action/Lang.php:1845
@@ -1339,7 +1339,7 @@ msgid "Customize notifications"
 msgstr ""
 
 #: includes/Action/Lang.php:1853
-msgid "Customize ParcelPanel shipping notifications"
+msgid "Customize ParcelWILL shipping notifications"
 msgstr ""
 
 #: includes/Action/Lang.php:1854
@@ -1361,7 +1361,7 @@ msgid "Enable dropshipping mode"
 msgstr ""
 
 #: includes/Action/Lang.php:1859
-msgid "ParcelPanel is the best for dropshipping, and supports Aliexpress Standard Shipping, Yunexpress, CJ packet & ePacket (China EMS, China Post), and all commonly used couriers for dropshipping merchants."
+msgid "ParcelWILL is the best for dropshipping, and supports Aliexpress Standard Shipping, Yunexpress, CJ packet & ePacket (China EMS, China Post), and all commonly used couriers for dropshipping merchants."
 msgstr ""
 
 #: includes/Action/Lang.php:1860
@@ -1369,7 +1369,7 @@ msgid "This feature will allow you to hide all Chinese regions easily, bringing 
 msgstr ""
 
 #: includes/Action/Lang.php:1862
-msgid "How ParcelPanel works"
+msgid "How ParcelWILL works"
 msgstr ""
 
 #: includes/Action/Lang.php:1863
@@ -1381,7 +1381,7 @@ msgid "Tracking numbers are synced from the Orders section of your WooCommerce a
 msgstr ""
 
 #: includes/Action/Lang.php:1865
-msgid "For new users, ParcelPanel will automatically sync their last-30-day orders for Free."
+msgid "For new users, ParcelWILL will automatically sync their last-30-day orders for Free."
 msgstr ""
 
 #: includes/Action/Lang.php:1866
@@ -1397,7 +1397,7 @@ msgid "Tracking numbers are synchronized from your WooCommerce admin's Orders se
 msgstr ""
 
 #: includes/Action/Lang.php:1869
-msgid "For new users, ParcelPanel offers free auto- sync of their last 30 days' orders."
+msgid "For new users, ParcelWILL offers free auto- sync of their last 30 days' orders."
 msgstr ""
 
 #: includes/Action/Lang.php:1870
@@ -1413,7 +1413,7 @@ msgid "Sync tracking numbers"
 msgstr ""
 
 #: includes/Action/Lang.php:1874
-msgid "ParcelPanel will automatically sync tracking numbers from Orders section in your WooCommerce admin once you add there, then track them."
+msgid "ParcelWILL will automatically sync tracking numbers from Orders section in your WooCommerce admin once you add there, then track them."
 msgstr ""
 
 #: includes/Action/Lang.php:1875
@@ -1421,7 +1421,7 @@ msgid "Orders section in WooCommerce admin"
 msgstr ""
 
 #: includes/Action/Lang.php:1876
-msgid "Additionally, how to get the tracking number, it's not about ParcelPanel. As we know, some merchants fulfilled orders via the 3rd party fulfillment service, some use dropshipping apps, some fulfilled by themselves etc. To know the tracking number of your order, we kindly suggest you asking suppliers or carriers support directly for some help."
+msgid "Additionally, how to get the tracking number, it's not about ParcelWILL. As we know, some merchants fulfilled orders via the 3rd party fulfillment service, some use dropshipping apps, some fulfilled by themselves etc. To know the tracking number of your order, we kindly suggest you asking suppliers or carriers support directly for some help."
 msgstr ""
 
 #: includes/Action/Lang.php:1878
@@ -1535,11 +1535,11 @@ msgid "In progress"
 msgstr ""
 
 #: includes/Action/Lang.php:1910
-msgid "Customized ParcelPanel shipping notifications email templates"
+msgid "Customized ParcelWILL shipping notifications email templates"
 msgstr ""
 
 #: includes/Action/Lang.php:1913
-msgid "Customized ParcelPanel shipping notifications"
+msgid "Customized ParcelWILL shipping notifications"
 msgstr ""
 
 #: includes/Action/Lang.php:1914
@@ -1567,7 +1567,7 @@ msgid "Talk to us directly via live chat to get help with your question."
 msgstr ""
 
 #: includes/Action/Lang.php:1925
-msgid "Find a solution for your problem with ParcelPanel documents and tutorials."
+msgid "Find a solution for your problem with ParcelWILL documents and tutorials."
 msgstr ""
 
 #: includes/Action/Lang.php:1927
@@ -1621,7 +1621,7 @@ msgid "Tracking page"
 msgstr ""
 
 #: includes/Action/Lang.php:1941
-msgid "Orders / Revenue attributed to all marketing channels of ParcelPanel's tracking page"
+msgid "Orders / Revenue attributed to all marketing channels of ParcelWILL's tracking page"
 msgstr ""
 
 #: includes/Action/Lang.php:1942
@@ -1632,11 +1632,11 @@ msgid "Shipping notifications"
 msgstr ""
 
 #: includes/Action/Lang.php:1943
-msgid "Orders / Revenue attributed to all marketing and coupons channels of ParcelPanel's shipping notifications"
+msgid "Orders / Revenue attributed to all marketing and coupons channels of ParcelWILL's shipping notifications"
 msgstr ""
 
 #: includes/Action/Lang.php:1944
-msgid "Orders / Revenue attributed to ParcelPanel marketing and coupons channels"
+msgid "Orders / Revenue attributed to ParcelWILL marketing and coupons channels"
 msgstr ""
 
 #: includes/Action/Lang.php:1945
@@ -1687,7 +1687,7 @@ msgstr ""
 #: includes/Action/Lang.php:1959
 #: includes/Action/Lang.php:2491
 #: includes/Action/Lang.php:2721
-msgid "ParcelPanel shipping notifications"
+msgid "ParcelWILL shipping notifications"
 msgstr ""
 
 #: includes/Action/Lang.php:1960
@@ -1703,7 +1703,7 @@ msgid "Shipping notifications over time"
 msgstr ""
 
 #: includes/Action/Lang.php:1963
-msgid "Automatically notify your customers or yourself via email with ParcelPanel shipment status updates"
+msgid "Automatically notify your customers or yourself via email with ParcelWILL shipment status updates"
 msgstr ""
 
 #: includes/Action/Lang.php:1964
@@ -1747,7 +1747,7 @@ msgid "The total number of delivered shipments and average transit day based on 
 msgstr ""
 
 #: includes/Action/Lang.php:1976
-msgid "Orders and revenue attributed to the coupons channel of ParcelPanel's shipping notifications"
+msgid "Orders and revenue attributed to the coupons channel of ParcelWILL's shipping notifications"
 msgstr ""
 
 #: includes/Action/Lang.php:1977
@@ -1772,11 +1772,11 @@ msgid "Revenue"
 msgstr ""
 
 #: includes/Action/Lang.php:1983
-msgid "Tracking numbers are synchronized from your WooCommerce admin's Orders section, please don't forget to add them from <0>Edit order page → ParcelPanel section<1>."
+msgid "Tracking numbers are synchronized from your WooCommerce admin's Orders section, please don't forget to add them from <0>Edit order page → ParcelWILL section<1>."
 msgstr ""
 
 #: includes/Action/Lang.php:1984
-msgid "To get the tracking number, it's not within ParcelPanel's scope. <0>We know that different merchants use various shipping methods such as third-party platforms, dropshipping apps, or self-fulfillment. To find out the tracking number for your order, we recommend reaching out directly to your <1>shipping provider<2> for assistance."
+msgid "To get the tracking number, it's not within ParcelWILL's scope. <0>We know that different merchants use various shipping methods such as third-party platforms, dropshipping apps, or self-fulfillment. To find out the tracking number for your order, we recommend reaching out directly to your <1>shipping provider<2> for assistance."
 msgstr ""
 
 #: includes/Action/Lang.php:1986
@@ -1799,7 +1799,7 @@ msgid "Get started"
 msgstr ""
 
 #: includes/Action/Lang.php:1993
-msgid "How does ParcelPanel work in WooCommerce?"
+msgid "How does ParcelWILL work in WooCommerce?"
 msgstr ""
 
 #: includes/Action/Lang.php:1994
@@ -1815,11 +1815,11 @@ msgid "How to add the tracking page to your store navigation menu?"
 msgstr ""
 
 #: includes/Action/Lang.php:1997
-msgid "ParcelPanel automatically generates a branded tracking page for your store. Add it to your storefront, enabling customers to track orders independently and reducing support requests."
+msgid "ParcelWILL automatically generates a branded tracking page for your store. Add it to your storefront, enabling customers to track orders independently and reducing support requests."
 msgstr ""
 
 #: includes/Action/Lang.php:1998
-msgid "ParcelPanel supports multiple methods for importing tracking numbers to orders (WooCommerce admin's Orders section), please don't forget to add them."
+msgid "ParcelWILL supports multiple methods for importing tracking numbers to orders (WooCommerce admin's Orders section), please don't forget to add them."
 msgstr ""
 
 #: includes/Action/Lang.php:1999
@@ -1827,7 +1827,7 @@ msgid "Here, you can customize shipping notifications to match your brand identi
 msgstr ""
 
 #: includes/Action/Lang.php:2000
-msgid "Here, various data analysis panels provide insights to optimize channels and gauge ParcelPanel's performance."
+msgid "Here, various data analysis panels provide insights to optimize channels and gauge ParcelWILL's performance."
 msgstr ""
 
 #: includes/Action/Lang.php:2001
@@ -1835,7 +1835,7 @@ msgid "Start a free trial"
 msgstr ""
 
 #: includes/Action/Lang.php:2002
-msgid "You're all set! Get even more from ParcelPanel."
+msgid "You're all set! Get even more from ParcelWILL."
 msgstr ""
 
 #: includes/Action/Lang.php:2003
@@ -1919,11 +1919,11 @@ msgid "Opt for Exception and Failed Attempt email notifications to proactively r
 msgstr ""
 
 #: includes/Action/Lang.php:2024
-msgid "Review your ParcelPanel notification history"
+msgid "Review your ParcelWILL notification history"
 msgstr ""
 
 #: includes/Action/Lang.php:2025
-msgid "Simply click the mail icon on the shipment page to view the full history of ParcelPanel emails sent for that shipment."
+msgid "Simply click the mail icon on the shipment page to view the full history of ParcelWILL emails sent for that shipment."
 msgstr ""
 
 #: includes/Action/Lang.php:2026
@@ -1931,7 +1931,7 @@ msgid "Multilingual email automation"
 msgstr ""
 
 #: includes/Action/Lang.php:2027
-msgid "Send out ParcelPanel's shipping updates in the language your customers feel most comfortable with, all automated and hassle-free."
+msgid "Send out ParcelWILL's shipping updates in the language your customers feel most comfortable with, all automated and hassle-free."
 msgstr ""
 
 #: includes/Action/Lang.php:2028
@@ -1939,7 +1939,7 @@ msgid "Boost repeat business with coupons"
 msgstr ""
 
 #: includes/Action/Lang.php:2029
-msgid "Include exclusive coupons in your ParcelPanel shipping updates. It's a simple way to entice customers to return for another purchase."
+msgid "Include exclusive coupons in your ParcelWILL shipping updates. It's a simple way to entice customers to return for another purchase."
 msgstr ""
 
 #: includes/Action/Lang.php:2030
@@ -1947,7 +1947,7 @@ msgid "Seamless integration for unleashed potential"
 msgstr ""
 
 #: includes/Action/Lang.php:2031
-msgid "Integrate ParcelPanel effortlessly with multiple integrated plugins, such as <0> to unlock the full potential of your business operations."
+msgid "Integrate ParcelWILL effortlessly with multiple integrated plugins, such as <0> to unlock the full potential of your business operations."
 msgstr ""
 
 #: includes/Action/Lang.php:2032
@@ -2133,7 +2133,7 @@ msgstr ""
 
 #: includes/Action/Lang.php:2087
 #: includes/Action/Lang.php:2534
-msgid "ParcelPanel branding"
+msgid "ParcelWILL branding"
 msgstr ""
 
 #: includes/Action/Lang.php:2088
@@ -2142,7 +2142,7 @@ msgid "Remove \"Powered by ParcelPanel\""
 msgstr ""
 
 #: includes/Action/Lang.php:2089
-msgid "to remove ParcelPanel branding for Free 😘"
+msgid "to remove ParcelWILL branding for Free 😘"
 msgstr ""
 
 #: includes/Action/Lang.php:2090
@@ -2575,7 +2575,7 @@ msgid "Automatic translation"
 msgstr ""
 
 #: includes/Action/Lang.php:2224
-msgid "ParcelPanel captures tracking details from carriers' websites. Professional plans and above support auto-translation based on the tracking page's language when customers visit."
+msgid "ParcelWILL captures tracking details from carriers' websites. Professional plans and above support auto-translation based on the tracking page's language when customers visit."
 msgstr ""
 
 #: includes/Action/Lang.php:2225
@@ -2628,7 +2628,7 @@ msgid "Automatic language switching"
 msgstr ""
 
 #: includes/Action/Lang.php:2238
-msgid "ParcelPanel supports multilingual tracking pages and auto-switches the language based on the store's language when customers visit. If the language is not supported, the default language will be displayed."
+msgid "ParcelWILL supports multilingual tracking pages and auto-switches the language based on the store's language when customers visit. If the language is not supported, the default language will be displayed."
 msgstr ""
 
 #: includes/Action/Lang.php:2239
@@ -3156,7 +3156,7 @@ msgid "Step 3: Download the file in a CSV format and upload it."
 msgstr ""
 
 #: includes/Action/Lang.php:2400
-msgid "Only ParcelPanel shipping notifications, don't include WooCommerce email notifications."
+msgid "Only ParcelWILL shipping notifications, don't include WooCommerce email notifications."
 msgstr ""
 
 #: includes/Action/Lang.php:2401
@@ -3164,7 +3164,7 @@ msgid "No notifications yet"
 msgstr ""
 
 #: includes/Action/Lang.php:2402
-msgid "You have not sent any ParcelPanel shipping notifications yet"
+msgid "You have not sent any ParcelWILL shipping notifications yet"
 msgstr ""
 
 #: includes/Action/Lang.php:2405
@@ -3323,12 +3323,12 @@ msgstr ""
 
 #: includes/Action/Lang.php:2454
 #: includes/views/settings-page.php:49
-msgid "ParcelPanel shipping email notifications"
+msgid "ParcelWILL shipping email notifications"
 msgstr ""
 
 #: includes/Action/Lang.php:2455
 #: includes/views/settings-page.php:53
-msgid "This feature will allow you to send email notifications based on ParcelPanel shipment status."
+msgid "This feature will allow you to send email notifications based on ParcelWILL shipment status."
 msgstr ""
 
 #: includes/Action/Lang.php:2456
@@ -3465,12 +3465,12 @@ msgstr ""
 
 #: includes/Action/Lang.php:2486
 #: includes/views/settings-page.php:345
-msgid "After enabled, ParcelPanel will add a track button to the orders history page (Actions column), so your customers can track their orders with one click directed to your store tracking page."
+msgid "After enabled, ParcelWILL will add a track button to the orders history page (Actions column), so your customers can track their orders with one click directed to your store tracking page."
 msgstr ""
 
 #: includes/Action/Lang.php:2487
 #: includes/views/settings-page.php:350
-msgid "After enabled, ParcelPanel will add a track button to orders admin (Actions column), you can add tracking info easily without clicking into order details."
+msgid "After enabled, ParcelWILL will add a track button to orders admin (Actions column), you can add tracking info easily without clicking into order details."
 msgstr ""
 
 #: includes/Action/Lang.php:2490
@@ -3478,7 +3478,7 @@ msgid "Automatically add an order tracking section in the email notifications se
 msgstr ""
 
 #: includes/Action/Lang.php:2492
-msgid "Automatically notify your customers or yourself via email with ParcelPanel shipment status updates. <0>Learn more<1>."
+msgid "Automatically notify your customers or yourself via email with ParcelWILL shipment status updates. <0>Learn more<1>."
 msgstr ""
 
 #: includes/Action/Lang.php:2493
@@ -3487,7 +3487,7 @@ msgid "Notify yourself"
 msgstr ""
 
 #: includes/Action/Lang.php:2494
-msgid "Auto-send email notifications to yourself based on ParcelPanel shipment status update."
+msgid "Auto-send email notifications to yourself based on ParcelWILL shipment status update."
 msgstr ""
 
 #: includes/Action/Lang.php:2495
@@ -3499,7 +3499,7 @@ msgid "Customize your brand"
 msgstr ""
 
 #: includes/Action/Lang.php:2497
-msgid "Auto-send email notifications to your customers based on ParcelPanel shipment status update."
+msgid "Auto-send email notifications to your customers based on ParcelWILL shipment status update."
 msgstr ""
 
 #: includes/Action/Lang.php:2498
@@ -3592,7 +3592,7 @@ msgid "to remove it for Free 😘"
 msgstr ""
 
 #: includes/Action/Lang.php:2537
-msgid "ParcelPanel's Auto Multilingual Email Sending"
+msgid "ParcelWILL's Auto Multilingual Email Sending"
 msgstr ""
 
 #: includes/Action/Lang.php:2538
@@ -3733,11 +3733,11 @@ msgid "Enable this notification"
 msgstr ""
 
 #: includes/Action/Lang.php:2582
-msgid "The following emails are developed and sent by ParcelPanel. Rest assured, all your previous settings (shipping emails sent by WooCommerce) are fully compatible, simply navigate to <0>WooCommerce settings<1> to access your familiar setup with ease.<br/> Please note that if you have set up the same shipping notifications in both here and WooCommerce, emails will be sent twice. <2>Learn more<3>."
+msgid "The following emails are developed and sent by ParcelWILL. Rest assured, all your previous settings (shipping emails sent by WooCommerce) are fully compatible, simply navigate to <0>WooCommerce settings<1> to access your familiar setup with ease.<br/> Please note that if you have set up the same shipping notifications in both here and WooCommerce, emails will be sent twice. <2>Learn more<3>."
 msgstr ""
 
 #: includes/Action/Lang.php:2583
-msgid "The following emails are developed and sent by ParcelPanel. However, if you prefer to use WooCommerce's standard <4>wp_mail()<5> email system (ParcelPanel shipping emails sent by WooCommerce), you can easily set it up by navigating to the <0>WooCommerce settings<1>.<br/> Please note that if you have set up the same shipping notifications in both here and WooCommerce, emails will be sent twice. <2>Learn more<3>."
+msgid "The following emails are developed and sent by ParcelWILL. However, if you prefer to use WooCommerce's standard <4>wp_mail()<5> email system (ParcelWILL shipping emails sent by WooCommerce), you can easily set it up by navigating to the <0>WooCommerce settings<1>.<br/> Please note that if you have set up the same shipping notifications in both here and WooCommerce, emails will be sent twice. <2>Learn more<3>."
 msgstr ""
 
 #: includes/Action/Lang.php:2586
@@ -3856,7 +3856,7 @@ msgstr ""
 
 #: includes/Action/Lang.php:2620
 #: includes/views/integration-page.php:106
-msgid "Yes, ParcelPanel will continue to integrate with more plugins to improve the user experience. Stay tuned!"
+msgid "Yes, ParcelWILL will continue to integrate with more plugins to improve the user experience. Stay tuned!"
 msgstr ""
 
 #: includes/Action/Lang.php:2621
@@ -3870,12 +3870,12 @@ msgid "Let us know which plugin you would like us to integrate with."
 msgstr ""
 
 #: includes/Action/Lang.php:2624
-msgid "You do not have to do anything, ParcelPanel works with the below plugins by default.  <0>Learn more<1>."
+msgid "You do not have to do anything, ParcelWILL works with the below plugins by default.  <0>Learn more<1>."
 msgstr ""
 
 #: includes/Action/Lang.php:2625
 #: includes/views/integration-page.php:59
-msgid "You do not have to do anything, ParcelPanel works with the below plugins by default."
+msgid "You do not have to do anything, ParcelWILL works with the below plugins by default."
 msgstr ""
 
 #: includes/Action/Lang.php:2627
@@ -3883,7 +3883,7 @@ msgid "API Key"
 msgstr ""
 
 #: includes/Action/Lang.php:2628
-msgid "Developers can use the ParcelPanel API to effectively manage shipments by creating, viewing, and deleting tracking information. Learn <0>API doc<1> for details."
+msgid "Developers can use the ParcelWILL API to effectively manage shipments by creating, viewing, and deleting tracking information. Learn <0>API doc<1> for details."
 msgstr ""
 
 #: includes/Action/Lang.php:2629
@@ -3903,11 +3903,11 @@ msgid "Copy"
 msgstr ""
 
 #: includes/Action/Lang.php:2633
-msgid "Disconnect ParcelPanel & Klaviyo"
+msgid "Disconnect ParcelWILL & Klaviyo"
 msgstr ""
 
 #: includes/Action/Lang.php:2634
-msgid "Connect ParcelPanel & Klaviyo"
+msgid "Connect ParcelWILL & Klaviyo"
 msgstr ""
 
 #: includes/Action/Lang.php:2635
@@ -3915,19 +3915,19 @@ msgid "Klaviyo Public API Key"
 msgstr ""
 
 #: includes/Action/Lang.php:2636
-msgid "By connecting ParcelPanel & Klaviyo, you can create personalized campaigns & flows based on tracking events from ParcelPanel, then adjust your customers' lifecycle email marketing."
+msgid "By connecting ParcelWILL & Klaviyo, you can create personalized campaigns & flows based on tracking events from ParcelWILL, then adjust your customers' lifecycle email marketing."
 msgstr ""
 
 #: includes/Action/Lang.php:2637
-msgid "How to connect ParcelPanel for WooCommerce & Klaviyo via API?"
+msgid "How to connect ParcelWILL for WooCommerce & Klaviyo via API?"
 msgstr ""
 
 #: includes/Action/Lang.php:2638
-msgid "Disconnect ParcelPanel & Omnisend"
+msgid "Disconnect ParcelWILL & Omnisend"
 msgstr ""
 
 #: includes/Action/Lang.php:2639
-msgid "Connect ParcelPanel & Omnisend"
+msgid "Connect ParcelWILL & Omnisend"
 msgstr ""
 
 #: includes/Action/Lang.php:2640
@@ -3935,11 +3935,11 @@ msgid "Omnisend API Key"
 msgstr ""
 
 #: includes/Action/Lang.php:2641
-msgid "By integrating ParcelPanel and Omnisend, you can create personalized campaigns & flows based on tracking events from ParcelPanel, then adjust your customers' lifecycle email marketing."
+msgid "By integrating ParcelWILL and Omnisend, you can create personalized campaigns & flows based on tracking events from ParcelWILL, then adjust your customers' lifecycle email marketing."
 msgstr ""
 
 #: includes/Action/Lang.php:2642
-msgid "How to connect ParcelPanel for WooCommerce & Omnisend via API?"
+msgid "How to connect ParcelWILL for WooCommerce & Omnisend via API?"
 msgstr ""
 
 #: includes/Action/Lang.php:2643
@@ -3955,7 +3955,7 @@ msgid "Invalid API Key"
 msgstr ""
 
 #: includes/Action/Lang.php:2647
-msgid "Disconnect ParcelPanel & Paypal"
+msgid "Disconnect ParcelWILL & Paypal"
 msgstr ""
 
 #: includes/Action/Lang.php:2656
@@ -4017,11 +4017,11 @@ msgid "Free Upgrade Now 🥳"
 msgstr ""
 
 #: includes/Action/Lang.php:2670
-msgid "Does ParcelPanel charge based on order lookups?"
+msgid "Does ParcelWILL charge based on order lookups?"
 msgstr ""
 
 #: includes/Action/Lang.php:2671
-msgid "No, ParcelPanel counts the quota based on the number of your orders synced to ParcelPanel, and provides unlimited order lookups."
+msgid "No, ParcelWILL counts the quota based on the number of your orders synced to ParcelWILL, and provides unlimited order lookups."
 msgstr ""
 
 #: includes/Action/Lang.php:2672
@@ -4033,7 +4033,7 @@ msgid "Yes, you can change your plan at any time based on your needs. If you wan
 msgstr ""
 
 #: includes/Action/Lang.php:2675
-msgid "Why is ParcelPanel launching an unlimited plan? When will ParcelPanel charge?"
+msgid "Why is ParcelWILL launching an unlimited plan? When will ParcelWILL charge?"
 msgstr ""
 
 #: includes/Action/Lang.php:2676
@@ -4041,7 +4041,7 @@ msgid "We've provided service for over 120,000 Shopify and WooCommerce stores, b
 msgstr ""
 
 #: includes/Action/Lang.php:2677
-msgid "ParcelPanel will not charge for a short time. But please rest assured that if we decide to charge, we will definitely inform you in advance, and there will be no hidden charges."
+msgid "ParcelWILL will not charge for a short time. But please rest assured that if we decide to charge, we will definitely inform you in advance, and there will be no hidden charges."
 msgstr ""
 
 #: includes/Action/Lang.php:2679
@@ -4118,11 +4118,11 @@ msgid "Recommended for you ✨"
 msgstr ""
 
 #: includes/Action/Lang.php:2702
-msgid "What's the quota? Does ParcelPanel charge based on order lookups?"
+msgid "What's the quota? Does ParcelWILL charge based on order lookups?"
 msgstr ""
 
 #: includes/Action/Lang.php:2703
-msgid "\"1 quota=1 order\". ParcelPanel counts the quota based on the number of your orders synced to ParcelPanel, and provides unlimited order lookups."
+msgid "\"1 quota=1 order\". ParcelWILL counts the quota based on the number of your orders synced to ParcelWILL, and provides unlimited order lookups."
 msgstr ""
 
 #: includes/Action/Lang.php:2707
@@ -4214,7 +4214,7 @@ msgid "Developer API"
 msgstr ""
 
 #: includes/Action/Lang.php:2737
-msgid "Remove ParcelPanel branding"
+msgid "Remove ParcelWILL branding"
 msgstr ""
 
 #: includes/Action/Lang.php:2738
@@ -4278,7 +4278,7 @@ msgid "What does \"quota\" mean? How can I check the orders I've synchronized?"
 msgstr ""
 
 #: includes/Action/Lang.php:2756
-msgid "1 order = 1 quota. When ParcelPanel syncs 1 order for you, it consumes 1 quota."
+msgid "1 order = 1 quota. When ParcelWILL syncs 1 order for you, it consumes 1 quota."
 msgstr ""
 
 #: includes/Action/Lang.php:2757
@@ -4290,7 +4290,7 @@ msgid "Order lookups don't consume quota, meaning your customers have unlimited 
 msgstr ""
 
 #: includes/Action/Lang.php:2759
-msgid "You can easily check the synchronized orders on the ParcelPanel Shipment page."
+msgid "You can easily check the synchronized orders on the ParcelWILL Shipment page."
 msgstr ""
 
 #: includes/Action/Lang.php:2760
@@ -4326,7 +4326,7 @@ msgid "All paid plans share the same free trial period. During the period, you c
 msgstr ""
 
 #: includes/Action/Lang.php:2768
-msgid "Of course, if you find that ParcelPanel doesn't meet your requirements, you can downgrade to the free plan before the trial period ends to avoid any unexpected charges."
+msgid "Of course, if you find that ParcelWILL doesn't meet your requirements, you can downgrade to the free plan before the trial period ends to avoid any unexpected charges."
 msgstr ""
 
 #: includes/Action/Lang.php:2773
@@ -4495,11 +4495,11 @@ msgid "Conversion orders"
 msgstr ""
 
 #: includes/Action/Lang.php:2826
-msgid "Orders attributed to all marketing and discount channels of ParcelPanel's shipping notifications"
+msgid "Orders attributed to all marketing and discount channels of ParcelWILL's shipping notifications"
 msgstr ""
 
 #: includes/Action/Lang.php:2827
-msgid "Orders attributed to all marketing channels of ParcelPanel's shipping notifications"
+msgid "Orders attributed to all marketing channels of ParcelWILL's shipping notifications"
 msgstr ""
 
 #: includes/Action/Lang.php:2828
@@ -4507,11 +4507,11 @@ msgid "Conversion revenue"
 msgstr ""
 
 #: includes/Action/Lang.php:2829
-msgid "Revenue attributed to all marketing and discount channels of ParcelPanel's shipping notifications"
+msgid "Revenue attributed to all marketing and discount channels of ParcelWILL's shipping notifications"
 msgstr ""
 
 #: includes/Action/Lang.php:2830
-msgid "Revenue attributed to all marketing channels of ParcelPanel's shipping notifications"
+msgid "Revenue attributed to all marketing channels of ParcelWILL's shipping notifications"
 msgstr ""
 
 #: includes/Action/Lang.php:2831
@@ -4587,15 +4587,15 @@ msgid "The total number of times customers have tracked their shipment through t
 msgstr ""
 
 #: includes/Action/Lang.php:2849
-msgid "Orders attributed to all marketing channels of ParcelPanel's tracking page"
+msgid "Orders attributed to all marketing channels of ParcelWILL's tracking page"
 msgstr ""
 
 #: includes/Action/Lang.php:2850
-msgid "Revenue attributed to all marketing channels of ParcelPanel's tracking page"
+msgid "Revenue attributed to all marketing channels of ParcelWILL's tracking page"
 msgstr ""
 
 #: includes/Action/Lang.php:2851
-msgid "Orders and revenue attributed to the discount channel of ParcelPanel's shipping notifications"
+msgid "Orders and revenue attributed to the discount channel of ParcelWILL's shipping notifications"
 msgstr ""
 
 #: includes/Action/ShopOrder.php:42
@@ -4715,11 +4715,11 @@ msgid "Invalid file type. The importer supports CSV and TXT file formats."
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Delivered.php:10
-msgid "ParcelPanel Delivered"
+msgid "ParcelWILL Delivered"
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Delivered.php:11
-msgid "ParcelPanel Delivered emails are sent to customers when the shipment has been delivered."
+msgid "ParcelWILL Delivered emails are sent to customers when the shipment has been delivered."
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Delivered.php:28
@@ -4731,11 +4731,11 @@ msgid "Your order has been delivered"
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Exception.php:10
-msgid "ParcelPanel Exception"
+msgid "ParcelWILL Exception"
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Exception.php:11
-msgid "ParcelPanel Exception emails are sent to customers when the shipment might have been sent back to the sender, damaged, or lost."
+msgid "ParcelWILL Exception emails are sent to customers when the shipment might have been sent back to the sender, damaged, or lost."
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Exception.php:28
@@ -4747,11 +4747,11 @@ msgid "Your order has a delivery exception"
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Failed_Attempt.php:10
-msgid "ParcelPanel Failed attempt"
+msgid "ParcelWILL Failed attempt"
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Failed_Attempt.php:11
-msgid "ParcelPanel Failed attempt emails are sent to customers when the carrier attempt to deliver the shipment but failed."
+msgid "ParcelWILL Failed attempt emails are sent to customers when the carrier attempt to deliver the shipment but failed."
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Failed_Attempt.php:29
@@ -4763,11 +4763,11 @@ msgid "Your order has a failed delivery attempt"
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_In_Transit.php:10
-msgid "ParcelPanel In transit"
+msgid "ParcelWILL In transit"
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_In_Transit.php:11
-msgid "ParcelPanel In transit emails are sent to customers when the shipment is on the way."
+msgid "ParcelWILL In transit emails are sent to customers when the shipment is on the way."
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_In_Transit.php:29
@@ -4779,11 +4779,11 @@ msgid "Your order is in transit"
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Out_For_Delivery.php:10
-msgid "ParcelPanel Out for delivery"
+msgid "ParcelWILL Out for delivery"
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Out_For_Delivery.php:11
-msgid "ParcelPanel Out for delivery emails are sent to customers when the shipment has arrived at the local point and is out for delivery."
+msgid "ParcelWILL Out for delivery emails are sent to customers when the shipment has arrived at the local point and is out for delivery."
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Out_For_Delivery.php:29
@@ -4795,7 +4795,7 @@ msgid "Your order is out for delivery"
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Partial_Shipped_Order.php:10
-msgid "ParcelPanel Partially Shipped order"
+msgid "ParcelWILL Partially Shipped order"
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Partial_Shipped_Order.php:11
@@ -4811,7 +4811,7 @@ msgid "Your order is Partially Shipped"
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Shipped_Order.php:10
-msgid "ParcelPanel Shipped order"
+msgid "ParcelWILL Shipped order"
 msgstr ""
 
 #: includes/Emails/WC_Email_Customer_PP_Shipped_Order.php:11
@@ -4911,7 +4911,7 @@ msgstr ""
 #: includes/ParcelPanel.php:1466
 #: includes/ParcelPanel.php:1483
 #: includes/ParcelPanel.php:1489
-msgid "Home - ParcelPanel"
+msgid "Home - ParcelWILL"
 msgstr ""
 
 #: includes/ParcelPanel.php:1484
@@ -4920,7 +4920,7 @@ msgid "Home"
 msgstr ""
 
 #: includes/ParcelPanel.php:1495
-msgid "Tracking Page - ParcelPanel"
+msgid "Tracking Page - ParcelWILL"
 msgstr ""
 
 #: includes/ParcelPanel.php:1496
@@ -4929,15 +4929,15 @@ msgid "Tracking Page"
 msgstr ""
 
 #: includes/ParcelPanel.php:1501
-msgid "Shipments - ParcelPanel"
+msgid "Shipments - ParcelWILL"
 msgstr ""
 
 #: includes/ParcelPanel.php:1507
-msgid "Settings - ParcelPanel"
+msgid "Settings - ParcelWILL"
 msgstr ""
 
 #: includes/ParcelPanel.php:1513
-msgid "Analysis - ParcelPanel"
+msgid "Analysis - ParcelWILL"
 msgstr ""
 
 #: includes/ParcelPanel.php:1514
@@ -4945,15 +4945,15 @@ msgid "Analysis"
 msgstr ""
 
 #: includes/ParcelPanel.php:1519
-msgid "Integration - ParcelPanel"
+msgid "Integration - ParcelWILL"
 msgstr ""
 
 #: includes/ParcelPanel.php:1525
-msgid "Billing - ParcelPanel"
+msgid "Billing - ParcelWILL"
 msgstr ""
 
 #: includes/ParcelPanel.php:1531
-msgid "Feature request - ParcelPanel"
+msgid "Feature request - ParcelWILL"
 msgstr ""
 
 #: includes/ParcelPanel.php:1589
@@ -4988,7 +4988,7 @@ msgstr ""
 #: includes/ParcelPanel.php:2223
 #: includes/ParcelPanel.php:2253
 #: includes/ParcelPanel.php:2267
-msgid "Failed to connect to ParcelPanel."
+msgid "Failed to connect to ParcelWILL."
 msgstr ""
 
 #: includes/ParcelPanel.php:2300
@@ -5097,7 +5097,7 @@ msgid "Free upgrade completed. Congratulations!! 🎉"
 msgstr ""
 
 #: includes/views/account-page.php:23
-msgid "Would you mind letting us know what you think about ParcelPanel"
+msgid "Would you mind letting us know what you think about ParcelWILL"
 msgstr ""
 
 #: includes/views/account-page.php:44
@@ -5109,15 +5109,15 @@ msgid "Current plan info"
 msgstr ""
 
 #: includes/views/account-page.php:54
-msgid "You are on the ParcelPanel %1$s plan and have %2$s cycle."
+msgid "You are on the ParcelWILL %1$s plan and have %2$s cycle."
 msgstr ""
 
 #: includes/views/account-page.php:59
-msgid "You are on the ParcelPanel %1$s plan and have %2$s cycle. Next cycle will reset on %3$s."
+msgid "You are on the ParcelWILL %1$s plan and have %2$s cycle. Next cycle will reset on %3$s."
 msgstr ""
 
 #: includes/views/account-page.php:66
-msgid "The ParcelPanel server is busy. Please try again later!"
+msgid "The ParcelWILL server is busy. Please try again later!"
 msgstr ""
 
 #: includes/views/account-page.php:92
@@ -5134,11 +5134,11 @@ msgid "If you want to change your plan, the remaining quota of current plan will
 msgstr ""
 
 #: includes/views/account-page.php:124
-msgid "Note: ParcelPanel counts the quota based on the number of your orders synced to ParcelPanel and offers unlimited order lookups."
+msgid "Note: ParcelWILL counts the quota based on the number of your orders synced to ParcelWILL and offers unlimited order lookups."
 msgstr ""
 
 #: includes/views/common/header.php:11
-msgid "ParcelPanel logo"
+msgid "ParcelWILL logo"
 msgstr ""
 
 #: includes/views/common/header.php:19
@@ -5257,7 +5257,7 @@ msgid "We want to provide the best experience for you"
 msgstr ""
 
 #: includes/views/notices/admin-plugins-feedback.php:62
-msgid "Hi there! Your feedback means a lot to us! Take a minute to share your experience with %1$sParcelPanel Order Tracking for WooCommerce%2$s will inspire us to keep going."
+msgid "Hi there! Your feedback means a lot to us! Take a minute to share your experience with %1$sParcelWILL Order Tracking for WooCommerce%2$s will inspire us to keep going."
 msgstr ""
 
 #: includes/views/notices/admin-plugins-feedback.php:66
@@ -5275,7 +5275,7 @@ msgid "Your feedback means a lot to us! Take a minute to leave your review."
 msgstr ""
 
 #: includes/views/notices/free-sync-orders-admin.php:10
-msgid "This will help you know how ParcelPanel performs and provide your old customers a seamless order tracking experience."
+msgid "This will help you know how ParcelWILL performs and provide your old customers a seamless order tracking experience."
 msgstr ""
 
 #: includes/views/notices/free-upgrade-admin.php:7
@@ -5295,7 +5295,7 @@ msgid "We value your opinion! It is highly appreciated if you could take %1$s10 
 msgstr ""
 
 #: includes/views/notices/question-2-banner-admin.php:8
-msgid " ParcelPanel Order Tracking for WooCommerce invites you to participate in our annual user survey (takes less than 1 minute) to help us enhance our services. Complete the survey for a 10% discount!! 🤩"
+msgid " ParcelWILL Order Tracking for WooCommerce invites you to participate in our annual user survey (takes less than 1 minute) to help us enhance our services. Complete the survey for a 10% discount!! 🤩"
 msgstr ""
 
 #: includes/views/notices/question-banner-admin.php:7
@@ -5303,11 +5303,11 @@ msgid "We value your opinion - Requirements Feedback Research 🙌"
 msgstr ""
 
 #: includes/views/notices/question-banner-admin.php:8
-msgid "ParcelPanel Order Tracking for WooCommerce invites you to participate in user research (within 8 questions) to gain more value. Thanks in advance!! 🤩"
+msgid "ParcelWILL Order Tracking for WooCommerce invites you to participate in user research (within 8 questions) to gain more value. Thanks in advance!! 🤩"
 msgstr ""
 
 #: includes/views/notices/remove-pp-branding-admin.php:7
-msgid "😘 Remove ParcelPanel branding for Free"
+msgid "😘 Remove ParcelWILL branding for Free"
 msgstr ""
 
 #: includes/views/settings-page.php:218

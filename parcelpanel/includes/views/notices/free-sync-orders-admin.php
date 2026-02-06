@@ -7,7 +7,7 @@ $first_synced_at = intval(get_option(\ParcelPanel\OptionName\FIRST_SYNCED_AT, 0)
 ?>
 <div class="notice notice-info notice-alt parcelpanel-message" id="pp-notice-free_sync_orders">
   <h3 style="font-size:14px"><?php esc_html_e('Even better - free sync & track your last-30-day orders 🎉', 'parcelpanel') ?></h3>
-  <p><?php esc_html_e('This will help you know how ParcelPanel performs and provide your old customers a seamless order tracking experience.', 'parcelpanel') ?></p>
+  <p><?php esc_html_e('This will help you know how ParcelWILL performs and provide your old customers a seamless order tracking experience.', 'parcelpanel') ?></p>
   <a href="<?php echo esc_url($url_dismiss) ?>" class="notice-dismiss" style="display:none"><span class="screen-reader-text"><?php esc_html_e('Dismiss this notice.', 'parcelpanel') ?></span></a>
   <div class="spinner-box" style="display:none"><span class="pp-spinner" /></div>
   <div class="badge-completed_on-box" style="display:none">

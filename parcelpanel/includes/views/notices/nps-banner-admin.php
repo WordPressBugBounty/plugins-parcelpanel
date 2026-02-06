@@ -4,7 +4,7 @@ defined('ABSPATH') || exit;
 $url_dismiss = wp_nonce_url(@add_query_arg(['pp-hide-notice' => 'nps_banner_notice', '_expired_at' => 9999999999]), 'parcelpanel_hide_notices_nonce', '_pp_notice_nonce');
 ?>
 <div class="notice notice-success notice-alt parcelpanel-message is-dismissible pp-text-container" id="pp-notice-nps">
-    <h3><?php esc_html_e('A Quick Word on your ParcelPanel Experience (Only 2 questions ) 🌻', 'parcelpanel') ?></h3>
+    <h3><?php esc_html_e('A Quick Word on your ParcelWILL Experience (Only 2 questions ) 🌻', 'parcelpanel') ?></h3>
     <p>
         <?php
         // translators: %1$s is html span %2$s is html span.

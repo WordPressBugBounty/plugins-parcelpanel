@@ -448,7 +448,7 @@ final class ParcelPanel
     // product GY product get url & storage (product attribution)
     public function checkoutGetPro($orderId)
     {
-        // /checkout/order-received/317/?key=wc_order_W3V8aqTIguETO
+        // /checkout/order-received/317/?key=wc_order_W3V8aqTIguETO //#gitleaks:allow
         // check out Page Record Attribution Product
         $current_url = home_url(add_query_arg(array()));
         $keyOrder = !empty($_GET['key']) ? $_GET['key'] : ''; // phpcs:ignore
@@ -1529,8 +1529,8 @@ SQL;
     function add_admin_menu()
     {
         add_menu_page(
-            __('Home - ParcelPanel', 'parcelpanel'),  // page title
-            __('ParcelPanel', 'parcelpanel'),  // nav name
+            __('Home - ParcelWILL', 'parcelpanel'),  // page title
+            __('ParcelWILL', 'parcelpanel'),  // nav name
             'manage_woocommerce',  // proxy to meet
             \ParcelPanel\PP_MENU_SLAG,  // menu_slug
             [$this, 'ParcelPanel_admin_page'],  // function   [$this, 'create_admin_page']
@@ -1546,55 +1546,55 @@ SQL;
         $sub_menu_list = [
             // new
             [
-                'page_title' => __('Home - ParcelPanel', 'parcelpanel'),
+                'page_title' => __('Home - ParcelWILL', 'parcelpanel'),
                 'menu_title' => __('Home', 'parcelpanel'),
                 'menu_slug' => 'parcelpanel',
                 'function' => [$this, 'ParcelPanel_admin_page'],
             ],
             [
-                'page_title' => __('Home - ParcelPanel', 'parcelpanel'),
+                'page_title' => __('Home - ParcelWILL', 'parcelpanel'),
                 'menu_title' => __('Home', 'parcelpanel'),
                 'menu_slug' => 'parcelpanel#/home',
                 'function' => [$this, 'ParcelPanel_admin_page'],
             ],
             [
-                'page_title' => __('Tracking Page - ParcelPanel', 'parcelpanel'),
+                'page_title' => __('Tracking Page - ParcelWILL', 'parcelpanel'),
                 'menu_title' => __('Tracking Page', 'parcelpanel'),
                 'menu_slug' => 'parcelpanel#/tracking-page',
                 'function' => [$this, 'ParcelPanel_admin_page'],
             ],
             [
-                'page_title' => __('Shipments - ParcelPanel', 'parcelpanel'),
+                'page_title' => __('Shipments - ParcelWILL', 'parcelpanel'),
                 'menu_title' => __('Shipments', 'parcelpanel'),
                 'menu_slug' => 'parcelpanel#/shipments',
                 'function' => [$this, 'ParcelPanel_admin_page'],
             ],
             [
-                'page_title' => __('Settings - ParcelPanel', 'parcelpanel'),
+                'page_title' => __('Settings - ParcelWILL', 'parcelpanel'),
                 'menu_title' => __('Settings', 'parcelpanel'),
                 'menu_slug' => 'parcelpanel#/settings',
                 'function' => [$this, 'ParcelPanel_admin_page'],
             ],
             [
-                'page_title' => __('Analytics - ParcelPanel', 'parcelpanel'),
+                'page_title' => __('Analytics - ParcelWILL', 'parcelpanel'),
                 'menu_title' => __('Analytics', 'parcelpanel'),
                 'menu_slug' => 'parcelpanel#/analytics',
                 'function' => [$this, 'ParcelPanel_admin_page'],
             ],
             [
-                'page_title' => __('Integration - ParcelPanel', 'parcelpanel'),
+                'page_title' => __('Integration - ParcelWILL', 'parcelpanel'),
                 'menu_title' => __('Integration', 'parcelpanel'),
                 'menu_slug' => 'parcelpanel#/integration',
                 'function' => [$this, 'ParcelPanel_admin_page'],
             ],
             [
-                'page_title' => __('Billing - ParcelPanel', 'parcelpanel'),
+                'page_title' => __('Billing - ParcelWILL', 'parcelpanel'),
                 'menu_title' => __('Billing', 'parcelpanel'),
                 'menu_slug' => 'parcelpanel#/billing',
                 'function' => [$this, 'ParcelPanel_admin_page'],
             ],
 //            [
-//                'page_title' => __('Feature request - ParcelPanel', 'parcelpanel'),
+//                'page_title' => __('Feature request - ParcelWILL', 'parcelpanel'),
 //                'menu_title' => __('Feature request', 'parcelpanel'),
 //                'menu_slug' => 'parcelpanel#/feature-request',
 //                'function' => [$this, 'ParcelPanel_admin_page'],
@@ -1724,7 +1724,7 @@ SQL;
 
         wp_enqueue_style('parcelpanel-admin');
 
-        if ('parcelpanel_page_parcelpanel' == $screen_id) {
+        if ('parcelwill_page_parcelpanel' == $screen_id) {
             $add_js_css = $parcelPanelFunction->get_add_js_css();
 
             $check_js = $add_js_css['js'] ?? array();
@@ -2039,7 +2039,7 @@ SQL;
     {
         add_meta_box(
             'pp-wc-shop_order-shipment-tracking',
-            __('Parcel Panel', 'parcelpanel') . (time() < 1662768000 ? '<span class="parcelpanel-new-badge"></span>' : ''),
+            __('ParcelWILL', 'parcelpanel') . (time() < 1662768000 ? '<span class="parcelpanel-new-badge"></span>' : ''),
             [ShopOrder::instance(), 'meta_box_tracking'],
             'shop_order',
             'side',
@@ -2049,7 +2049,7 @@ SQL;
         // compatible with HPOS
         add_meta_box(
             'pp-wc-shop_order-shipment-tracking',
-            __('Parcel Panel', 'parcelpanel') . (time() < 1662768000 ? '<span class="parcelpanel-new-badge"></span>' : ''),
+            __('ParcelWILL', 'parcelpanel') . (time() < 1662768000 ? '<span class="parcelpanel-new-badge"></span>' : ''),
             [ShopOrder::instance(), 'meta_box_tracking_HPOS'],
             'woocommerce_page_wc-orders',
             'side',
@@ -2261,7 +2261,7 @@ SQL;
         $check = $this->check_privacy();
         if (is_wp_error($check)) {
             (new ParcelPanelFunction)->parcelpanel_json_response([]);
-            // $msg = $check->get_error_message('parcelpanel_connect_error') ?: __('Failed to connect to ParcelPanel.', 'parcelpanel');
+            // $msg = $check->get_error_message('parcelpanel_connect_error') ?: __('Failed to connect to ParcelWILL.', 'parcelpanel');
             // (new ParcelPanelFunction)->parcelpanel_json_response([], $msg, false);
         }
 
@@ -2269,7 +2269,7 @@ SQL;
         $res = $this->connect_endpoint();
 
         if (is_wp_error($res)) {
-            $msg = $res->get_error_message('parcelpanel_connect_error') ?: __('Failed to connect to ParcelPanel.', 'parcelpanel');
+            $msg = $res->get_error_message('parcelpanel_connect_error') ?: __('Failed to connect to ParcelWILL.', 'parcelpanel');
             (new ParcelPanelFunction)->parcelpanel_json_response([], $msg, false);
         }
 
@@ -2284,7 +2284,7 @@ SQL;
             // API err
             $msg = $resp_data->get_error_message('api_error');
 
-            return new \WP_Error('parcelpanel_connect_error', __('Failed to connect to ParcelPanel.', 'parcelpanel') . ' ' . __($msg, 'parcelpanel')); // phpcs:ignore
+            return new \WP_Error('parcelpanel_connect_error', __('Failed to connect to ParcelWILL.', 'parcelpanel') . ' ' . __($msg, 'parcelpanel')); // phpcs:ignore
         }
 
         return true;
@@ -2318,7 +2318,7 @@ SQL;
 
             $msg = $resp_data->get_error_message('api_error');
 
-            return new \WP_Error('parcelpanel_connect_error', __('Failed to connect to ParcelPanel.', 'parcelpanel') . ' ' . __($msg, 'parcelpanel')); // phpcs:ignore
+            return new \WP_Error('parcelpanel_connect_error', __('Failed to connect to ParcelWILL.', 'parcelpanel') . ' ' . __($msg, 'parcelpanel')); // phpcs:ignore
         }
 
         $resp_token = strval($resp_data['token'] ?? '');
@@ -2332,12 +2332,12 @@ SQL;
 
             delete_user_meta($user->ID, 'parcelpanel_api_key', $user_api_key_hash);
 
-            return new \WP_Error('parcelpanel_connect_error', __('Failed to connect to ParcelPanel.', 'parcelpanel'));
+            return new \WP_Error('parcelpanel_connect_error', __('Failed to connect to ParcelWILL.', 'parcelpanel'));
         }
 
         // Authentication success
         update_option(\ParcelPanel\OptionName\API_KEY, $resp_token);
-        // Save the ID of the user registered on ParcelPanel, if not registered it will be 0
+        // Save the ID of the user registered on ParcelWILL, if not registered it will be 0
         update_option(\ParcelPanel\OptionName\API_UID, $resp_uid);
         update_option(\ParcelPanel\OptionName\API_BID, $resp_bid);
 
@@ -3722,6 +3722,8 @@ SQL;
         }
 
         if (in_array($from, [1009])) {
+            // Remove HTML tags
+            $content = strip_tags($content);
 
             $carrier_matches = [];
             $res_match_carrier = preg_match('/shipped via (.*) on (.*) with/', $content, $carrier_matches);

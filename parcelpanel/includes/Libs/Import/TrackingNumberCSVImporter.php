@@ -242,7 +242,13 @@ class TrackingNumberCSVImporter
     function parse_order_number_field($value): int
     {
         $order_id = preg_replace('/\A#/', '', $value);
-        return absint((new ParcelPanelFunction)->parcelpanel_get_formatted_order_id($order_id));
+
+        $ppFunction = new ParcelPanelFunction();
+        if ($ppFunction->orderStorageIsHpos()) {
+            return absint($ppFunction->parcelpanel_get_formatted_order_id_by_hpos($order_id));
+        }
+
+        return absint($ppFunction->parcelpanel_get_formatted_order_id($order_id));
     }
 
     /**
@@ -1118,6 +1124,9 @@ class TrackingNumberCSVImporter
         $ppFunction = new ParcelPanelFunction();
 
         $wpdb->show_errors = false;
+
+        $ordersTrackingNumber = [];
+
         foreach ($this->parsed_data as $parsed_data) {
 
             $this->order_id = 0;
@@ -1212,7 +1221,14 @@ class TrackingNumberCSVImporter
                     throw new \Exception('All items of this type of product are shipped.');
                 }
 
-                $tracking_data = self::init_tracking_data($tracking_number, $courier_code, $fulfilled_at, $order_id, $shipment_line_items);
+                $forceSync = false;
+                if (isset($ordersTrackingNumber[$order_id]) && $ordersTrackingNumber[$order_id] == $tracking_number) {
+                    $forceSync = true;
+                }
+
+                $ordersTrackingNumber[$order_id] = $tracking_number;
+
+                $tracking_data = self::init_tracking_data($tracking_number, $courier_code, $fulfilled_at, $order_id, $shipment_line_items, $forceSync);
                 if (is_wp_error($tracking_data)) {
                     throw new \Exception('Tracking number already exists');
                 }
@@ -1415,7 +1431,7 @@ class TrackingNumberCSVImporter
      *
      * @return \stdClass|\WP_Error
      */
-    public static function init_tracking_data(string $tracking_number, string $courier_code = '', int $fulfilled_at = 0, $order_id = 0, $shipment_line_items = [])
+    public static function init_tracking_data(string $tracking_number, string $courier_code = '', int $fulfilled_at = 0, $order_id = 0, $shipment_line_items = [], $forceSync = false)
     {
         global $wpdb;
 
@@ -1483,10 +1499,11 @@ class TrackingNumberCSVImporter
         if ($tracking_data->fulfilled_at != $fulfilled_at) {
             $_update_tracking_data['fulfilled_at'] = $fulfilled_at;
         }
-        if (0 < $tracking_data->sync_times) {
+        if (0 < $tracking_data->sync_times || $forceSync) {
             // 重置同步次数
             $_update_tracking_data['sync_times'] = 0;
         }
+
         if (!empty($_update_tracking_data)) {
             $_update_tracking_data['updated_at'] = time();
 

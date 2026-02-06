@@ -7,8 +7,8 @@ class WC_Email_Customer_PP_Out_For_Delivery extends WC_Email_Shipping_Notice
     public function __construct()
     {
         $this->id          = 'customer_pp_out_for_delivery_shipment';
-        $this->title       = __( 'ParcelPanel Out for delivery', 'parcelpanel' );
-        $this->description = __( 'ParcelPanel Out for delivery emails are sent to customers when the shipment has arrived at the local point and is out for delivery.', 'parcelpanel' );
+        $this->title       = __( 'ParcelWILL Out for delivery', 'parcelpanel' );
+        $this->description = __( 'ParcelWILL Out for delivery emails are sent to customers when the shipment has arrived at the local point and is out for delivery.', 'parcelpanel' );
 
         // Triggers for this email.
         add_action( 'parcelpanel_shipment_status_out_for_delivery_notification', [ $this, 'trigger' ], 10, 3 );

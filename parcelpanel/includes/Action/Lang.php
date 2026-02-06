@@ -140,7 +140,7 @@ class Lang
 
                 'verify_email' => 'Too many requests, please try again later',
 
-                'privacy_success' => 'Thanks for your trust and welcome to ParcelPanel!',
+                'privacy_success' => 'Thanks for your trust and welcome to ParcelWILL!',
                 'privacy_fail' => 'Verify unsuccessfully',
                 'privacy_accept_fail' => 'Please check the box to accept first',
 
@@ -159,7 +159,7 @@ class Lang
                 'free_upgrade_con_new' => 'We\'ve so far provided service for over 120,000 Shopify & WooCommerce stores. This is our way of giving back (20 → 50 quotas) 🙌',
                 'free_upgrade_btn' => 'Free upgrade now',
 
-                'remove_branding_title' => 'Remove ParcelPanel branding for Free 😘',
+                'remove_branding_title' => 'Remove ParcelWILL branding for Free 😘',
                 'remove_branding_con' => 'Contact support to remove the branding (worth $49/month) from your tracking page.',
                 'remove_branding_btn' => 'Contact us',
 
@@ -169,15 +169,15 @@ class Lang
                 'upgrade_reminder_btn' => 'Upgrade now',
 
                 'first_sync_title' => 'Even better - free sync & track your last-30-day orders 🎉',
-                'first_sync_con' => 'This will help you know how ParcelPanel performs and provide your old customers with a seamless order tracking experience.',
+                'first_sync_con' => 'This will help you know how ParcelWILL performs and provide your old customers with a seamless order tracking experience.',
                 'first_sync_tip' => 'Completed on <0>',
 
-                'nps_title' => 'A Quick Word on your ParcelPanel Experience (Only 2 questions ) 🌻',
+                'nps_title' => 'A Quick Word on your ParcelWILL Experience (Only 2 questions ) 🌻',
                 'nps_con' => 'We value your opinion! It is highly appreciated if you could take <0>10 seconds<1> to rate your experience with us by participating in our brief Net Promoter Score (NPS) survey.',
                 'nps_btn' => 'Take the survey →',
 
-                'price_tip_title' => 'ParcelPanel Paid version V3.6 is coming in September',
-                'price_tip_con' => 'Due to rising costs, ParcelPanel Paid version V3.6 is coming in <0>September!<1> Some previously free features will no longer be available. To give back to loyal users, we will provide you with a <2>20% discount<3> on our paid version.',
+                'price_tip_title' => 'ParcelWILL Paid version V3.6 is coming in September',
+                'price_tip_con' => 'Due to rising costs, ParcelWILL Paid version V3.6 is coming in <0>September!<1> Some previously free features will no longer be available. To give back to loyal users, we will provide you with a <2>20% discount<3> on our paid version.',
 
                 'auto_renewal_title' => 'Auto-renewal failed',
                 'auto_renewal_con' => 'Howdy partner, your subscription charge failed and was automatically canceled on <0>. You can re-subscribe to any plan again!',
@@ -190,9 +190,9 @@ class Lang
                 'upgraded_tip_con' => 'We would love to know your experience with our plugin, share your feedback! 🌻',
 
                 'email_wc_tip_title' => 'Customizable shipping notification template editor is now live!',
-                'email_wc_tip_con' => 'With this new functionality, you can now customize ParcelPanel shipping notifications that align with your brand and even create more sales with coupon upsell. Rest assured, all your previous settings are fully compatible, simply navigate to WooCommerce settings to access your familiar setup with ease. Please note that if you have set up the same shipping notifications in both WooCommerce and ParcelPanel, emails will be sent redundantly. <0>Learn more<1>.',
+                'email_wc_tip_con' => 'With this new functionality, you can now customize ParcelWILL shipping notifications that align with your brand and even create more sales with coupon upsell. Rest assured, all your previous settings are fully compatible, simply navigate to WooCommerce settings to access your familiar setup with ease. Please note that if you have set up the same shipping notifications in both WooCommerce and ParcelWILL, emails will be sent redundantly. <0>Learn more<1>.',
 
-                'remove_branding_con1' => 'Contact support to remove the branding (worth $49/month) from ParcelPanel shipping notifications.',
+                'remove_branding_con1' => 'Contact support to remove the branding (worth $49/month) from ParcelWILL shipping notifications.',
                 'upgraded_tip_title2' => 'Thanks for your trust',
 
                 'verify_your_email_title' => 'Verify your email address to reduce spam.',
@@ -208,7 +208,7 @@ class Lang
                 // v3.9.1
                 'synced_successfully' => '🎉 <0> orders have been synced successfully!',
                 'questionV391_title' => 'Your opinion matters! Complete the survey for a 10% discount! 🙌',
-                'questionV391_con' => 'ParcelPanel Order Tracking for WooCommerce invites you to participate in our annual user survey (takes less than 1 minute) to help us enhance our services. Complete the survey for a 10% discount!! 🤩',
+                'questionV391_con' => 'ParcelWILL Order Tracking for WooCommerce invites you to participate in our annual user survey (takes less than 1 minute) to help us enhance our services. Complete the survey for a 10% discount!! 🤩',
                 'questionV391_btn' => 'Get 10% discount →',
                 'discount50TopTip1' => 'Your trial ends in <0> days. <1>Add a credit card now<2> → for <3>50% Off<4>! 🎊',
                 'discount50TopTip2' => 'Your free trial has ended. Choose a plan to restore your settings with <0>one click<1> ✨ ',
@@ -216,13 +216,13 @@ class Lang
                 // v3.9.1
 
                 // v4.0.1.
-                'plan_tip_update' => 'ParcelPanel Payment Plan Update',
+                'plan_tip_update' => 'ParcelWILL Payment Plan Update',
                 'plan_tip_update_con1' => 'Howdy partner, we\'ve released new payment plans, featuring annual subscriptions and usage-based charges for usage exceeding the subscription quota.',
                 'plan_tip_update_con2' => 'These new plans are designed to ensure that even during fluctuations in your store\'s order volume, you can still provide the best post-purchase experience to your customers.',
                 'plan_tip_update_con3' => 'Of course, you can continue using your current plan as before, or switch to the new plan at any time.',
                 'upgrade_reminder_con3' => 'Howdy partner, you have only <0> available quotas in your account, additional quota will be charged based on usage.',
                 'upgrade_reminder_con4' => 'Howdy partner, you have only <0> available quotas in your account.',
-                'upgrade_reminder_con5' => 'To ensure ParcelPanel can provide the best post-purchase experience for your customers, upgrade to sync and track more orders at a lower per-quota price.',
+                'upgrade_reminder_con5' => 'To ensure ParcelWILL can provide the best post-purchase experience for your customers, upgrade to sync and track more orders at a lower per-quota price.',
                 'plan_downgraded' => 'You\'ll be downgraded to the <0> plan on <1>. If you change your mind, you can <2>resume<3> your current plan before this date.',
                 // v4.0.1.
             ],
@@ -271,7 +271,7 @@ class Lang
                 'send' => 'Send',
                 'contact_us' => 'Contact us',
                 'view_example' => 'View example',
-                'learn_more_about_parcel_panel' => 'Learn more about <0>ParcelPanel<1>',
+                'learn_more_about_parcel_panel' => 'Learn more about <0>ParcelWILL<1>',
                 'new' => 'NEW',
                 'hot' => 'HOT',
                 'preview' => 'Preview',
@@ -283,9 +283,9 @@ class Lang
                 'intercom_con_t_n' => 'Don\'t want to use live chat? Contact us via <0>support forum<1> or email: <2>support@parcelpanel.org<3>',
                 'intercom_con_b_cancel' => 'Cancel',
                 'intercom_con_b_confirm' => 'Confirm',
-                'intercom_alert_user' => '<0>Jessie<1> from ParcelPanel',
+                'intercom_alert_user' => '<0>Jessie<1> from ParcelWILL',
                 'intercom_alert_status' => 'Active',
-                'intercom_alert_title' => 'Welcome to ParcelPanel',
+                'intercom_alert_title' => 'Welcome to ParcelWILL',
                 'intercom_alert_hello' => 'Hello',
                 'intercom_alert_con' => 'We\'re so glad you\'re here, let us know if you have any questions.',
                 'intercom_alert_input' => 'Live chat with us',
@@ -295,7 +295,7 @@ class Lang
                 'help_con' => 'Select a direction.',
                 'live_chat_support' => 'Live Chat Support',
                 'get_email_support' => 'Get Email Support',
-                'parcel_panel_help_docs' => 'ParcelPanel Help Docs',
+                'parcel_panel_help_docs' => 'ParcelWILL Help Docs',
                 'create_a_topic' => 'Create a topic',
 
                 'alert_title_other' => 'Special Gift',
@@ -307,7 +307,7 @@ class Lang
                 'alert_con_t3' => '<0><1><2>Access to<3> <4>1000+ couriers<5>',
                 'alert_con_t4' => '<0><1><2>Import widget &<3> <4>CSV import<5>',
                 'alert_con_t5' => '<0><1><2>Branded<3> <4>tracking page<5>',
-                'alert_con_t6' => '<0><1><2><3><4>Remove ParcelPanel branding<5>',
+                'alert_con_t6' => '<0><1><2><3><4>Remove ParcelWILL branding<5>',
                 'alert_con_t7' => '<0><1><2>Shipping<3> <4>notifications<5>',
                 'alert_con_t8' => '<0>24/7<1> <2>live chat<3> <4>support<5>',
 
@@ -332,7 +332,7 @@ class Lang
                 'connect' => 'Connect',
 
                 'privacy_title' => 'Enable settings?',
-                // 'privacy_con' => 'When you click the confirm button, the setting will be enabled, and you can send ParcelPanel shipping notifications to your customers. But also potentially collect your customer\'s email and billing address data to only use this function but nothing else.',
+                // 'privacy_con' => 'When you click the confirm button, the setting will be enabled, and you can send ParcelWILL shipping notifications to your customers. But also potentially collect your customer\'s email and billing address data to only use this function but nothing else.',
                 'privacy_help' => 'Learn more about our <0>Privacy Policy<1>.',
                 'privacy_help2' => 'If you have any questions, contact us via email: <0>support@parcelpanel.org<1>.',
 
@@ -371,18 +371,18 @@ class Lang
                 'privacy_store_address' => 'Store Address',
                 'privacy_authorization' => 'Privacy Authorization',
                 'privacy_accept_start' => 'Accept & Start',
-                'privacy_welcome' => 'Welcome to ParcelPanel! ✨',
+                'privacy_welcome' => 'Welcome to ParcelWILL! ✨',
                 'privacy_con' => 'Prior to using our services, we require your consent in compliance with GDPR and privacy regulations. Kindly review and accept our privacy permissions below: ',
                 'privacy_your_store' => 'Your Store',
-                'parcel_panel' => 'ParcelPanel',
+                'parcel_panel' => 'ParcelWILL',
                 'privacy_con2' => 'Your data is encrypted and used solely for our services. We adhere to strict privacy policies and comply with data protection regulations. Review our <0>Privacy Policy<1> and <2>Terms of Service<3> for details.',
                 'privacy_con3' => 'Deleting plugin from your store will remove its access, and request the removal of customer information if it was collected.',
                 'privacy_details' => 'Privacy details',
-                'privacy_con4' => 'What access does ParcelPanel need in your store:',
+                'privacy_con4' => 'What access does ParcelWILL need in your store:',
                 'privacy_permission_details' => 'Permission details',
-                'privacy_con5' => 'What will ParcelPanel do with these data:',
+                'privacy_con5' => 'What will ParcelWILL do with these data:',
                 'privacy_con6' => 'View and manage orders: Essential for seamless integration and efficient order processing.',
-                'privacy_con7' => 'View and manage customers: Necessary for sending ParcelPanel shipping notifications.',
+                'privacy_con7' => 'View and manage customers: Necessary for sending ParcelWILL shipping notifications.',
                 'privacy_con8' => 'I have read and agreed to all the above terms and conditions.',
 
                 'remove' => 'Remove',
@@ -467,8 +467,8 @@ class Lang
 
             ],
             'home' => [
-                'welcome' => 'Welcome to ParcelPanel 👋',
-                'welcome_card_title' => 'Welcome!! Get started with ParcelPanel',
+                'welcome' => 'Welcome to ParcelWILL 👋',
+                'welcome_card_title' => 'Welcome!! Get started with ParcelWILL',
 
                 'add_tracking_page' => 'Add tracking page',
                 'add_tracking_page_title' => 'Add tracking page to your storefront',
@@ -478,30 +478,30 @@ class Lang
                 'add_tracking_page_foot' => 'Looks not so good?',
 
                 'add_shipping' => 'Customize notifications',
-                'add_shipping_title' => 'Customize ParcelPanel shipping notifications',
+                'add_shipping_title' => 'Customize ParcelWILL shipping notifications',
                 'add_shipping_con' => 'Keep your customers informed in a timely manner with shipment status updates, and boost your sales by incorporating effective marketing assets.',
                 'add_shipping_con_s' => 'Want to know how to do this? Please follow <0>this instruction<1>.',
 
                 'drop_shipping_optional' => 'Dropshipping (optional)',
                 'drop_shipping_optional_title' => 'Enable dropshipping mode',
-                'drop_shipping_optional_con' => 'ParcelPanel is the best for dropshipping, and supports Aliexpress Standard Shipping, Yunexpress, CJ packet & ePacket (China EMS, China Post), and all commonly used couriers for dropshipping merchants.',
+                'drop_shipping_optional_con' => 'ParcelWILL is the best for dropshipping, and supports Aliexpress Standard Shipping, Yunexpress, CJ packet & ePacket (China EMS, China Post), and all commonly used couriers for dropshipping merchants.',
                 'drop_shipping_optional_con_s' => 'This feature will allow you to hide all Chinese regions easily, bringing your customers an all-around brand shopping experience. <0>Learn more<1>.',
 
-                'how_parcel_panel_works' => 'How ParcelPanel works',
+                'how_parcel_panel_works' => 'How ParcelWILL works',
                 'how_parcel_panel_works_title' => 'Out-of-box user experience',
                 'how_parcel_panel_works_con' => 'Tracking numbers are synced from the Orders section of your WooCommerce admin, please don\'t forget to add them.',
-                'how_parcel_panel_works_con_s' => 'For new users, ParcelPanel will automatically sync their last-30-day orders for Free.',
+                'how_parcel_panel_works_con_s' => 'For new users, ParcelWILL will automatically sync their last-30-day orders for Free.',
                 'how_parcel_panel_works_con_t' => 'New coming orders will be automatically synced in real time.',
                 'how_parcel_panel_works_con_f' => 'We fetch the tracking info from couriers\' websites based on the tracking numbers.',
                 'how_parcel_panel_works_con_1' => 'Tracking numbers are synchronized from your WooCommerce admin\'s Orders section, please don\'t forget to add them.',
-                'how_parcel_panel_works_con_2' => 'For new users, ParcelPanel offers free auto- sync of their last 30 days\' orders.',
+                'how_parcel_panel_works_con_2' => 'For new users, ParcelWILL offers free auto- sync of their last 30 days\' orders.',
                 'how_parcel_panel_works_con_3' => 'Additionally, new incoming orders will be seamlessly synced in real-time.',
                 'how_parcel_panel_works_con_4' => 'We retrieve tracking info directly from the courier websites based on the provided tracking numbers.',
 
                 'sync_tracking_numbers' => 'Sync tracking numbers',
-                'sync_tracking_numbers_con' => 'ParcelPanel will automatically sync tracking numbers from Orders section in your WooCommerce admin once you add there, then track them.',
+                'sync_tracking_numbers_con' => 'ParcelWILL will automatically sync tracking numbers from Orders section in your WooCommerce admin once you add there, then track them.',
                 'sync_tracking_numbers_t' => 'Orders section in WooCommerce admin',
-                'sync_tracking_numbers_foot' => 'Additionally, how to get the tracking number, it\'s not about ParcelPanel. As we know, some merchants fulfilled orders via the 3rd party fulfillment service, some use dropshipping apps, some fulfilled by themselves etc. To know the tracking number of your order, we kindly suggest you asking suppliers or carriers support directly for some help.',
+                'sync_tracking_numbers_foot' => 'Additionally, how to get the tracking number, it\'s not about ParcelWILL. As we know, some merchants fulfilled orders via the 3rd party fulfillment service, some use dropshipping apps, some fulfilled by themselves etc. To know the tracking number of your order, we kindly suggest you asking suppliers or carriers support directly for some help.',
 
                 'import_number_title' => 'Import tracking number of your orders',
                 'import_con' => 'Import tracking numbers of your orders in bulk with a CSV file, or manually add one by one in the Edit order page.',
@@ -534,9 +534,9 @@ class Lang
                 'upcoming_features_n_t_c_1' => 'Tracking API',
                 'upcoming_features_n_t_c_2' => 'Integration with WPML, Shippo, WooCommerce Shipping...',
                 'upcoming_features_n_t_2' => 'In progress',
-                'upcoming_features_n_t_2_c_1' => 'Customized ParcelPanel shipping notifications email templates',
+                'upcoming_features_n_t_2_c_1' => 'Customized ParcelWILL shipping notifications email templates',
 
-                'upcoming_features_v9_con1' => 'Customized ParcelPanel shipping notifications',
+                'upcoming_features_v9_con1' => 'Customized ParcelWILL shipping notifications',
                 'upcoming_features_v9_con2' => 'More analysis (Tracking page, Shipping notifications, Coupons upsell)',
                 'upcoming_features_v9_con3' => 'Integration with WPML, WooCommerce Shipping, Shippo, Sendcloud...',
                 'upcoming_features_v9_con4' => 'More integrations...',
@@ -548,8 +548,8 @@ class Lang
                 'get_email_support_con' => 'Email us and we\'ll get back to you as soon as possible.',
                 'start_live_chat' => 'Start Live Chat',
                 'start_live_chat_con' => 'Talk to us directly via live chat to get help with your question.',
-                'parcel_panel_help_docs' => 'ParcelPanel Help Docs',
-                'parcel_panel_help_docs_con' => 'Find a solution for your problem with ParcelPanel documents and tutorials.',
+                'parcel_panel_help_docs' => 'ParcelWILL Help Docs',
+                'parcel_panel_help_docs_con' => 'Find a solution for your problem with ParcelWILL documents and tutorials.',
 
                 'Last_days' => 'Last <0> days',
                 'day_range' => 'Day range',
@@ -566,10 +566,10 @@ class Lang
                 'number_percentage_tip1' => 'The number and percentage of delivered shipments',
                 'number_percentage_tip2' => 'The number and percentage of shipments correctly tracked',
                 'tip3_title' => 'Tracking page',
-                'number_percentage_tip3' => 'Orders / Revenue attributed to all marketing channels of ParcelPanel\'s tracking page',
+                'number_percentage_tip3' => 'Orders / Revenue attributed to all marketing channels of ParcelWILL\'s tracking page',
                 'tip4_title' => 'Shipping notifications',
-                'number_percentage_tip4' => 'Orders / Revenue attributed to all marketing and coupons channels of ParcelPanel\'s shipping notifications',
-                'orders_revenue_title_tip' => 'Orders / Revenue attributed to ParcelPanel marketing and coupons channels',
+                'number_percentage_tip4' => 'Orders / Revenue attributed to all marketing and coupons channels of ParcelWILL\'s shipping notifications',
+                'orders_revenue_title_tip' => 'Orders / Revenue attributed to ParcelWILL marketing and coupons channels',
                 'orders_revenue_title' => 'Total conversion orders / revenue',
                 'shipments_lookups_tip' => 'The total number of shipments / The total number of times customers have tracked their shipment through the tracking page',
 
@@ -584,11 +584,11 @@ class Lang
                 'shipping_notifications_c5' => 'Marketing clicks',
                 'shipping_notifications_c5_tip' => 'The total number of clicks your marketing channels in the shipping notifications, including product and product recommendation',
 
-                'shipping_notifications_title' => 'ParcelPanel shipping notifications',
+                'shipping_notifications_title' => 'ParcelWILL shipping notifications',
                 'shipping_notifications_title_tip' => 'The total number of shipping notifications sent, including sent to customers and yourself',
                 'shipping_notifications_param' => 'Performance summary',
                 'shipping_notifications_over_time' => 'Shipping notifications over time',
-                'shipping_notifications_over_check1' => 'Automatically notify your customers or yourself via email with ParcelPanel shipment status updates',
+                'shipping_notifications_over_check1' => 'Automatically notify your customers or yourself via email with ParcelWILL shipment status updates',
                 'shipping_notifications_over_check2' => 'Unlock all advanced analytics and drive business growth with data-driven insights',
                 'shipping_notifications_btn1' => 'Enable this feature',
                 'shipping_notifications_btn2' => 'Upgrade now',
@@ -601,15 +601,15 @@ class Lang
                 'remaining_total_tip' => 'The total number of available quotas / The total number of quotas in the current plan',
                 'delivery_days_by_destinations_tip' => 'The total number of delivered shipments and average transit day based on destination',
                 'delivery_days_by_couriers_tip' => 'The total number of delivered shipments and average transit day based on couriers',
-                'coupons_title_tip' => 'Orders and revenue attributed to the coupons channel of ParcelPanel\'s shipping notifications',
+                'coupons_title_tip' => 'Orders and revenue attributed to the coupons channel of ParcelWILL\'s shipping notifications',
                 'coupons_title' => 'Coupons upsell',
                 'coupons_check' => 'Enable to boost more sales for Increased Revenue',
                 'coupons_table1' => 'Coupons',
                 'coupons_table2' => 'Orders',
                 'coupons_table3' => 'Revenue',
 
-                'sync_tracking_numbers_con1' => 'Tracking numbers are synchronized from your WooCommerce admin\'s Orders section, please don\'t forget to add them from <0>Edit order page → ParcelPanel section<1>.',
-                'sync_tracking_numbers_con2' => 'To get the tracking number, it\'s not within ParcelPanel\'s scope. <0>We know that different merchants use various shipping methods such as third-party platforms, dropshipping apps, or self-fulfillment. To find out the tracking number for your order, we recommend reaching out directly to your <1>shipping provider<2> for assistance.',
+                'sync_tracking_numbers_con1' => 'Tracking numbers are synchronized from your WooCommerce admin\'s Orders section, please don\'t forget to add them from <0>Edit order page → ParcelWILL section<1>.',
+                'sync_tracking_numbers_con2' => 'To get the tracking number, it\'s not within ParcelWILL\'s scope. <0>We know that different merchants use various shipping methods such as third-party platforms, dropshipping apps, or self-fulfillment. To find out the tracking number for your order, we recommend reaching out directly to your <1>shipping provider<2> for assistance.',
 
                 'btn_import_via' => 'Bulk Import via CSV',
                 'chart_shipments' => 'Shipments',
@@ -620,16 +620,16 @@ class Lang
 
                 // v3.9.1
                 'get_started' => 'Get started',
-                'how_work_in_woo' => 'How does ParcelPanel work in WooCommerce?',
+                'how_work_in_woo' => 'How does ParcelWILL work in WooCommerce?',
                 'welcome_card_title_con' => 'In just one minute, you\'ll learn how to enable your customers to track their orders on your store\'s tracking page.',
                 'video_tutorial' => 'Video tutorial',
                 'how_add_to_store_menu' => 'How to add the tracking page to your store navigation menu?',
-                'step_add_to_store_menu' => 'ParcelPanel automatically generates a branded tracking page for your store. Add it to your storefront, enabling customers to track orders independently and reducing support requests.',
-                'step_importing_tracking_numbers' => 'ParcelPanel supports multiple methods for importing tracking numbers to orders (WooCommerce admin\'s Orders section), please don\'t forget to add them.',
+                'step_add_to_store_menu' => 'ParcelWILL automatically generates a branded tracking page for your store. Add it to your storefront, enabling customers to track orders independently and reducing support requests.',
+                'step_importing_tracking_numbers' => 'ParcelWILL supports multiple methods for importing tracking numbers to orders (WooCommerce admin\'s Orders section), please don\'t forget to add them.',
                 'step_shipping_notifications' => 'Here, you can customize shipping notifications to match your brand identity. Once enabled, customers will promptly receive updates on their orders.',
-                'step_analysis' => 'Here, various data analysis panels provide insights to optimize channels and gauge ParcelPanel\'s performance.',
+                'step_analysis' => 'Here, various data analysis panels provide insights to optimize channels and gauge ParcelWILL\'s performance.',
                 'start_free_trial' => 'Start a free trial',
-                'get_even_more' => 'You\'re all set! Get even more from ParcelPanel.',
+                'get_even_more' => 'You\'re all set! Get even more from ParcelWILL.',
                 'no_credit_card' => 'Unlock our most powerful shipment tracking tools with a free trial, <0>no credit card required!<1> ✨',
                 'done_click' => 'I\'ve done this',
                 'bulk_import_via_csv' => '<2>Bulk import via CSV<3>: import multiple tracking numbers efficiently using a CSV file. <0>Learn more<1>.',
@@ -656,14 +656,14 @@ class Lang
                 'recommendation_2_1_content' => 'Add tracking numbers to auto-sync and and present detailed tracking information from carriers on your tracking page.',
                 'recommendation_2_2_title' => 'Self-Notify before customer complaints',
                 'recommendation_2_2_content' => 'Opt for Exception and Failed Attempt email notifications to proactively resolve issues before customer complaints arise.',
-                'recommendation_2_3_title' => 'Review your ParcelPanel notification history',
-                'recommendation_2_3_content' => 'Simply click the mail icon on the shipment page to view the full history of ParcelPanel emails sent for that shipment.',
+                'recommendation_2_3_title' => 'Review your ParcelWILL notification history',
+                'recommendation_2_3_content' => 'Simply click the mail icon on the shipment page to view the full history of ParcelWILL emails sent for that shipment.',
                 'recommendation_2_4_title' => 'Multilingual email automation',
-                'recommendation_2_4_content' => 'Send out ParcelPanel\'s shipping updates in the language your customers feel most comfortable with, all automated and hassle-free.',
+                'recommendation_2_4_content' => 'Send out ParcelWILL\'s shipping updates in the language your customers feel most comfortable with, all automated and hassle-free.',
                 'recommendation_2_5_title' => 'Boost repeat business with coupons',
-                'recommendation_2_5_content' => 'Include exclusive coupons in your ParcelPanel shipping updates. It\'s a simple way to entice customers to return for another purchase.',
+                'recommendation_2_5_content' => 'Include exclusive coupons in your ParcelWILL shipping updates. It\'s a simple way to entice customers to return for another purchase.',
                 'recommendation_3_1_title' => 'Seamless integration for unleashed potential',
-                'recommendation_3_1_content' => 'Integrate ParcelPanel effortlessly with multiple integrated plugins, such as <0> to unlock the full potential of your business operations.',
+                'recommendation_3_1_content' => 'Integrate ParcelWILL effortlessly with multiple integrated plugins, such as <0> to unlock the full potential of your business operations.',
                 'recommendation_3_2_title' => 'Streamline your order fulfillment process',
                 'recommendation_3_2_content' => 'Customize order statuses to match the unique workflow of your store, ensuring a smoother and more efficient fulfillment experience.',
                 'recommendation_3_3_title' => 'Enhance Brand Experience with Dropshipping Mode',
@@ -717,9 +717,9 @@ class Lang
                 'lookup_options' => 'Lookup options',
                 'by_order_email' => 'By order number and email',
                 'by_number' => 'By tracking number',
-                'parcel_panel_branding' => 'ParcelPanel branding',
+                'parcel_panel_branding' => 'ParcelWILL branding',
                 'parcel_panel_branding_con' => 'Remove "Powered by ParcelPanel"',
-                'parcel_panel_branding_help' => 'to remove ParcelPanel branding for Free 😘',
+                'parcel_panel_branding_help' => 'to remove ParcelWILL branding for Free 😘',
                 'additional_text' => 'Additional text',
                 'text_above_title' => 'Text above the order lookup widget',
                 'text_above_eg' => 'e.g. Curious about where your package is? Click the button to track!',
@@ -857,7 +857,7 @@ class Lang
                 'expected_delivery_date_eg' => 'Estimated delivery date: <0> - <1>(d)',
                 'dynamic_tracking_details' => 'Dynamic tracking details',
                 'automatic_translation' => 'Automatic translation',
-                'automatic_translation_con' => 'ParcelPanel captures tracking details from carriers\' websites. Professional plans and above support auto-translation based on the tracking page\'s language when customers visit.',
+                'automatic_translation_con' => 'ParcelWILL captures tracking details from carriers\' websites. Professional plans and above support auto-translation based on the tracking page\'s language when customers visit.',
                 'manual_translation' => 'Manual translation',
                 'manual_translations_con_1' => '1. This feature distinguishes strings based on spaces, so please remember to include commas and periods when translating. <0> 2. If you\'ve enabled automatic translation, please manually review and edit the tracking info after it has been translated.',
                 'order_lookup' => 'Order Lookup',
@@ -871,7 +871,7 @@ class Lang
                 'static_text_con1' => 'Edit the static text on your tracking page here.',
                 'static_text_con2' => 'to add more supported languages 😘',
                 'automatic_language_switching' => 'Automatic language switching',
-                'automatic_language_switching_con' => 'ParcelPanel supports multilingual tracking pages and auto-switches the language based on the store\'s language when customers visit. If the language is not supported, the default language will be displayed.',
+                'automatic_language_switching_con' => 'ParcelWILL supports multilingual tracking pages and auto-switches the language based on the store\'s language when customers visit. If the language is not supported, the default language will be displayed.',
                 'the_initial_con1' => 'The initial',
                 'the_initial_con2' => 'for the tracking page is English.',
                 'default_language' => 'default language',
@@ -1032,9 +1032,9 @@ class Lang
                 'import_step_1_model_b_import' => 'Import',
                 'import_step_1_model_b_close' => 'Close',
 
-                'order_list_text1' => 'Only ParcelPanel shipping notifications, don\'t include WooCommerce email notifications.',
+                'order_list_text1' => 'Only ParcelWILL shipping notifications, don\'t include WooCommerce email notifications.',
                 'order_list_text2' => 'No notifications yet',
-                'order_list_text3' => 'You have not sent any ParcelPanel shipping notifications yet',
+                'order_list_text3' => 'You have not sent any ParcelWILL shipping notifications yet',
 
                 'sync_to_paypal' => 'Sync to PayPal',
                 'sync_orders' => 'Sync orders',
@@ -1086,8 +1086,8 @@ class Lang
                 'preview' => 'Preview',
                 'add_an_order_tracking_switch' => 'Add an order tracking section to WooCommerce email notifications',
                 'add_an_order_tracking_select' => 'Select order status to show the tracking section',
-                'shipping_email_title' => 'ParcelPanel shipping email notifications',
-                'shipping_email_note' => 'This feature will allow you to send email notifications based on ParcelPanel shipment status.',
+                'shipping_email_title' => 'ParcelWILL shipping email notifications',
+                'shipping_email_note' => 'This feature will allow you to send email notifications based on ParcelWILL shipment status.',
                 'manage_template' => 'Manage template',
                 'account_page_tracking' => 'Account page tracking',
                 'add_a_order_track_btn' => 'Add a track button to orders history page (Actions column)',
@@ -1118,19 +1118,19 @@ class Lang
                 'couriers_selected_Showing' => 'Showing <0> of <1> couriers',
 
                 'model_account_btn_title' => 'How it works?',
-                'model_account_btn_con' => 'After enabled, ParcelPanel will add a track button to the orders history page (Actions column), so your customers can track their orders with one click directed to your store tracking page.',
-                'model_account_btn_con_s' => 'After enabled, ParcelPanel will add a track button to orders admin (Actions column), you can add tracking info easily without clicking into order details.',
+                'model_account_btn_con' => 'After enabled, ParcelWILL will add a track button to the orders history page (Actions column), so your customers can track their orders with one click directed to your store tracking page.',
+                'model_account_btn_con_s' => 'After enabled, ParcelWILL will add a track button to orders admin (Actions column), you can add tracking info easily without clicking into order details.',
 
                 'ship_title' => 'Shipping notifications',
                 'ship_auto_tracking' => 'Automatically add an order tracking section in the email notifications sent by WooCommerce based on the order status. <0>Learn more<1>.',
-                'ship_title1' => 'ParcelPanel shipping notifications',
-                'ship_con1' => 'Automatically notify your customers or yourself via email with ParcelPanel shipment status updates. <0>Learn more<1>.',
+                'ship_title1' => 'ParcelWILL shipping notifications',
+                'ship_con1' => 'Automatically notify your customers or yourself via email with ParcelWILL shipment status updates. <0>Learn more<1>.',
                 'ship_title2' => 'Notify yourself',
                 'ship_btn2' => 'Notify yourself',
-                'ship_con2' => 'Auto-send email notifications to yourself based on ParcelPanel shipment status update.',
+                'ship_con2' => 'Auto-send email notifications to yourself based on ParcelWILL shipment status update.',
                 'ship_title3' => 'Notify your customers',
                 'ship_btn3' => 'Customize your brand',
-                'ship_con3' => 'Auto-send email notifications to your customers based on ParcelPanel shipment status update.',
+                'ship_con3' => 'Auto-send email notifications to your customers based on ParcelWILL shipment status update.',
                 'ship_edit_template' => 'Edit template',
 
                 'ship_wc_set_title' => 'Tailored for WooCommerce',
@@ -1167,10 +1167,10 @@ class Lang
                 'ship_email_customize' => 'Customize your brand:',
                 'ship_email_more_actions' => 'More actions',
                 'ship_email_sender_info' => 'Sender info',
-                'ship_email_branding' => 'ParcelPanel branding',
+                'ship_email_branding' => 'ParcelWILL branding',
                 'ship_email_branding_con' => 'Remove "Powered by ParcelPanel"',
                 'ship_email_remove_con' => 'to remove it for Free 😘',
-                'ship_email_table_lang_con' => 'ParcelPanel\'s Auto Multilingual Email Sending',
+                'ship_email_table_lang_con' => 'ParcelWILL\'s Auto Multilingual Email Sending',
                 'ship_email_table_lang_con1' => 'Auto-send based on your customers\' country. <0>Learn more<1>.',
                 'ship_email_table_accent' => 'Accent color',
                 'ship_email_table_logo' => 'Logo width',
@@ -1216,8 +1216,8 @@ class Lang
                 'email_settings' => 'Email settings',
                 'enable_this_notification' => 'Enable this notification',
 
-                'wc_email_tip_old' => 'The following emails are developed and sent by ParcelPanel. Rest assured, all your previous settings (shipping emails sent by WooCommerce) are fully compatible, simply navigate to <0>WooCommerce settings<1> to access your familiar setup with ease.<br/> Please note that if you have set up the same shipping notifications in both here and WooCommerce, emails will be sent twice. <2>Learn more<3>.',
-                'wc_email_tip_new' => 'The following emails are developed and sent by ParcelPanel. However, if you prefer to use WooCommerce\'s standard <4>wp_mail()<5> email system (ParcelPanel shipping emails sent by WooCommerce), you can easily set it up by navigating to the <0>WooCommerce settings<1>.<br/> Please note that if you have set up the same shipping notifications in both here and WooCommerce, emails will be sent twice. <2>Learn more<3>.',
+                'wc_email_tip_old' => 'The following emails are developed and sent by ParcelWILL. Rest assured, all your previous settings (shipping emails sent by WooCommerce) are fully compatible, simply navigate to <0>WooCommerce settings<1> to access your familiar setup with ease.<br/> Please note that if you have set up the same shipping notifications in both here and WooCommerce, emails will be sent twice. <2>Learn more<3>.',
+                'wc_email_tip_new' => 'The following emails are developed and sent by ParcelWILL. However, if you prefer to use WooCommerce\'s standard <4>wp_mail()<5> email system (ParcelWILL shipping emails sent by WooCommerce), you can easily set it up by navigating to the <0>WooCommerce settings<1>.<br/> Please note that if you have set up the same shipping notifications in both here and WooCommerce, emails will be sent twice. <2>Learn more<3>.',
 
 
                 // v3.8.2
@@ -1253,35 +1253,35 @@ class Lang
                 'email_customizer' => 'Email customizer',
                 'translate' => 'Translate',
                 'plugins_integrated_title' => 'Will there be more plugins integrated?',
-                'plugins_integrated_con' => 'Yes, ParcelPanel will continue to integrate with more plugins to improve the user experience. Stay tuned!',
+                'plugins_integrated_con' => 'Yes, ParcelWILL will continue to integrate with more plugins to improve the user experience. Stay tuned!',
                 'using_list_title' => 'Is it possible to integrate a plugin that I using but is not on your list?',
                 'using_list_con' => 'Let us know which plugin you would like us to integrate with.',
                 'contact_us' => 'Contact us',
-                'custom_order_number_con' => 'You do not have to do anything, ParcelPanel works with the below plugins by default.  <0>Learn more<1>.',
-                'email_customizer_con' => 'You do not have to do anything, ParcelPanel works with the below plugins by default.',
+                'custom_order_number_con' => 'You do not have to do anything, ParcelWILL works with the below plugins by default.  <0>Learn more<1>.',
+                'email_customizer_con' => 'You do not have to do anything, ParcelWILL works with the below plugins by default.',
 
                 'api_key' => 'API Key',
-                'api_key_note' => 'Developers can use the ParcelPanel API to effectively manage shipments by creating, viewing, and deleting tracking information. Learn <0>API doc<1> for details.',
+                'api_key_note' => 'Developers can use the ParcelWILL API to effectively manage shipments by creating, viewing, and deleting tracking information. Learn <0>API doc<1> for details.',
                 'api_key_title' => 'Your API Key',
                 'api_key_btn_show' => 'Show',
                 'api_key_btn_hidden' => 'Hide',
                 'api_key_btn_copy' => 'Copy',
-                'klaviyo_page_connect_title' => 'Disconnect ParcelPanel & Klaviyo',
-                'klaviyo_page_title' => 'Connect ParcelPanel & Klaviyo',
+                'klaviyo_page_connect_title' => 'Disconnect ParcelWILL & Klaviyo',
+                'klaviyo_page_title' => 'Connect ParcelWILL & Klaviyo',
                 'klaviyo_page_label' => 'Klaviyo Public API Key',
-                'klaviyo_page_aboveText' => 'By connecting ParcelPanel & Klaviyo, you can create personalized campaigns & flows based on tracking events from ParcelPanel, then adjust your customers\' lifecycle email marketing.',
-                'klaviyo_page_linkText' => 'How to connect ParcelPanel for WooCommerce & Klaviyo via API?',
-                'omnisend_page_connect_title' => 'Disconnect ParcelPanel & Omnisend',
-                'omnisend_page_title' => 'Connect ParcelPanel & Omnisend',
+                'klaviyo_page_aboveText' => 'By connecting ParcelWILL & Klaviyo, you can create personalized campaigns & flows based on tracking events from ParcelWILL, then adjust your customers\' lifecycle email marketing.',
+                'klaviyo_page_linkText' => 'How to connect ParcelWILL for WooCommerce & Klaviyo via API?',
+                'omnisend_page_connect_title' => 'Disconnect ParcelWILL & Omnisend',
+                'omnisend_page_title' => 'Connect ParcelWILL & Omnisend',
                 'omnisend_page_label' => 'Omnisend API Key',
-                'omnisend_page_aboveText' => 'By integrating ParcelPanel and Omnisend, you can create personalized campaigns & flows based on tracking events from ParcelPanel, then adjust your customers\' lifecycle email marketing.',
-                'omnisend_page_linkText' => 'How to connect ParcelPanel for WooCommerce & Omnisend via API?',
+                'omnisend_page_aboveText' => 'By integrating ParcelWILL and Omnisend, you can create personalized campaigns & flows based on tracking events from ParcelWILL, then adjust your customers\' lifecycle email marketing.',
+                'omnisend_page_linkText' => 'How to connect ParcelWILL for WooCommerce & Omnisend via API?',
                 'email_marketing' => 'Email marketing',
                 'payment' => 'Payment',
 
                 'invalid_api_key' => 'Invalid API Key',
                 // 3.8.2
-                'paypal_page_connect_title' => 'Disconnect ParcelPanel & Paypal',
+                'paypal_page_connect_title' => 'Disconnect ParcelWILL & Paypal',
                 // 3.8.2
 
             ],
@@ -1302,14 +1302,14 @@ class Lang
                 'unlimited' => 'Unlimited',
                 'unlimited_note' => 'Unlimited quota Avg $0.0000 per order',
                 'unlimited_btn' => 'Free Upgrade Now 🥳',
-                'charge_based_on_title' => 'Does ParcelPanel charge based on order lookups?',
-                'charge_based_on_con' => 'No, ParcelPanel counts the quota based on the number of your orders synced to ParcelPanel, and provides unlimited order lookups.',
+                'charge_based_on_title' => 'Does ParcelWILL charge based on order lookups?',
+                'charge_based_on_con' => 'No, ParcelWILL counts the quota based on the number of your orders synced to ParcelWILL, and provides unlimited order lookups.',
                 'billing_cycle_title' => 'Can I change my plan in the middle of a billing cycle?',
                 'billing_cycle_con_new' => 'Yes, you can change your plan at any time based on your needs. If you want to upgrade the plan, the remaining quotas of current plan will be added to the new one automatically. <0>Learn more<1>.',
                 'billing_cycle_con' => 'Yes, you can change your plan at any time based on your needs. If you want to change the plan, the remaining quotas of current plan will be added to the new one automatically.',
-                'why_unlimited_title' => 'Why is ParcelPanel launching an unlimited plan? When will ParcelPanel charge?',
+                'why_unlimited_title' => 'Why is ParcelWILL launching an unlimited plan? When will ParcelWILL charge?',
                 'why_unlimited_con' => 'We\'ve provided service for over 120,000 Shopify and WooCommerce stores, but we are still pretty new to WooCommerce for now. We want to give more special offers for WooCommerce merchants.',
-                'why_unlimited_con_s' => 'ParcelPanel will not charge for a short time. But please rest assured that if we decide to charge, we will definitely inform you in advance, and there will be no hidden charges.',
+                'why_unlimited_con_s' => 'ParcelWILL will not charge for a short time. But please rest assured that if we decide to charge, we will definitely inform you in advance, and there will be no hidden charges.',
 
                 'free_plan_model_title' => 'Downgrade to Starter Free plan',
                 'free_plan_model_con' => 'This can\'t be undone!',
@@ -1333,8 +1333,8 @@ class Lang
                 'recharge_reminder' => 'Recharge reminder',
                 'recommended_for_you' => 'Recommended for you ✨',
                 'plus_plan_list' => 'All <0> features, plus:',
-                'con_title_f' => 'What\'s the quota? Does ParcelPanel charge based on order lookups?',
-                'con_title_con' => '"1 quota=1 order". ParcelPanel counts the quota based on the number of your orders synced to ParcelPanel, and provides unlimited order lookups.',
+                'con_title_f' => 'What\'s the quota? Does ParcelWILL charge based on order lookups?',
+                'con_title_con' => '"1 quota=1 order". ParcelWILL counts the quota based on the number of your orders synced to ParcelWILL, and provides unlimited order lookups.',
 
                 'free' => 'Free',
                 'free_con' => 'Key features to start your business',
@@ -1351,7 +1351,7 @@ class Lang
                 'essential_plan_2' => 'Estimated delivery time',
                 'essential_plan_2_1' => 'Post-purchase EDD', // v-analysis_version
                 'essential_plan_3' => 'Product recommendation',
-                'essential_plan_4' => 'ParcelPanel shipping notifications',
+                'essential_plan_4' => 'ParcelWILL shipping notifications',
                 // 'essential_plan_5' => 'Advanced analytics',
                 'essential_plan_5' => 'Advanced analytics: Delivery days by destinations, Delivery days by couriers and more...', // v3.9.1
                 'essential_plan_5_1' => 'Advanced analytics: transit time, tracking page and shipping notifications', // v-analysis_version
@@ -1366,7 +1366,7 @@ class Lang
                 // 'professional_plan_4_2' => 'Advanced integrations: PayPal, DSers, WooCommerce Shipping, WPML and more...',
                 'professional_plan_4_2' => 'Advanced integrations: PayPal, DSers, WPML and more...', // v3.9.1
                 'professional_plan_5' => 'Developer API',
-                'professional_plan_6' => 'Remove ParcelPanel branding',
+                'professional_plan_6' => 'Remove ParcelWILL branding',
 
                 'enterprise' => 'Enterprise',
                 'enterprise_con' => 'Tailored for high-volume companies',
@@ -1385,10 +1385,10 @@ class Lang
                 'remaining_quotas_previous_plan' => '<0> remaining quotas in the previous plan(s)',
                 'remaining_quotas_gift' => '<0> remaining gifting quotas in the current plan',
                 'account_foot_t1' => 'What does "quota" mean? How can I check the orders I\'ve synchronized?',
-                'account_foot_t1_l1' => '1 order = 1 quota. When ParcelPanel syncs 1 order for you, it consumes 1 quota.',
+                'account_foot_t1_l1' => '1 order = 1 quota. When ParcelWILL syncs 1 order for you, it consumes 1 quota.',
                 'account_foot_t1_l2' => 'If an order contains multiple shipments, it is counted as one order, consuming only one quota.',
                 'account_foot_t1_l3' => 'Order lookups don\'t consume quota, meaning your customers have unlimited lookups.',
-                'account_foot_t1_l4' => 'You can easily check the synchronized orders on the ParcelPanel Shipment page.',
+                'account_foot_t1_l4' => 'You can easily check the synchronized orders on the ParcelWILL Shipment page.',
                 'account_foot_t2' => 'Can I change my plan in the middle of a billing cycle? How do I cancel my plan?',
                 'account_foot_t2_d' => 'Of course, you can change your plan at any time based on your needs. Changing your plan follows these rules:',
                 'account_foot_t2_l1' => 'Upgrading your plan takes effect immediately, resetting the billing cycle, and any remaining quota will be added to the new plan.',
@@ -1397,7 +1397,7 @@ class Lang
                 'account_foot_t2_l4' => 'For more details on subscriptions, <0>learn more<1>.',
                 'account_foot_t3' => 'What is the free trial, and how does it work?',
                 'account_foot_t3_l1' => 'All paid plans share the same free trial period. During the period, you can switch to any paid plan at no cost, and it won\'t consume any quotas.',
-                'account_foot_t3_l2' => 'Of course, if you find that ParcelPanel doesn\'t meet your requirements, you can downgrade to the free plan before the trial period ends to avoid any unexpected charges.',
+                'account_foot_t3_l2' => 'Of course, if you find that ParcelWILL doesn\'t meet your requirements, you can downgrade to the free plan before the trial period ends to avoid any unexpected charges.',
                 'professional_plan_7' => 'Automatic language switching',
                 'professional_plan_8' => 'Automatic translation',
                 // v3.8.2
@@ -1458,11 +1458,11 @@ class Lang
                 'shipments_over_time' => 'Shipments over time',
                 'shipments_tip' => 'The total number of shipments',
                 'conversion_orders' => 'Conversion orders',
-                'conversion_orders_tip' => 'Orders attributed to all marketing and discount channels of ParcelPanel\'s shipping notifications',
-                'conversion_orders_tip_1' => 'Orders attributed to all marketing channels of ParcelPanel\'s shipping notifications',
+                'conversion_orders_tip' => 'Orders attributed to all marketing and discount channels of ParcelWILL\'s shipping notifications',
+                'conversion_orders_tip_1' => 'Orders attributed to all marketing channels of ParcelWILL\'s shipping notifications',
                 'conversion_revenue' => 'Conversion revenue',
-                'conversion_revenue_tip' => 'Revenue attributed to all marketing and discount channels of ParcelPanel\'s shipping notifications',
-                'conversion_revenue_tip_1' => 'Revenue attributed to all marketing channels of ParcelPanel\'s shipping notifications',
+                'conversion_revenue_tip' => 'Revenue attributed to all marketing and discount channels of ParcelWILL\'s shipping notifications',
+                'conversion_revenue_tip_1' => 'Revenue attributed to all marketing channels of ParcelWILL\'s shipping notifications',
                 'marketing_ctr' => 'Marketing CTR',
                 'marketing_ctr_tip' => 'Marketing clicks divided by opened shipping notifications',
                 'lookups_label' => 'Shipping notifications time',
@@ -1481,9 +1481,9 @@ class Lang
                 'transit_time_over' => 'Transit time (d) over time',
                 'transit_time_details' => 'Transit time details',
                 'shipments_tip_1' => 'The total number of times customers have tracked their shipment through the tracking page',
-                'shipments_tip_2' => 'Orders attributed to all marketing channels of ParcelPanel\'s tracking page',
-                'shipments_tip_3' => 'Revenue attributed to all marketing channels of ParcelPanel\'s tracking page',
-                'shipments_tip_4' => 'Orders and revenue attributed to the discount channel of ParcelPanel\'s shipping notifications',
+                'shipments_tip_2' => 'Orders attributed to all marketing channels of ParcelWILL\'s tracking page',
+                'shipments_tip_3' => 'Revenue attributed to all marketing channels of ParcelWILL\'s tracking page',
+                'shipments_tip_4' => 'Orders and revenue attributed to the discount channel of ParcelWILL\'s shipping notifications',
 
 
                 // v-analysis_version
@@ -1529,7 +1529,7 @@ class Lang
         __('Verify successfully', 'parcelpanel');
         __('Verify unsuccessfully', 'parcelpanel');
         __('Too many requests, please try again later', 'parcelpanel');
-        __('Thanks for your trust and welcome to ParcelPanel!', 'parcelpanel');
+        __('Thanks for your trust and welcome to ParcelWILL!', 'parcelpanel');
         __('Verify unsuccessfully', 'parcelpanel');
         __('Please check the box to accept first', 'parcelpanel');
 
@@ -1548,7 +1548,7 @@ class Lang
         __('We\'ve so far provided service for over 120,000 Shopify & WooCommerce stores. This is our way of giving back (20 → Unlimited free quota) 🙌', 'parcelpanel');
         __('We\'ve so far provided service for over 120,000 Shopify & WooCommerce stores. This is our way of giving back (20 → 50 quotas) 🙌', 'parcelpanel');
         __('Free upgrade now', 'parcelpanel');
-        __('Remove ParcelPanel branding for Free 😘', 'parcelpanel');
+        __('Remove ParcelWILL branding for Free 😘', 'parcelpanel');
         __('Contact support to remove the branding (worth $49/month) from your tracking page.', 'parcelpanel');
         __('Contact us', 'parcelpanel');
         __('Upgrade reminder', 'parcelpanel');
@@ -1556,13 +1556,13 @@ class Lang
         __('Howdy partner, there are only <0> available quotas in your account, upgrade now to enjoy seamless syncing & tracking more orders.', 'parcelpanel');
         __('Upgrade now', 'parcelpanel');
         __('Even better - free sync & track your last-30-day orders 🎉', 'parcelpanel');
-        __('This will help you know how ParcelPanel performs and provide your old customers with a seamless order tracking experience.', 'parcelpanel');
+        __('This will help you know how ParcelWILL performs and provide your old customers with a seamless order tracking experience.', 'parcelpanel');
         __('Completed on <0>', 'parcelpanel');
-        __('A Quick Word on your ParcelPanel Experience (Only 2 questions ) 🌻', 'parcelpanel');
+        __('A Quick Word on your ParcelWILL Experience (Only 2 questions ) 🌻', 'parcelpanel');
         __('We value your opinion! It is highly appreciated if you could take <0>10 seconds<1> to rate your experience with us by participating in our brief Net Promoter Score (NPS) survey.', 'parcelpanel');
         __('Take the survey →', 'parcelpanel');
-        __('ParcelPanel Paid version V3.6 is coming in September', 'parcelpanel');
-        __('Due to rising costs, ParcelPanel Paid version V3.6 is coming in <0>September!<1> Some previously free features will no longer be available. To give back to loyal users, we will provide you with a <2>20% discount<3> on our paid version.', 'parcelpanel');
+        __('ParcelWILL Paid version V3.6 is coming in September', 'parcelpanel');
+        __('Due to rising costs, ParcelWILL Paid version V3.6 is coming in <0>September!<1> Some previously free features will no longer be available. To give back to loyal users, we will provide you with a <2>20% discount<3> on our paid version.', 'parcelpanel');
 
 
         __('Auto-renewal failed', 'parcelpanel');
@@ -1573,9 +1573,9 @@ class Lang
         __('🎉 Howdy partner, you have upgraded successfully!', 'parcelpanel');
         __('We would love to know your experience with our plugin, share your feedback! 🌻', 'parcelpanel');
         __('Customizable shipping notification template editor is now live!', 'parcelpanel');
-        __('With this new functionality, you can now customize ParcelPanel shipping notifications that align with your brand and even create more sales with coupon upsell. Rest assured, all your previous settings are fully compatible, simply navigate to WooCommerce settings to access your familiar setup with ease. Please note that if you have set up the same shipping notifications in both WooCommerce and ParcelPanel, emails will be sent redundantly. <0>Learn more<1>.', 'parcelpanel');
+        __('With this new functionality, you can now customize ParcelWILL shipping notifications that align with your brand and even create more sales with coupon upsell. Rest assured, all your previous settings are fully compatible, simply navigate to WooCommerce settings to access your familiar setup with ease. Please note that if you have set up the same shipping notifications in both WooCommerce and ParcelWILL, emails will be sent redundantly. <0>Learn more<1>.', 'parcelpanel');
 
-        __('Contact support to remove the branding (worth $49/month) from ParcelPanel shipping notifications.', 'parcelpanel');
+        __('Contact support to remove the branding (worth $49/month) from ParcelWILL shipping notifications.', 'parcelpanel');
         __('Thanks for your trust', 'parcelpanel');
         __('Verify your email address to reduce spam.', 'parcelpanel');
         __('We\'ve sent a 6-character code to <0><1><2>. The code expires shortly, so please enter it soon.', 'parcelpanel');
@@ -1587,18 +1587,18 @@ class Lang
 
         __('🎉 <0> orders have been synced successfully!', 'parcelpanel');
         __('Your opinion matters! Complete the survey for a 10% discount! 🙌', 'parcelpanel');
-        __('ParcelPanel Order Tracking for WooCommerce invites you to participate in our annual user survey (takes less than 1 minute) to help us enhance our services. Complete the survey for a 10% discount!! 🤩', 'parcelpanel');
+        __('ParcelWILL Order Tracking for WooCommerce invites you to participate in our annual user survey (takes less than 1 minute) to help us enhance our services. Complete the survey for a 10% discount!! 🤩', 'parcelpanel');
         __('Get 10% discount →', 'parcelpanel');
         __('Your trial ends in <0> days. <1>Add a credit card now<2> → for <3>50% Off<4>! 🎊', 'parcelpanel');
         __('Your free trial has ended. Choose a plan to restore your settings with <0>one click<1> ✨ ', 'parcelpanel');
 
-        __('ParcelPanel Payment Plan Update', 'parcelpanel');
+        __('ParcelWILL Payment Plan Update', 'parcelpanel');
         __('Howdy partner, we\'ve released new payment plans, featuring annual subscriptions and usage-based charges for usage exceeding the subscription quota.', 'parcelpanel');
         __('These new plans are designed to ensure that even during fluctuations in your store\'s order volume, you can still provide the best post-purchase experience to your customers.', 'parcelpanel');
         __('Of course, you can continue using your current plan as before, or switch to the new plan at any time.', 'parcelpanel');
         __('Howdy partner, you have only <0> available quotas in your account, additional quota will be charged based on usage.', 'parcelpanel');
         __('Howdy partner, you have only <0> available quotas in your account.', 'parcelpanel');
-        __('To ensure ParcelPanel can provide the best post-purchase experience for your customers, upgrade to sync and track more orders at a lower per-quota price.', 'parcelpanel');
+        __('To ensure ParcelWILL can provide the best post-purchase experience for your customers, upgrade to sync and track more orders at a lower per-quota price.', 'parcelpanel');
         __('You\'ll be downgraded to the <0> plan on <1>. If you change your mind, you can <2>resume<3> your current plan before this date.', 'parcelpanel');
 
         // tips ----------
@@ -1651,7 +1651,7 @@ class Lang
         __('Send', 'parcelpanel');
         __('Contact us', 'parcelpanel');
         __('View example', 'parcelpanel');
-        __('Learn more about <0>ParcelPanel<1>', 'parcelpanel');
+        __('Learn more about <0>ParcelWILL<1>', 'parcelpanel');
         __('NEW', 'parcelpanel');
         __('HOT', 'parcelpanel');
         __('Preview', 'parcelpanel');
@@ -1663,9 +1663,9 @@ class Lang
         __('Don\'t want to use live chat? Contact us via <0>support forum<1> or email: <2>support@parcelpanel.org<3>', 'parcelpanel');
         __('Cancel', 'parcelpanel');
         __('Confirm', 'parcelpanel');
-        __('<0>Jessie<1> from ParcelPanel', 'parcelpanel');
+        __('<0>Jessie<1> from ParcelWILL', 'parcelpanel');
         __('Active', 'parcelpanel');
-        __('Welcome to ParcelPanel', 'parcelpanel');
+        __('Welcome to ParcelWILL', 'parcelpanel');
         __('Hello', 'parcelpanel');
         __('We\'re so glad you\'re here, let us know if you have any questions.', 'parcelpanel');
         __('Live chat with us', 'parcelpanel');
@@ -1675,7 +1675,7 @@ class Lang
         __('Select a direction.', 'parcelpanel');
         __('Live Chat Support', 'parcelpanel');
         __('Get Email Support', 'parcelpanel');
-        __('ParcelPanel Help Docs', 'parcelpanel');
+        __('ParcelWILL Help Docs', 'parcelpanel');
         __('Create a topic', 'parcelpanel');
 
         __('Special Gift', 'parcelpanel');
@@ -1687,7 +1687,7 @@ class Lang
         __('<0><1><2>Access to<3> <4>1000+ couriers<5>', 'parcelpanel');
         __('<0><1><2>Import widget &<3> <4>CSV import<5>', 'parcelpanel');
         __('<0><1><2>Branded<3> <4>tracking page<5>', 'parcelpanel');
-        __('<0><1><2><3><4>Remove ParcelPanel branding<5>', 'parcelpanel');
+        __('<0><1><2><3><4>Remove ParcelWILL branding<5>', 'parcelpanel');
         __('<0><1><2>Shipping<3> <4>notifications<5>', 'parcelpanel');
         __('<0>24/7<1> <2>live chat<3> <4>support<5>', 'parcelpanel');
 
@@ -1749,18 +1749,18 @@ class Lang
         __('Store Address', 'parcelpanel');
         __('Privacy Authorization', 'parcelpanel');
         __('Accept & Start', 'parcelpanel');
-        __('Welcome to ParcelPanel! ✨', 'parcelpanel');
+        __('Welcome to ParcelWILL! ✨', 'parcelpanel');
         __('Prior to using our services, we require your consent in compliance with GDPR and privacy regulations. Kindly review and accept our privacy permissions below: ', 'parcelpanel');
         __('Your Store', 'parcelpanel');
-        __('ParcelPanel', 'parcelpanel');
+        __('ParcelWILL', 'parcelpanel');
         __('Your data is encrypted and used solely for our services. We adhere to strict privacy policies and comply with data protection regulations. Review our <0>Privacy Policy<1> and <2>Terms of Service<3> for details.', 'parcelpanel');
         __('Deleting plugin from your store will remove its access, and request the removal of customer information if it was collected.', 'parcelpanel');
         __('Privacy details', 'parcelpanel');
-        __('What access does ParcelPanel need in your store:', 'parcelpanel');
+        __('What access does ParcelWILL need in your store:', 'parcelpanel');
         __('Permission details', 'parcelpanel');
-        __('What will ParcelPanel do with these data:', 'parcelpanel');
+        __('What will ParcelWILL do with these data:', 'parcelpanel');
         __('View and manage orders: Essential for seamless integration and efficient order processing.', 'parcelpanel');
-        __('View and manage customers: Necessary for sending ParcelPanel shipping notifications.', 'parcelpanel');
+        __('View and manage customers: Necessary for sending ParcelWILL shipping notifications.', 'parcelpanel');
         __('I have read and agreed to all the above terms and conditions.', 'parcelpanel');
 
         __('Remove', 'parcelpanel');
@@ -1839,8 +1839,8 @@ class Lang
     private static function langNew_home()
     {
         // home ----------
-        __('Welcome to ParcelPanel 👋', 'parcelpanel');
-        __('Welcome!! Get started with ParcelPanel', 'parcelpanel');
+        __('Welcome to ParcelWILL 👋', 'parcelpanel');
+        __('Welcome!! Get started with ParcelWILL', 'parcelpanel');
 
         __('Add tracking page', 'parcelpanel');
         __('Add tracking page to your storefront', 'parcelpanel');
@@ -1850,30 +1850,30 @@ class Lang
         __('Looks not so good?', 'parcelpanel');
 
         __('Customize notifications', 'parcelpanel');
-        __('Customize ParcelPanel shipping notifications', 'parcelpanel');
+        __('Customize ParcelWILL shipping notifications', 'parcelpanel');
         __('Keep your customers informed in a timely manner with shipment status updates, and boost your sales by incorporating effective marketing assets.', 'parcelpanel');
         __('Want to know how to do this? Please follow <0>this instruction<1>.', 'parcelpanel');
 
         __('Dropshipping (optional)', 'parcelpanel');
         __('Enable dropshipping mode', 'parcelpanel');
-        __('ParcelPanel is the best for dropshipping, and supports Aliexpress Standard Shipping, Yunexpress, CJ packet & ePacket (China EMS, China Post), and all commonly used couriers for dropshipping merchants.', 'parcelpanel');
+        __('ParcelWILL is the best for dropshipping, and supports Aliexpress Standard Shipping, Yunexpress, CJ packet & ePacket (China EMS, China Post), and all commonly used couriers for dropshipping merchants.', 'parcelpanel');
         __('This feature will allow you to hide all Chinese regions easily, bringing your customers an all-around brand shopping experience. <0>Learn more<1>.', 'parcelpanel');
 
-        __('How ParcelPanel works', 'parcelpanel');
+        __('How ParcelWILL works', 'parcelpanel');
         __('Out-of-box user experience', 'parcelpanel');
         __('Tracking numbers are synced from the Orders section of your WooCommerce admin, please don\'t forget to add them.', 'parcelpanel');
-        __('For new users, ParcelPanel will automatically sync their last-30-day orders for Free.', 'parcelpanel');
+        __('For new users, ParcelWILL will automatically sync their last-30-day orders for Free.', 'parcelpanel');
         __('New coming orders will be automatically synced in real time.', 'parcelpanel');
         __('We fetch the tracking info from couriers\' websites based on the tracking numbers.', 'parcelpanel');
         __('Tracking numbers are synchronized from your WooCommerce admin\'s Orders section, please don\'t forget to add them.', 'parcelpanel');
-        __('For new users, ParcelPanel offers free auto- sync of their last 30 days\' orders.', 'parcelpanel');
+        __('For new users, ParcelWILL offers free auto- sync of their last 30 days\' orders.', 'parcelpanel');
         __('Additionally, new incoming orders will be seamlessly synced in real-time.', 'parcelpanel');
         __('We retrieve tracking info directly from the courier websites based on the provided tracking numbers.', 'parcelpanel');
 
         __('Sync tracking numbers', 'parcelpanel');
-        __('ParcelPanel will automatically sync tracking numbers from Orders section in your WooCommerce admin once you add there, then track them.', 'parcelpanel');
+        __('ParcelWILL will automatically sync tracking numbers from Orders section in your WooCommerce admin once you add there, then track them.', 'parcelpanel');
         __('Orders section in WooCommerce admin', 'parcelpanel');
-        __('Additionally, how to get the tracking number, it\'s not about ParcelPanel. As we know, some merchants fulfilled orders via the 3rd party fulfillment service, some use dropshipping apps, some fulfilled by themselves etc. To know the tracking number of your order, we kindly suggest you asking suppliers or carriers support directly for some help.', 'parcelpanel');
+        __('Additionally, how to get the tracking number, it\'s not about ParcelWILL. As we know, some merchants fulfilled orders via the 3rd party fulfillment service, some use dropshipping apps, some fulfilled by themselves etc. To know the tracking number of your order, we kindly suggest you asking suppliers or carriers support directly for some help.', 'parcelpanel');
 
         __('Import tracking number of your orders', 'parcelpanel');
         __('Import tracking numbers of your orders in bulk with a CSV file, or manually add one by one in the Edit order page.', 'parcelpanel');
@@ -1907,10 +1907,10 @@ class Lang
         __('Tracking API', 'parcelpanel');
         __('Integration with WPML, Shippo, WooCommerce Shipping...', 'parcelpanel');
         __('In progress', 'parcelpanel');
-        __('Customized ParcelPanel shipping notifications email templates', 'parcelpanel');
+        __('Customized ParcelWILL shipping notifications email templates', 'parcelpanel');
 
 
-        __('Customized ParcelPanel shipping notifications', 'parcelpanel');
+        __('Customized ParcelWILL shipping notifications', 'parcelpanel');
         __('More analysis (Tracking page, Shipping notifications, Coupons upsell)', 'parcelpanel');
         __('Integration with WPML, WooCommerce Shipping, Shippo, Sendcloud...', 'parcelpanel');
         __('More integrations...', 'parcelpanel');
@@ -1921,8 +1921,8 @@ class Lang
         __('Email us and we\'ll get back to you as soon as possible.', 'parcelpanel');
         __('Start Live Chat', 'parcelpanel');
         __('Talk to us directly via live chat to get help with your question.', 'parcelpanel');
-        __('ParcelPanel Help Docs', 'parcelpanel');
-        __('Find a solution for your problem with ParcelPanel documents and tutorials.', 'parcelpanel');
+        __('ParcelWILL Help Docs', 'parcelpanel');
+        __('Find a solution for your problem with ParcelWILL documents and tutorials.', 'parcelpanel');
 
         __('Last <0> days', 'parcelpanel');
         __('Day range', 'parcelpanel');
@@ -1938,10 +1938,10 @@ class Lang
         __('The number and percentage of delivered shipments', 'parcelpanel');
         __('The number and percentage of shipments correctly tracked', 'parcelpanel');
         __('Tracking page', 'parcelpanel');
-        __('Orders / Revenue attributed to all marketing channels of ParcelPanel\'s tracking page', 'parcelpanel');
+        __('Orders / Revenue attributed to all marketing channels of ParcelWILL\'s tracking page', 'parcelpanel');
         __('Shipping notifications', 'parcelpanel');
-        __('Orders / Revenue attributed to all marketing and coupons channels of ParcelPanel\'s shipping notifications', 'parcelpanel');
-        __('Orders / Revenue attributed to ParcelPanel marketing and coupons channels', 'parcelpanel');
+        __('Orders / Revenue attributed to all marketing and coupons channels of ParcelWILL\'s shipping notifications', 'parcelpanel');
+        __('Orders / Revenue attributed to ParcelWILL marketing and coupons channels', 'parcelpanel');
         __('Total conversion orders / revenue', 'parcelpanel');
         __('The total number of shipments / The total number of times customers have tracked their shipment through the tracking page', 'parcelpanel');
 
@@ -1956,11 +1956,11 @@ class Lang
         __('Marketing clicks', 'parcelpanel');
         __('The total number of clicks your marketing channels in the shipping notifications, including product and product recommendation', 'parcelpanel');
 
-        __('ParcelPanel shipping notifications', 'parcelpanel');
+        __('ParcelWILL shipping notifications', 'parcelpanel');
         __('The total number of shipping notifications sent, including sent to customers and yourself', 'parcelpanel');
         __('Performance summary', 'parcelpanel');
         __('Shipping notifications over time', 'parcelpanel');
-        __('Automatically notify your customers or yourself via email with ParcelPanel shipment status updates', 'parcelpanel');
+        __('Automatically notify your customers or yourself via email with ParcelWILL shipment status updates', 'parcelpanel');
         __('Unlock all advanced analytics and drive business growth with data-driven insights', 'parcelpanel');
         __('Enable this feature', 'parcelpanel');
         __('Upgrade now', 'parcelpanel');
@@ -1973,15 +1973,15 @@ class Lang
         __('The total number of available quotas / The total number of quotas in the current plan', 'parcelpanel');
         __('The total number of delivered shipments and average transit day based on destination', 'parcelpanel');
         __('The total number of delivered shipments and average transit day based on couriers', 'parcelpanel');
-        __('Orders and revenue attributed to the coupons channel of ParcelPanel\'s shipping notifications', 'parcelpanel');
+        __('Orders and revenue attributed to the coupons channel of ParcelWILL\'s shipping notifications', 'parcelpanel');
         __('Coupons upsell', 'parcelpanel');
         __('Enable to boost more sales for Increased Revenue', 'parcelpanel');
         __('Coupons', 'parcelpanel');
         __('Orders', 'parcelpanel');
         __('Revenue', 'parcelpanel');
 
-        __('Tracking numbers are synchronized from your WooCommerce admin\'s Orders section, please don\'t forget to add them from <0>Edit order page → ParcelPanel section<1>.', 'parcelpanel');
-        __('To get the tracking number, it\'s not within ParcelPanel\'s scope. <0>We know that different merchants use various shipping methods such as third-party platforms, dropshipping apps, or self-fulfillment. To find out the tracking number for your order, we recommend reaching out directly to your <1>shipping provider<2> for assistance.', 'parcelpanel');
+        __('Tracking numbers are synchronized from your WooCommerce admin\'s Orders section, please don\'t forget to add them from <0>Edit order page → ParcelWILL section<1>.', 'parcelpanel');
+        __('To get the tracking number, it\'s not within ParcelWILL\'s scope. <0>We know that different merchants use various shipping methods such as third-party platforms, dropshipping apps, or self-fulfillment. To find out the tracking number for your order, we recommend reaching out directly to your <1>shipping provider<2> for assistance.', 'parcelpanel');
 
         __('Bulk Import via CSV', 'parcelpanel');
         __('Shipments', 'parcelpanel');
@@ -1990,16 +1990,16 @@ class Lang
         __('Marketing clicks', 'parcelpanel');
 
         __('Get started', 'parcelpanel');
-        __('How does ParcelPanel work in WooCommerce?', 'parcelpanel');
+        __('How does ParcelWILL work in WooCommerce?', 'parcelpanel');
         __('In just one minute, you\'ll learn how to enable your customers to track their orders on your store\'s tracking page.', 'parcelpanel');
         __('Video tutorial', 'parcelpanel');
         __('How to add the tracking page to your store navigation menu?', 'parcelpanel');
-        __('ParcelPanel automatically generates a branded tracking page for your store. Add it to your storefront, enabling customers to track orders independently and reducing support requests.', 'parcelpanel');
-        __('ParcelPanel supports multiple methods for importing tracking numbers to orders (WooCommerce admin\'s Orders section), please don\'t forget to add them.', 'parcelpanel');
+        __('ParcelWILL automatically generates a branded tracking page for your store. Add it to your storefront, enabling customers to track orders independently and reducing support requests.', 'parcelpanel');
+        __('ParcelWILL supports multiple methods for importing tracking numbers to orders (WooCommerce admin\'s Orders section), please don\'t forget to add them.', 'parcelpanel');
         __('Here, you can customize shipping notifications to match your brand identity. Once enabled, customers will promptly receive updates on their orders.', 'parcelpanel');
-        __('Here, various data analysis panels provide insights to optimize channels and gauge ParcelPanel\'s performance.', 'parcelpanel');
+        __('Here, various data analysis panels provide insights to optimize channels and gauge ParcelWILL\'s performance.', 'parcelpanel');
         __('Start a free trial', 'parcelpanel');
-        __('You\'re all set! Get even more from ParcelPanel.', 'parcelpanel');
+        __('You\'re all set! Get even more from ParcelWILL.', 'parcelpanel');
         __('Unlock our most powerful shipment tracking tools with a free trial, <0>no credit card required!<1> ✨', 'parcelpanel');
         __('I\'ve done this', 'parcelpanel');
         __('<2>Bulk import via CSV<3>: import multiple tracking numbers efficiently using a CSV file. <0>Learn more<1>.', 'parcelpanel');
@@ -2021,14 +2021,14 @@ class Lang
         __('Add tracking numbers to auto-sync and and present detailed tracking information from carriers on your tracking page.', 'parcelpanel');
         __('Self-Notify before customer complaints', 'parcelpanel');
         __('Opt for Exception and Failed Attempt email notifications to proactively resolve issues before customer complaints arise.', 'parcelpanel');
-        __('Review your ParcelPanel notification history', 'parcelpanel');
-        __('Simply click the mail icon on the shipment page to view the full history of ParcelPanel emails sent for that shipment.', 'parcelpanel');
+        __('Review your ParcelWILL notification history', 'parcelpanel');
+        __('Simply click the mail icon on the shipment page to view the full history of ParcelWILL emails sent for that shipment.', 'parcelpanel');
         __('Multilingual email automation', 'parcelpanel');
-        __('Send out ParcelPanel\'s shipping updates in the language your customers feel most comfortable with, all automated and hassle-free.', 'parcelpanel');
+        __('Send out ParcelWILL\'s shipping updates in the language your customers feel most comfortable with, all automated and hassle-free.', 'parcelpanel');
         __('Boost repeat business with coupons', 'parcelpanel');
-        __('Include exclusive coupons in your ParcelPanel shipping updates. It\'s a simple way to entice customers to return for another purchase.', 'parcelpanel');
+        __('Include exclusive coupons in your ParcelWILL shipping updates. It\'s a simple way to entice customers to return for another purchase.', 'parcelpanel');
         __('Seamless integration for unleashed potential', 'parcelpanel');
-        __('Integrate ParcelPanel effortlessly with multiple integrated plugins, such as <0> to unlock the full potential of your business operations.', 'parcelpanel');
+        __('Integrate ParcelWILL effortlessly with multiple integrated plugins, such as <0> to unlock the full potential of your business operations.', 'parcelpanel');
         __('Streamline your order fulfillment process', 'parcelpanel');
         __('Customize order statuses to match the unique workflow of your store, ensuring a smoother and more efficient fulfillment experience.', 'parcelpanel');
         __('Enhance Brand Experience with Dropshipping Mode', 'parcelpanel');
@@ -2084,9 +2084,9 @@ class Lang
         __('Lookup options', 'parcelpanel');
         __('By order number and email', 'parcelpanel');
         __('By tracking number', 'parcelpanel');
-        __('ParcelPanel branding', 'parcelpanel');
-        __('Remove "Powered by ParcelPanel"', 'parcelpanel');
-        __('to remove ParcelPanel branding for Free 😘', 'parcelpanel');
+        __('ParcelWILL branding', 'parcelpanel');
+        __('Remove "Powered by ParcePanel"', 'parcelpanel');
+        __('to remove ParcelWILL branding for Free 😘', 'parcelpanel');
         __('Additional text', 'parcelpanel');
         __('Text above the order lookup widget', 'parcelpanel');
         __('e.g. Curious about where your package is? Click the button to track!', 'parcelpanel');
@@ -2221,7 +2221,7 @@ class Lang
         __('Estimated delivery date: <0> - <1>(d)', 'parcelpanel');
         __('Dynamic tracking details', 'parcelpanel');
         __('Automatic translation', 'parcelpanel');
-        __('ParcelPanel captures tracking details from carriers\' websites. Professional plans and above support auto-translation based on the tracking page\'s language when customers visit.', 'parcelpanel');
+        __('ParcelWILL captures tracking details from carriers\' websites. Professional plans and above support auto-translation based on the tracking page\'s language when customers visit.', 'parcelpanel');
         __('Manual translation', 'parcelpanel');
         __('1. This feature distinguishes strings based on spaces, so please remember to include commas and periods when translating. <0> 2. If you\'ve enabled automatic translation, please manually review and edit the tracking info after it has been translated.', 'parcelpanel');
         __('Order Lookup', 'parcelpanel');
@@ -2235,7 +2235,7 @@ class Lang
         __('Edit the static text on your tracking page here.', 'parcelpanel');
         __('to add more supported languages 😘', 'parcelpanel');
         __('Automatic language switching', 'parcelpanel');
-        __('ParcelPanel supports multilingual tracking pages and auto-switches the language based on the store\'s language when customers visit. If the language is not supported, the default language will be displayed.', 'parcelpanel');
+        __('ParcelWILL supports multilingual tracking pages and auto-switches the language based on the store\'s language when customers visit. If the language is not supported, the default language will be displayed.', 'parcelpanel');
         __('The initial', 'parcelpanel');
         __('for the tracking page is English.', 'parcelpanel');
         __('default language', 'parcelpanel');
@@ -2397,9 +2397,9 @@ class Lang
         __('Step 3: Download the file in a CSV format and upload it.', 'parcelpanel');
         __('Import', 'parcelpanel');
         __('Close', 'parcelpanel');
-        __('Only ParcelPanel shipping notifications, don\'t include WooCommerce email notifications.', 'parcelpanel');
+        __('Only ParcelWILL shipping notifications, don\'t include WooCommerce email notifications.', 'parcelpanel');
         __('No notifications yet', 'parcelpanel');
-        __('You have not sent any ParcelPanel shipping notifications yet', 'parcelpanel');
+        __('You have not sent any ParcelWILL shipping notifications yet', 'parcelpanel');
 
 
         __('Sync to PayPal', 'parcelpanel');
@@ -2451,8 +2451,8 @@ class Lang
         __('Preview', 'parcelpanel');
         __('Add an order tracking section to WooCommerce email notifications', 'parcelpanel');
         __('Select order status to show the tracking section', 'parcelpanel');
-        __('ParcelPanel shipping email notifications', 'parcelpanel');
-        __('This feature will allow you to send email notifications based on ParcelPanel shipment status.', 'parcelpanel');
+        __('ParcelWILL shipping email notifications', 'parcelpanel');
+        __('This feature will allow you to send email notifications based on ParcelWILL shipment status.', 'parcelpanel');
         __('Manage template', 'parcelpanel');
         __('Account page tracking', 'parcelpanel');
         __('Add a track button to orders history page (Actions column)', 'parcelpanel');
@@ -2483,18 +2483,18 @@ class Lang
         __('Showing <0> of <1> couriers', 'parcelpanel');
 
         __('How it works?', 'parcelpanel');
-        __('After enabled, ParcelPanel will add a track button to the orders history page (Actions column), so your customers can track their orders with one click directed to your store tracking page.', 'parcelpanel');
-        __('After enabled, ParcelPanel will add a track button to orders admin (Actions column), you can add tracking info easily without clicking into order details.', 'parcelpanel');
+        __('After enabled, ParcelWILL will add a track button to the orders history page (Actions column), so your customers can track their orders with one click directed to your store tracking page.', 'parcelpanel');
+        __('After enabled, ParcelWILL will add a track button to orders admin (Actions column), you can add tracking info easily without clicking into order details.', 'parcelpanel');
 
         __('Shipping notifications', 'parcelpanel');
         __('Automatically add an order tracking section in the email notifications sent by WooCommerce based on the order status. <0>Learn more<1>.', 'parcelpanel');
-        __('ParcelPanel shipping notifications', 'parcelpanel');
-        __('Automatically notify your customers or yourself via email with ParcelPanel shipment status updates. <0>Learn more<1>.', 'parcelpanel');
+        __('ParcelWILL shipping notifications', 'parcelpanel');
+        __('Automatically notify your customers or yourself via email with ParcelWILL shipment status updates. <0>Learn more<1>.', 'parcelpanel');
         __('Notify yourself', 'parcelpanel');
-        __('Auto-send email notifications to yourself based on ParcelPanel shipment status update.', 'parcelpanel');
+        __('Auto-send email notifications to yourself based on ParcelWILL shipment status update.', 'parcelpanel');
         __('Notify your customers', 'parcelpanel');
         __('Customize your brand', 'parcelpanel');
-        __('Auto-send email notifications to your customers based on ParcelPanel shipment status update.', 'parcelpanel');
+        __('Auto-send email notifications to your customers based on ParcelWILL shipment status update.', 'parcelpanel');
         __('Edit template', 'parcelpanel');
 
         __('Tailored for WooCommerce', 'parcelpanel');
@@ -2531,10 +2531,10 @@ class Lang
         __('Customize your brand:', 'parcelpanel');
         __('More actions', 'parcelpanel');
         __('Sender info', 'parcelpanel');
-        __('ParcelPanel branding', 'parcelpanel');
+        __('ParcelWILL branding', 'parcelpanel');
         __('Remove "Powered by ParcelPanel"', 'parcelpanel');
         __('to remove it for Free 😘', 'parcelpanel');
-        __('ParcelPanel\'s Auto Multilingual Email Sending', 'parcelpanel');
+        __('ParcelWILL\'s Auto Multilingual Email Sending', 'parcelpanel');
         __('Auto-send based on your customers\' country. <0>Learn more<1>.', 'parcelpanel');
         __('Accent color', 'parcelpanel');
         __('Logo width', 'parcelpanel');
@@ -2579,8 +2579,8 @@ class Lang
         __('Email settings', 'parcelpanel');
         __('Enable this notification', 'parcelpanel');
 
-        __('The following emails are developed and sent by ParcelPanel. Rest assured, all your previous settings (shipping emails sent by WooCommerce) are fully compatible, simply navigate to <0>WooCommerce settings<1> to access your familiar setup with ease.<br/> Please note that if you have set up the same shipping notifications in both here and WooCommerce, emails will be sent twice. <2>Learn more<3>.', 'parcelpanel');
-        __('The following emails are developed and sent by ParcelPanel. However, if you prefer to use WooCommerce\'s standard <4>wp_mail()<5> email system (ParcelPanel shipping emails sent by WooCommerce), you can easily set it up by navigating to the <0>WooCommerce settings<1>.<br/> Please note that if you have set up the same shipping notifications in both here and WooCommerce, emails will be sent twice. <2>Learn more<3>.', 'parcelpanel');
+        __('The following emails are developed and sent by ParcelWILL. Rest assured, all your previous settings (shipping emails sent by WooCommerce) are fully compatible, simply navigate to <0>WooCommerce settings<1> to access your familiar setup with ease.<br/> Please note that if you have set up the same shipping notifications in both here and WooCommerce, emails will be sent twice. <2>Learn more<3>.', 'parcelpanel');
+        __('The following emails are developed and sent by ParcelWILL. However, if you prefer to use WooCommerce\'s standard <4>wp_mail()<5> email system (ParcelWILL shipping emails sent by WooCommerce), you can easily set it up by navigating to the <0>WooCommerce settings<1>.<br/> Please note that if you have set up the same shipping notifications in both here and WooCommerce, emails will be sent twice. <2>Learn more<3>.', 'parcelpanel');
 
         __('Delivered', 'parcelpanel');
         __('Check this option to automatically update the order status to \'Completed\' when all shipments within the order have been delivered.', 'parcelpanel');
@@ -2617,34 +2617,34 @@ class Lang
         __('Email customizer', 'parcelpanel');
         __('Translate', 'parcelpanel');
         __('Will there be more plugins integrated?', 'parcelpanel');
-        __('Yes, ParcelPanel will continue to integrate with more plugins to improve the user experience. Stay tuned!', 'parcelpanel');
+        __('Yes, ParcelWILL will continue to integrate with more plugins to improve the user experience. Stay tuned!', 'parcelpanel');
         __('Is it possible to integrate a plugin that I using but is not on your list?', 'parcelpanel');
         __('Let us know which plugin you would like us to integrate with.', 'parcelpanel');
         __('Contact us', 'parcelpanel');
-        __('You do not have to do anything, ParcelPanel works with the below plugins by default.  <0>Learn more<1>.', 'parcelpanel');
-        __('You do not have to do anything, ParcelPanel works with the below plugins by default.', 'parcelpanel');
+        __('You do not have to do anything, ParcelWILL works with the below plugins by default.  <0>Learn more<1>.', 'parcelpanel');
+        __('You do not have to do anything, ParcelWILL works with the below plugins by default.', 'parcelpanel');
 
         __('API Key', 'parcelpanel');
-        __('Developers can use the ParcelPanel API to effectively manage shipments by creating, viewing, and deleting tracking information. Learn <0>API doc<1> for details.', 'parcelpanel');
+        __('Developers can use the ParcelWILL API to effectively manage shipments by creating, viewing, and deleting tracking information. Learn <0>API doc<1> for details.', 'parcelpanel');
         __('Your API Key', 'parcelpanel');
         __('Show', 'parcelpanel');
         __('Hide', 'parcelpanel');
         __('Copy', 'parcelpanel');
-        __('Disconnect ParcelPanel & Klaviyo', 'parcelpanel');
-        __('Connect ParcelPanel & Klaviyo', 'parcelpanel');
+        __('Disconnect ParcelWILL & Klaviyo', 'parcelpanel');
+        __('Connect ParcelWILL & Klaviyo', 'parcelpanel');
         __('Klaviyo Public API Key', 'parcelpanel');
-        __('By connecting ParcelPanel & Klaviyo, you can create personalized campaigns & flows based on tracking events from ParcelPanel, then adjust your customers\' lifecycle email marketing.', 'parcelpanel');
-        __('How to connect ParcelPanel for WooCommerce & Klaviyo via API?', 'parcelpanel');
-        __('Disconnect ParcelPanel & Omnisend', 'parcelpanel');
-        __('Connect ParcelPanel & Omnisend', 'parcelpanel');
+        __('By connecting ParcelWILL & Klaviyo, you can create personalized campaigns & flows based on tracking events from ParcelWILL, then adjust your customers\' lifecycle email marketing.', 'parcelpanel');
+        __('How to connect ParcelWILL for WooCommerce & Klaviyo via API?', 'parcelpanel');
+        __('Disconnect ParcelWILL & Omnisend', 'parcelpanel');
+        __('Connect ParcelWILL & Omnisend', 'parcelpanel');
         __('Omnisend API Key', 'parcelpanel');
-        __('By integrating ParcelPanel and Omnisend, you can create personalized campaigns & flows based on tracking events from ParcelPanel, then adjust your customers\' lifecycle email marketing.', 'parcelpanel');
-        __('How to connect ParcelPanel for WooCommerce & Omnisend via API?', 'parcelpanel');
+        __('By integrating ParcelWILL and Omnisend, you can create personalized campaigns & flows based on tracking events from ParcelWILL, then adjust your customers\' lifecycle email marketing.', 'parcelpanel');
+        __('How to connect ParcelWILL for WooCommerce & Omnisend via API?', 'parcelpanel');
         __('Email marketing', 'parcelpanel');
         __('Payment', 'parcelpanel');
 
         __('Invalid API Key', 'parcelpanel');
-        __('Disconnect ParcelPanel & Paypal', 'parcelpanel');
+        __('Disconnect ParcelWILL & Paypal', 'parcelpanel');
         // integration ----------
     }
 
@@ -2667,14 +2667,14 @@ class Lang
         __('Unlimited', 'parcelpanel');
         __('Unlimited quota Avg $0.0000 per order', 'parcelpanel');
         __('Free Upgrade Now 🥳', 'parcelpanel');
-        __('Does ParcelPanel charge based on order lookups?', 'parcelpanel');
-        __('No, ParcelPanel counts the quota based on the number of your orders synced to ParcelPanel, and provides unlimited order lookups.', 'parcelpanel');
+        __('Does ParcelWILL charge based on order lookups?', 'parcelpanel');
+        __('No, ParcelWILL counts the quota based on the number of your orders synced to ParcelWILL, and provides unlimited order lookups.', 'parcelpanel');
         __('Can I change my plan in the middle of a billing cycle?', 'parcelpanel');
         __('Yes, you can change your plan at any time based on your needs. If you want to change the plan, the remaining quotas of current plan will be added to the new one automatically.', 'parcelpanel');
         __('Yes, you can change your plan at any time based on your needs. If you want to upgrade the plan, the remaining quotas of current plan will be added to the new one automatically. <0>Learn more<1>.', 'parcelpanel');
-        __('Why is ParcelPanel launching an unlimited plan? When will ParcelPanel charge?', 'parcelpanel');
+        __('Why is ParcelWILL launching an unlimited plan? When will ParcelWILL charge?', 'parcelpanel');
         __('We\'ve provided service for over 120,000 Shopify and WooCommerce stores, but we are still pretty new to WooCommerce for now. We want to give more special offers for WooCommerce merchants.', 'parcelpanel');
-        __('ParcelPanel will not charge for a short time. But please rest assured that if we decide to charge, we will definitely inform you in advance, and there will be no hidden charges.', 'parcelpanel');
+        __('ParcelWILL will not charge for a short time. But please rest assured that if we decide to charge, we will definitely inform you in advance, and there will be no hidden charges.', 'parcelpanel');
 
         __('Downgrade to Starter Free plan', 'parcelpanel');
         __('This can\'t be undone!', 'parcelpanel');
@@ -2699,8 +2699,8 @@ class Lang
         __('Recharge reminder', 'parcelpanel');
         __('Recommended for you ✨', 'parcelpanel');
         __('All <0> features, plus:', 'parcelpanel');
-        __('What\'s the quota? Does ParcelPanel charge based on order lookups?', 'parcelpanel');
-        __('"1 quota=1 order". ParcelPanel counts the quota based on the number of your orders synced to ParcelPanel, and provides unlimited order lookups.', 'parcelpanel');
+        __('What\'s the quota? Does ParcelWILL charge based on order lookups?', 'parcelpanel');
+        __('"1 quota=1 order". ParcelWILL counts the quota based on the number of your orders synced to ParcelWILL, and provides unlimited order lookups.', 'parcelpanel');
         // account ---------- new
 
         // account ---------- plan
@@ -2718,7 +2718,7 @@ class Lang
         __('Custom shipment status', 'parcelpanel');
         __('Estimated delivery time', 'parcelpanel');
         __('Product recommendation', 'parcelpanel');
-        __('ParcelPanel shipping notifications', 'parcelpanel');
+        __('ParcelWILL shipping notifications', 'parcelpanel');
         // __('Advanced analytics', 'parcelpanel');
         __('Post-purchase EDD', 'parcelpanel'); // v-analysis_version
         __('Advanced analytics: transit time, tracking page and shipping notifications', 'parcelpanel'); // v-analysis_version
@@ -2734,7 +2734,7 @@ class Lang
         // __('Advanced integrations: PayPal, DSers, WooCommerce Shipping, WPML and more...', 'parcelpanel');
         __('Advanced integrations: PayPal, DSers, WPML and more...', 'parcelpanel');
         __('Developer API', 'parcelpanel');
-        __('Remove ParcelPanel branding', 'parcelpanel');
+        __('Remove ParcelWILL branding', 'parcelpanel');
         __('Enterprise', 'parcelpanel');
         __('Tailored for high-volume companies', 'parcelpanel');
         __('Dedicated tracking channel', 'parcelpanel');
@@ -2753,10 +2753,10 @@ class Lang
         __('<0> remaining quotas in the previous plan(s', 'parcelpanel');
         __('<0> remaining gifting quotas in the current plan', 'parcelpanel');
         __('What does "quota" mean? How can I check the orders I\'ve synchronized?', 'parcelpanel');
-        __('1 order = 1 quota. When ParcelPanel syncs 1 order for you, it consumes 1 quota.', 'parcelpanel');
+        __('1 order = 1 quota. When ParcelWILL syncs 1 order for you, it consumes 1 quota.', 'parcelpanel');
         __('If an order contains multiple shipments, it is counted as one order, consuming only one quota.', 'parcelpanel');
         __('Order lookups don\'t consume quota, meaning your customers have unlimited lookups.', 'parcelpanel');
-        __('You can easily check the synchronized orders on the ParcelPanel Shipment page.', 'parcelpanel');
+        __('You can easily check the synchronized orders on the ParcelWILL Shipment page.', 'parcelpanel');
         __('Can I change my plan in the middle of a billing cycle? How do I cancel my plan?', 'parcelpanel');
         __('Of course, you can change your plan at any time based on your needs. Changing your plan follows these rules:', 'parcelpanel');
         __('Upgrading your plan takes effect immediately, resetting the billing cycle, and any remaining quota will be added to the new plan.', 'parcelpanel');
@@ -2765,7 +2765,7 @@ class Lang
         __('For more details on subscriptions, <0>learn more<1>.', 'parcelpanel');
         __('What is the free trial, and how does it work?', 'parcelpanel');
         __('All paid plans share the same free trial period. During the period, you can switch to any paid plan at no cost, and it won\'t consume any quotas.', 'parcelpanel');
-        __('Of course, if you find that ParcelPanel doesn\'t meet your requirements, you can downgrade to the free plan before the trial period ends to avoid any unexpected charges.', 'parcelpanel');
+        __('Of course, if you find that ParcelWILL doesn\'t meet your requirements, you can downgrade to the free plan before the trial period ends to avoid any unexpected charges.', 'parcelpanel');
         __('Automatic language switching', 'parcelpanel');
         __('Automatic translation', 'parcelpanel');
         // v3.8.2
@@ -2823,11 +2823,11 @@ class Lang
         __('Shipments over time', 'parcelpanel');
         __('The total number of shipments', 'parcelpanel');
         __('Conversion orders', 'parcelpanel');
-        __('Orders attributed to all marketing and discount channels of ParcelPanel\'s shipping notifications', 'parcelpanel');
-        __('Orders attributed to all marketing channels of ParcelPanel\'s shipping notifications', 'parcelpanel');
+        __('Orders attributed to all marketing and discount channels of ParcelWILL\'s shipping notifications', 'parcelpanel');
+        __('Orders attributed to all marketing channels of ParcelWILL\'s shipping notifications', 'parcelpanel');
         __('Conversion revenue', 'parcelpanel');
-        __('Revenue attributed to all marketing and discount channels of ParcelPanel\'s shipping notifications', 'parcelpanel');
-        __('Revenue attributed to all marketing channels of ParcelPanel\'s shipping notifications', 'parcelpanel');
+        __('Revenue attributed to all marketing and discount channels of ParcelWILL\'s shipping notifications', 'parcelpanel');
+        __('Revenue attributed to all marketing channels of ParcelWILL\'s shipping notifications', 'parcelpanel');
         __('Marketing CTR', 'parcelpanel');
         __('Marketing clicks divided by opened shipping notifications', 'parcelpanel');
         __('Shipping notifications time', 'parcelpanel');
@@ -2846,8 +2846,8 @@ class Lang
         __('Transit time (d) over time', 'parcelpanel');
         __('Transit time details', 'parcelpanel');
         __('The total number of times customers have tracked their shipment through the tracking page', 'parcelpanel');
-        __('Orders attributed to all marketing channels of ParcelPanel\'s tracking page', 'parcelpanel');
-        __('Revenue attributed to all marketing channels of ParcelPanel\'s tracking page', 'parcelpanel');
-        __('Orders and revenue attributed to the discount channel of ParcelPanel\'s shipping notifications', 'parcelpanel');
+        __('Orders attributed to all marketing channels of ParcelWILL\'s tracking page', 'parcelpanel');
+        __('Revenue attributed to all marketing channels of ParcelWILL\'s tracking page', 'parcelpanel');
+        __('Orders and revenue attributed to the discount channel of ParcelWILL\'s shipping notifications', 'parcelpanel');
     }
 }

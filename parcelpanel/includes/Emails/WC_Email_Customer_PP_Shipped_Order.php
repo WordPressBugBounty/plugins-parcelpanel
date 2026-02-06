@@ -7,7 +7,7 @@ class WC_Email_Customer_PP_Shipped_Order extends WC_Email_Shipping_Notice
     public function __construct()
     {
         $this->id = 'customer_shipped_order';
-        $this->title = __('ParcelPanel Shipped order', 'parcelpanel');
+        $this->title = __('ParcelWILL Shipped order', 'parcelpanel');
         $this->description = __('Order shipped emails are sent to customers when their orders are marked shipped and usually indicate that their all shipments in the orders have been shipped.', 'parcelpanel');
 
         // Triggers for this email.

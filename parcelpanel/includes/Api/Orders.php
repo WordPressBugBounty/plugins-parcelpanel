@@ -425,6 +425,7 @@ class Orders
      */
     static function get_order_item_data($item)
     {
+        global $wpdb;
         $data           = $item->get_data();
         $format_decimal = ['subtotal', 'subtotal_tax', 'total', 'total_tax', 'tax_total', 'shipping_tax_total'];
 
@@ -441,12 +442,37 @@ class Orders
         if ($getProductIsCallable) {
             $product = $item->get_product();
 
+            // 如果没有产品
+            if (empty($product)) {
+                $lookup_table = $wpdb->prefix . 'wc_order_product_lookup';
+                $item_id = $item->get_id();
+                $rows = $wpdb->get_results(
+                    $wpdb->prepare(
+                        "SELECT * FROM {$lookup_table} WHERE order_item_id = %d",
+                        $item_id
+                    )
+                );
+
+                if (!empty($rows)) {
+                    $data['product_id'] = $rows[0]->product_id;
+                    $data['variation_id'] = $rows[0]->variation_id;
+                }
+            }
+
             $data['sku'] = null;
             $data['parent_name'] = null;
 
             // ADD SKU
             if (is_callable([$product, 'get_sku'])) {
                 $data['sku'] = $product->get_sku();
+            }
+
+            if (is_callable([$product, 'get_image_id'])) {
+                $image_id = $product->get_image_id();
+
+                if ($image_id) {
+                    $data['image_url'] = wp_get_attachment_url($image_id);
+                }
             }
 
             // Add parent_name if the product is a variation.

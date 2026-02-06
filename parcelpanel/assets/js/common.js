@@ -216,7 +216,7 @@ jQuery(($) => {
       _ajax_nonce: parcelpanel_param.connect_server_nonce,
     }, (res) => {
       if (!res.success) {
-        $.toastr.error(res.msg || 'Failed to connect to ParcelPanel.', {time: 5e3})
+        $.toastr.error(res.msg || 'Failed to connect to ParcelWILL.', {time: 5e3})
         // 连接失败，等待一段时间后继续检测
         setTimeout(connectPP, 15e3)
       } else if (!res.data.is_connected) {
