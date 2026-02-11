@@ -30,7 +30,7 @@ defined('ABSPATH') || exit;
           <div style="flex:1" class="pp-m-l-4">
             <p><a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=AliExpress Dropshipping with Ali2Woo Lite" target="_blank" rel="noopener noreferrer"><?php esc_html_e('AliExpress Dropshipping with Ali2Woo Lite', 'parcelpanel') ?></a></p>
             <p class="pp-m-t-1"><?php esc_html_e('Looking for AliExpress Dropshipping plugin for WordPress and WooCommerce stores? Ali2Woo is the right choice! Import any products with reviews from Al …', 'parcelpanel') ?></p>
-            <p class="pp-m-t-2"><a href="https://docs.parcelpanel.com/woocommerce/article/how-integration-with-aliexpress-dropshipping-with-ali2woo-lite-works/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('How integration with AliExpress Dropshipping with Ali2Woo Lite works?', 'parcelpanel') ?></a></p>
+            <p class="pp-m-t-2"><a href="https://docs.parcelwill.com/woocommerce/article/how-integration-with-aliexpress-dropshipping-with-ali2woo-lite-works/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('How integration with AliExpress Dropshipping with Ali2Woo Lite works?', 'parcelpanel') ?></a></p>
           </div>
           <toggle-control v-model="pluginIntegrationEnable[1001]" @change="savePluginIntegrationEnabled(1001, $event)" :disabled="toggleDisabled[1001]" class="pp-m-l-4"></toggle-control>
         </div>
@@ -42,7 +42,7 @@ defined('ABSPATH') || exit;
           <div style="flex:1" class="pp-m-l-4">
             <p><a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=ALD – Dropshipping and Fulfillment for AliExpress and WooCommerce" target="_blank" rel="noopener noreferrer"><?php esc_html_e('ALD – Dropshipping and Fulfillment for AliExpress and WooCommerce', 'parcelpanel') ?></a></p>
             <p class="pp-m-t-1"><?php esc_html_e('ALD – Dropshipping and Fulfillment for AliExpress and WooCommerce allows shop owners to import products from AliExpress to their own WooCommerce store …', 'parcelpanel') ?></p>
-            <p class="pp-m-t-2"><a href="https://docs.parcelpanel.com/woocommerce/article/how-integration-with-ald-%E2%80%93-dropshipping-and-fulfillment-for-aliexpress-and-woocommerce-works/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('How integration with ALD – Dropshipping and Fulfillment for AliExpress and WooCommerce works?', 'parcelpanel') ?></a></p>
+            <p class="pp-m-t-2"><a href="https://docs.parcelwill.com/woocommerce/article/how-integration-with-ald-%E2%80%93-dropshipping-and-fulfillment-for-aliexpress-and-woocommerce-works/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('How integration with ALD – Dropshipping and Fulfillment for AliExpress and WooCommerce works?', 'parcelpanel') ?></a></p>
           </div>
           <toggle-control v-model="pluginIntegrationEnable[1002]" @change="savePluginIntegrationEnabled(1002, $event)" :disabled="toggleDisabled[1002]" class="pp-m-l-4"></toggle-control>
         </div>
@@ -52,14 +52,14 @@ defined('ABSPATH') || exit;
           <div style="flex:1" class="pp-m-l-4">
             <p><span><?php esc_html_e('DSers Dropshipping Solution: Find products on AliExpress for WooCommerce', 'parcelpanel') ?></span></p>
             <p class="pp-m-t-1"><?php esc_html_e('DSers is AliExpress official dropshipping partner. It\'s the best way to place 100s of orders at once to AliExpress, find products, and more!', 'parcelpanel') ?></p>
-            <p class="pp-m-t-2"><a href="https://docs.parcelpanel.com/woocommerce/article/how-integration-with-dsers-dropshipping-solution-find-products-on-aliexpress-for-woocommerce-works/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('How integration with DSers Dropshipping Solution: Find products on AliExpress for WooCommerce works?', 'parcelpanel') ?></a></p>
+            <p class="pp-m-t-2"><a href="https://docs.parcelwill.com/woocommerce/article/how-integration-with-dsers-dropshipping-solution-find-products-on-aliexpress-for-woocommerce-works/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('How integration with DSers Dropshipping Solution: Find products on AliExpress for WooCommerce works?', 'parcelpanel') ?></a></p>
           </div>
           <toggle-control v-model="pluginIntegrationEnable[1003]" @change="savePluginIntegrationEnabled(1003, $event)" :disabled="toggleDisabled[1003]" class="pp-m-l-4"></toggle-control>
         </div>
       </div>
 
       <div class="pp-card-body list-box" style="padding-bottom:32px" v-if="activatedTabIndex === 1">
-        <div><?php esc_html_e('You do not have to do anything, ParcelWILL works with the below plugins by default.', 'parcelpanel') ?> <a href="https://docs.parcelpanel.com/woocommerce/article/how-integration-with-custom-order-numbers-plugins-works/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Learn more.', 'parcelpanel') ?></a></div>
+        <div><?php esc_html_e('You do not have to do anything, ParcelWILL works with the below plugins by default.', 'parcelpanel') ?> <a href="https://docs.parcelwill.com/woocommerce/article/how-integration-with-custom-order-numbers-plugins-works/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Learn more.', 'parcelpanel') ?></a></div>
         <hr class="pp-divider">
         <div style="display:flex;">
           <a href="<?php echo esc_url(admin_url()); ?>plugin-install.php?tab=search&type=term&s=Sequential Order Number for WooCommerce" target="_blank" rel="noopener noreferrer">

@@ -19,7 +19,7 @@ msgid "Parcel Panel Order Tracking for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
-msgid "https://docs.parcelpanel.com/woocommerce"
+msgid "https://docs.parcelwill.com/woocommerce"
 msgstr ""
 
 #. Description of the plugin

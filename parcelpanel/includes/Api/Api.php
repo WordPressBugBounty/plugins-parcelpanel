@@ -50,7 +50,7 @@ class Api
 
     public static function get_url($path): string
     {
-        $server_api = apply_filters('parcelpanel_server_api_url', 'https://wp.parcelpanel.com/api/v1');
+        $server_api = apply_filters('parcelpanel_server_api_url', 'https://wp.parcelwill.net/api/v1');
 
         return $server_api . $path;
     }

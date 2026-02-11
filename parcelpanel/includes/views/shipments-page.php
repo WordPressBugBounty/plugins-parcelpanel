@@ -53,7 +53,7 @@ $pp_param = wp_json_encode([
       <p class="pp-m-t-4">
         <?php
         // translators: %1$s is html %2$s is html.
-        echo sprintf(esc_html__('Learn more about %1$sCSV table headers%2$s.', 'parcelpanel'), '<a href="https://docs.parcelpanel.com/woocommerce/article/69" target="_blank">', '</a>')
+        echo sprintf(esc_html__('Learn more about %1$sCSV table headers%2$s.', 'parcelpanel'), '<a href="https://docs.parcelwill.com/woocommerce/article/69" target="_blank">', '</a>')
         ?>
       </p>
       <div v-show="isExporting" class="pp-m-t-4" style="width: 100%">

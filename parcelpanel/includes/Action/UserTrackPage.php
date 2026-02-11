@@ -109,7 +109,7 @@ class UserTrackPage
         $trackingAssetUrlJs = !empty($tracking_config['trackingAsset']['js']) ? $tracking_config['trackingAsset']['js'] : '';
         $trackingAssetUrlCss = !empty($tracking_config['trackingAsset']['css']) ? $tracking_config['trackingAsset']['css'] : '';
         $trackingAssetVersion = !empty($tracking_config['trackingAsset']['version']) ? $tracking_config['trackingAsset']['version'] : VERSION;
-        // $api_url = 'https://wp.parcelpanel.com/api/v1/wordpress/';
+        // $api_url = 'https://wp.parcelwill.net/api/v1/wordpress/';
         // $tracking_url = apply_filters('parcelpanel_server_tracking_url', $api_url);
         // $trackingAssetTrackingUrl = !empty($tracking_config['trackingAsset']['tracking_url']) ? $tracking_config['trackingAsset']['tracking_url'] : $tracking_url;
         unset($tracking_config['trackingAsset']);

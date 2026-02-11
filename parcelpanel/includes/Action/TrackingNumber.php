@@ -640,7 +640,7 @@ class TrackingNumber
                                                         echo esc_url($import_template_file_link) ?>" target="_blank">this CSV file</a>.</p>
                             </div>
                             <div style="margin-bottom:16px">
-                                <p>Step 2: Fill in the data following the <a href="https://docs.parcelpanel.com/woocommerce/article/57" target="_blank">Import
+                                <p>Step 2: Fill in the data following the <a href="https://docs.parcelwill.com/woocommerce/article/57" target="_blank">Import
                                         Template Instructions</a>. Tracking number that do not comply with the
                                     instructions will not be imported.</p>
                             </div>

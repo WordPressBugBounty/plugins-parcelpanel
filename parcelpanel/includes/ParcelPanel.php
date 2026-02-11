@@ -1653,7 +1653,7 @@ SQL;
     public function plugin_action_links($actions): array
     {
         $links = [
-            '<a href="https://docs.parcelpanel.com/woocommerce?utm_source=plugin_listing" target="_blank">' . esc_html__('Docs', 'parcelpanel') . '</a>',
+            '<a href="https://docs.parcelwill.com/woocommerce?utm_source=plugin_listing" target="_blank">' . esc_html__('Docs', 'parcelpanel') . '</a>',
             '<a href="https://wordpress.org/support/plugin/parcelpanel/" target="_blank">' . __('Support', 'parcelpanel') . '</a>',
         ];
 
@@ -1773,8 +1773,8 @@ SQL;
             // Add corresponding language information
             // $preview_email_url = add_query_arg('_wpnonce', wp_create_nonce('pp-preview-mail'), admin_url('?pp_preview_mail=1'));
             $preview_email_url = add_query_arg('_wpnonce', wp_create_nonce('pp-preview-mail-wc'), admin_url('?pp_preview_mail_wc=1'));
-            $api_url = 'https://wp-api.parcelpanel.com/api/v1';
-            $api_go_url = 'https://pc-go-pro.parcelpanel.com';
+            $api_url = 'https://wp-api.parcelwill.net/api/v1';
+            $api_go_url = 'https://pc-go-pro.parcelwill.net';
 
             $token = get_option(\ParcelPanel\OptionName\API_KEY);
             if (empty($token)) {

@@ -37,7 +37,7 @@ defined('ABSPATH') || exit;
         <p class="pp-m-t-2">
           <?php
           // translators: %1$s is url html %2$s is url html.
-          echo sprintf(esc_html__('Don’t know how to do this? Please follow %1$sthis instruction%2$s.', 'parcelpanel'), '<a href="https://docs.parcelpanel.com/woocommerce/article/56" target="_blank">', '</a>')
+          echo sprintf(esc_html__('Don’t know how to do this? Please follow %1$sthis instruction%2$s.', 'parcelpanel'), '<a href="https://docs.parcelwill.com/woocommerce/article/56" target="_blank">', '</a>')
           ?>
         </p>
         <pp-button @click="previewTrackPage" variant="primary" class="pp-m-t-5 pp-m-b-5"><?php esc_html_e('Preview tracking page', 'parcelpanel') ?></pp-button>
@@ -52,7 +52,7 @@ defined('ABSPATH') || exit;
         <p>
           <?php
           // translators: %1$s is url html %2$s is url html.
-          echo sprintf(esc_html__('Use mapping feature to bulk import tracking number with a CSV file, or manually add one by one in the Edit order page. %1$sLearn more%2$s.', 'parcelpanel'), '<a href="https://docs.parcelpanel.com/woocommerce/article/how-does-parcelpanel-work-in-woocommerce/" target="_blank">', '</a>')
+          echo sprintf(esc_html__('Use mapping feature to bulk import tracking number with a CSV file, or manually add one by one in the Edit order page. %1$sLearn more%2$s.', 'parcelpanel'), '<a href="https://docs.parcelwill.com/woocommerce/article/how-does-parcelpanel-work-in-woocommerce/" target="_blank">', '</a>')
           ?>
         </p>
         <pp-button @click="modal" variant="primary" class="pp-m-t-5"><?php esc_html_e('Import tracking number', 'parcelpanel') ?></pp-button>
@@ -69,7 +69,7 @@ defined('ABSPATH') || exit;
             <li class="pp-m-t-1">
               <?php
               // translators: %1$s is url html %2$s is url html.
-              echo sprintf(esc_html__('Hide all Chinese origin easily, brings your customers an all-around brand shopping experience. %1$sLearn more%2$s.', 'parcelpanel'), '<a href="https://docs.parcelpanel.com/woocommerce/article/61" target="_blank">', '</a>')
+              echo sprintf(esc_html__('Hide all Chinese origin easily, brings your customers an all-around brand shopping experience. %1$sLearn more%2$s.', 'parcelpanel'), '<a href="https://docs.parcelwill.com/woocommerce/article/61" target="_blank">', '</a>')
               ?>
             </li>
           </ul>

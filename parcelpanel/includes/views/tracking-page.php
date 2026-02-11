@@ -213,7 +213,7 @@ defined('ABSPATH') || exit;
               <div class="pp-col-xs-12 pp-col-md-4  pp-p-r-5 pp-taggle-body-min-wdith">
                 <div>
                   <p class="pp-taggle-subtitle"><?php esc_html_e('Custom shipment status', 'parcelpanel') ?></p>
-                  <p><?php esc_html_e('Add custom status(up to 3) with time interval and description, to timely inform customers about the progress of their orders before you fulfill them.', 'parcelpanel') ?>&nbsp;<a href="https://docs.parcelpanel.com/woocommerce/article/58" target="_blank"><?php esc_html_e('Learn more', 'parcelpanel') ?></a>.
+                  <p><?php esc_html_e('Add custom status(up to 3) with time interval and description, to timely inform customers about the progress of their orders before you fulfill them.', 'parcelpanel') ?>&nbsp;<a href="https://docs.parcelwill.com/woocommerce/article/58" target="_blank"><?php esc_html_e('Learn more', 'parcelpanel') ?></a>.
                   </p>
                 </div>
                 <div class="pp-m-y-3">
@@ -334,7 +334,7 @@ defined('ABSPATH') || exit;
 
           <div class="pp-row" type="flex">
             <div class="pp-col-xs-12 pp-col-md-4  pp-p-r-5 pp-taggle-body-min-wdith">
-              <p><?php esc_html_e('Set an estimated time period that will be displayed on your tracking page, to show your customers when they will receive their orders.', 'parcelpanel') ?>&nbsp;<a href="https://docs.parcelpanel.com/woocommerce/article/59" target="_blank"><?php esc_html_e('Learn more', 'parcelpanel') ?></a>.
+              <p><?php esc_html_e('Set an estimated time period that will be displayed on your tracking page, to show your customers when they will receive their orders.', 'parcelpanel') ?>&nbsp;<a href="https://docs.parcelwill.com/woocommerce/article/59" target="_blank"><?php esc_html_e('Learn more', 'parcelpanel') ?></a>.
               </p>
             </div>
 
@@ -534,7 +534,7 @@ defined('ABSPATH') || exit;
               <label class="pp-label pp-m-b-1"><?php esc_html_e('CSS', 'parcelpanel') ?></label>
               <p><?php
                   // translators: %1$s is html %2$s is html.
-                  echo sprintf(esc_html__('View the CSS codes here you used to do the custom change of your tracking page, if you would like to change codes, please %1$scontact us%2$s or follow %3$sthis instruction%4$s.', 'parcelpanel'), '<a @click="onContactUs" href="javascript:">', '</a>', '<a href="https://docs.parcelpanel.com/woocommerce/article/customize-your-tracking-page-via-css-codes/" target="_blank">', '</a>')
+                  echo sprintf(esc_html__('View the CSS codes here you used to do the custom change of your tracking page, if you would like to change codes, please %1$scontact us%2$s or follow %3$sthis instruction%4$s.', 'parcelpanel'), '<a @click="onContactUs" href="javascript:">', '</a>', '<a href="https://docs.parcelwill.com/woocommerce/article/customize-your-tracking-page-via-css-codes/" target="_blank">', '</a>')
                   ?></p>
             </div>
             <div class="pp-col-xs-12 pp-col-md-8 pp-taggle-body-min-wdith">
