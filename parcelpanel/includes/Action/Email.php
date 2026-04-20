@@ -187,6 +187,10 @@ class Email
         foreach ($items as $item_id => $item) {
             $product = $item->get_product();
 
+            if (!$product || !is_object($product)) {
+                break;
+            }
+
             if ($product->is_virtual()) {
                 $is_no_virtual = false;
                 // This product is virtual

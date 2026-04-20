@@ -1,7 +1,7 @@
 === ParcelWILL (Formerly ParcelPanel) – Shipment Tracking, Tracking & Order Tracking for WooCommerce ===
 Contributors: parcelpanel
 Tags: tracking, shipment tracking, order tracking, track order, woocommerce shipment tracking
-Stable Tag: 4.5.5
+Stable Tag: 4.5.6
 Requires at least: 5.9
 Tested up to: 6.9
 Requires PHP: 7.4
@@ -287,6 +287,10 @@ You might also want to refer to the following video:
 
 
 == Changelog ==
+
+= 4.5.6 – 2026-04-20 =
+
+- Fix – Fixed some known issues
 
 = 4.5.5 – 2026-02-11 =
 
