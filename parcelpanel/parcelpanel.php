@@ -4,7 +4,7 @@
  * Plugin Name: ParcelWILL Order Tracking for WooCommerce
  * Plugin URI: https://docs.parcelpanel.com/woocommerce
  * Description: The best order tracking plugin specially designed for WooCommerce, driving customer loyalty and more sales by providing the best post-purchase experience.
- * Version: 4.5.6
+ * Version: 4.5.7
  * Author: ParcelWILL
  * Author URI: https://www.parcelpanel.com
  * Developer: ParcelWILL
@@ -15,12 +15,12 @@
  * Requires PHP: 7.2
  * Requires at least: 5.8
  * WC requires at least: 4.4.0
- * WC tested up to: 10.4
+ * WC tested up to: 10.8
  *
  * @copyright 2018-2026 ParcelWILL
  */
 
-define('ParcelPanel\VERSION', '4.5.6');
+define('ParcelPanel\VERSION', '4.5.7');
 define('ParcelPanel\DB_VERSION', '2.9.0');
 
 define('ParcelPanel\PLUGIN_FILE', __FILE__);

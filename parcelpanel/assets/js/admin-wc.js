@@ -537,7 +537,7 @@ input.pp-number-input-input[data-v-ubw820r6]{margin:0;padding:0 0 0 8px;width:10
 .pp-input-box-new label{display:flex;flex-direction:column;}
 .pp-input-title-style{margin-bottom: 4px;}
 .pp-cursor{cursor: pointer;}
-#PP-click-status input {vertical-align: sub;}
+#PP-click-status input {vertical-align: text-bottom;}
 
 .pp-tracking-number-tip{display: none;align-items: center;margin-top: 4px;color:#CC1818;}
 

@@ -935,7 +935,7 @@ final class ParcelPanel
     {
         register_post_status('wc-partial-shipped', [
             'label' => __('Partially Shipped', 'parcelpanel'),
-            'public' => true,
+            'public' => false,
             'show_in_admin_status_list' => true,
             'show_in_admin_all_list' => true,
             'exclude_from_search' => false,
@@ -949,7 +949,7 @@ final class ParcelPanel
 
         register_post_status('wc-shipped', [
             'label' => __('Shipped', 'parcelpanel'),
-            'public' => true,
+            'public' => false,
             'show_in_admin_status_list' => true,
             'show_in_admin_all_list' => true,
             'exclude_from_search' => false,
@@ -963,7 +963,7 @@ final class ParcelPanel
 
         register_post_status('wc-delivered', [
             'label' => __('Delivered', 'parcelpanel'),
-            'public' => true,
+            'public' => false,
             'show_in_admin_status_list' => true,
             'show_in_admin_all_list' => true,
             'exclude_from_search' => false,

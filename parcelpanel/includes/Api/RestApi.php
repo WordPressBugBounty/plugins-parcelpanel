@@ -335,7 +335,7 @@ class RestApi extends \WP_REST_Controller
             return false;
         }
 
-        return $users[0];
+        return (int) $users[0]->ID;
     }
 
     /**
