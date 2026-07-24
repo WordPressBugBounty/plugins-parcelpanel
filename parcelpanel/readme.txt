@@ -1,7 +1,7 @@
-=== ParcelWILL (Formerly ParcelPanel) – Shipment Tracking, Tracking & Order Tracking for WooCommerce ===
+=== CWILL (Formerly ParcelPanel) – Shipment Tracking, Tracking & Order Tracking for WooCommerce ===
 Contributors: parcelpanel
 Tags: tracking, shipment tracking, order tracking, track order, woocommerce shipment tracking
-Stable Tag: 4.5.7
+Stable Tag: 4.5.8
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.4
@@ -12,12 +12,12 @@ Free Plan Available. Order Tracking, Shipment Tracking. The best WooCommerce Ord
 
 == Description ==
 
-### PARCELWILL (FORMERLY PARCELPANEL) SHIPMENT TRACKING FOR WOOCOMMERCE – BEST ORDER TRACKING PLUGIN IN WORDPRESS 💪
+### CWILL (FORMERLY PARCELPANEL) SHIPMENT TRACKING FOR WOOCOMMERCE – BEST ORDER TRACKING PLUGIN IN WORDPRESS 💪
 
-**“Where is my order?”(WISMO) is the biggest concern of your customers.** We created ParcelWILL (formerly ParcelPanel) Shipment Tracking, the ultimate tracking plugin for WordPress, to help WooCommerce merchants get access to the order tracker, improving customer satisfaction and driving more sales by providing the best post-purchase experience.
+**“Where is my order?”(WISMO) is the biggest concern of your customers.** We created CWILL (formerly ParcelPanel) Shipment Tracking, the ultimate tracking plugin for WordPress, to help WooCommerce merchants get access to the order tracker, improving customer satisfaction and driving more sales by providing the best post-purchase experience.
 
 ### Free plan still available ✨
-- Since our initial launch in 2021, ParcelWILL (formerly ParcelPanel) Tracking has remained 100% FREE up to the present day. However, due to the continuous increase of various costs, we have decided to launch the paid version V3.6 starting in Sept, 2023.
+- Since our initial launch in 2021, CWILL (formerly ParcelPanel) Tracking has remained 100% FREE up to the present day. However, due to the continuous increase of various costs, we have decided to launch the paid version V3.6 starting in Sept, 2023.
 - Free plan Including:
     - 20 orders/month, and provides unlimited order lookups
     - Access to 1,500+ carriers
@@ -33,7 +33,7 @@ Free Plan Available. Order Tracking, Shipment Tracking. The best WooCommerce Ord
 
 
 ### Fully GDPR ready
-ParcelWILL (formerly ParcelPanel) Tracking is fully GDPR compliant, so you can be confident that your customers’ data is being collected and used in a responsible way. Learn more about our [Privacy Policy](https://www.parcelpanel.com/privacy-policy/).
+CWILL (formerly ParcelPanel) Tracking is fully GDPR compliant, so you can be confident that your customers’ data is being collected and used in a responsible way. Learn more about our [Privacy Policy](https://www.parcelpanel.com/privacy-policy/).
 
 ### Why do you need an order tracking plugin for WooCommerce?
 
@@ -46,35 +46,35 @@ Tracking orders and knowing estimated delivery dates should be effortless for cu
 - **Consistent brand experience is being challenged**
 Before purchase, you control the customer experience. However, after ordering, shipment tracking is handled by a third-party carrier. Problems like a poorly designed tracking page or loading issues can harm your brand.
 
-### Why ParcelWILL (formerly Parcel Panel) Order Tracking for WooCommerce?
-- ParcelWILL (formerly Parcel Panel) Order Tracking can solve all the above shipment tracking and tracking issues and even bring in additional revenue.
+### Why CWILL (formerly Parcel Panel) Order Tracking for WooCommerce?
+- CWILL (formerly Parcel Panel) Order Tracking can solve all the above shipment tracking and tracking issues and even bring in additional revenue.
 - We've been focused on parcel tracking for years, provides advanced shipment tracking, and make sure accurate results for track orders, better than AST (Advanced Shipment Tracking), Trackship, 17track, Aftership, TrackingMore, Yith, Orders tracking, covering [1,500+ carriers](https://www.parcelpanel.com/couriers/) worldwide including USPS, Cainiao, Royal Mail, YunExpress, 4PX, YANWEN, etc.
 - Perhaps we may not yet be as renowned as those well-known plugins on WordPress, such as Elementor, Yoast SEO, Rank Math SEO, Popup Builder, or the essential WordPress plugins like Contact Form, Classic Editor, Akismet Anti-Spam: Spam Protection, Jetpack, WP Mail SMTP, nor do we fall under the trendy categories like SEO, Email Marketing, Translate, Popup, or Google Analytics. However, our brand is built on being the top eCommerce tracking solution, dedicated to providing the best post-purchase experience for your customers with our ultimate product and service approach.
 - Our team believes in efficiency and doing what's right. We're here to help merchants with order tracking challenges.
-- Discover our exclusive order tracking features and understand why ParcelWILL (formerly ParcelPanel) shipment tracking is possibly the best WooCommerce tracking plugin.
+- Discover our exclusive order tracking features and understand why CWILL (formerly ParcelPanel) shipment tracking is possibly the best WooCommerce tracking plugin.
 
 ### Working Principle
 ### Streamlined Order Fulfillment Workflow
-ParcelWILL (formerly ParcelPanel) Tracking offers features to optimize your order fulfillment process, tailored to meet various merchant requirements.
+CWILL (formerly ParcelPanel) Tracking offers features to optimize your order fulfillment process, tailored to meet various merchant requirements.
 
-- ParcelWILL (formerly Parcel Panel) Shipment Tracking enables you to add [Partially Shipped], [Shipped], and [Delivered] order statuses, aligning seamlessly with your store’s workflow.
-- Automation – ParcelWILL (formerly ParcelPanel) tracking support automatic switching of order status after all shipments reach the ‘Delivered’ status to reduce repetitive tasks.
+- CWILL (formerly Parcel Panel) Shipment Tracking enables you to add [Partially Shipped], [Shipped], and [Delivered] order statuses, aligning seamlessly with your store’s workflow.
+- Automation – CWILL (formerly ParcelPanel) tracking support automatic switching of order status after all shipments reach the ‘Delivered’ status to reduce repetitive tasks.
 
 ### Auto-sync WooCommerce order data
-- Once a WooCommerce order is placed, it syncs up with ParcelWILL (formerly Parcel Panel) Shipment Tracking automatically. From there, tracking your shipments on our branded page is a breeze.
+- Once a WooCommerce order is placed, it syncs up with CWILL (formerly Parcel Panel) Shipment Tracking automatically. From there, tracking your shipments on our branded page is a breeze.
 
 ### Auto-matching courier
 - We ensure accurate tracking results for all orders, covering [1,500+ mainstream carriers](https://www.parcelpanel.com/couriers/) worldwide.
-- ParcelWILL (formerly Parcel Panel) Shipment Tracking's smart system automatically identifies the correct couriers, retrieves tracking details from their official websites, and displays them on the tracking page.
+- CWILL (formerly Parcel Panel) Shipment Tracking's smart system automatically identifies the correct couriers, retrieves tracking details from their official websites, and displays them on the tracking page.
 
 ### Add tracking numbers to orders
-- Use the tracking number widget: Individually add tracking numbers on the Edit order page. Once added, they'll sync to the ParcelWILL (formerly ParcelPanel) Shipments page.
+- Use the tracking number widget: Individually add tracking numbers on the Edit order page. Once added, they'll sync to the CWILL (formerly ParcelPanel) Order Tracking Shipments page.
 - Bulk import via CSV: Utilize our smart field-mapping tool to import multiple tracking numbers from a CSV file, minimizing repetitive tasks.
-- API Integration: Easily manage shipment tracking information in orders through ParcelWILL (formerly ParcelPanel) WooCommerce Tracking API (API). Refer to our [API doc](https://docs.parcelpanel.com/woocommerce/api/pp-woo-api/) for details.
-- Third-Party Fulfillment: For dropshipping and shipping plugins, tracking numbers are auto-synced to ParcelWILL (formerly ParcelPanel) without any additional effort required on your part!
+- API Integration: Easily manage shipment tracking information in orders through CWILL (formerly ParcelPanel) WooCommerce Tracking API (API). Refer to our [API doc](https://docs.parcelpanel.com/woocommerce/api/pp-woo-api/) for details.
+- Third-Party Fulfillment: For dropshipping and shipping plugins, tracking numbers are auto-synced to CWILL (formerly ParcelPanel) Order Tracking without any additional effort required on your part!
 
 ### Integration
-ParcelWILL (formerly Parcel Panel) Shipment Tracking integration includes the following plugins:
+CWILL (formerly Parcel Panel) Shipment Tracking integration includes the following plugins:
 
 - Dropshipping
     - Ali2Woo - AliExpress Dropshipping with Ali2Woo Lite
@@ -102,7 +102,7 @@ ParcelWILL (formerly Parcel Panel) Shipment Tracking integration includes the fo
     - ...
 - More Integration coming soon...
 
-ParcelWILL (formerly ParcelPanel) Shipment Tracking will continue to integrate with more plugins to improve the user experience. Stay tuned!
+CWILL (formerly ParcelPanel) Shipment Tracking will continue to integrate with more plugins to improve the user experience. Stay tuned!
 Got a plugin you'd like us to add? Let us know through our Feature request page, and we'll check it out!
 
 ### The best for WooCommerce dropshipping
@@ -113,16 +113,16 @@ Got a plugin you'd like us to add? Let us know through our Feature request page,
 ### Save money & Boost sales
 
 A great order tracking solution not only lets customers track orders on their own, saving you cash, but also creates opportunities to make more money.
-ParcelWILL (formerly ParcelPanel) Shipment Tracking offers proactive updates and notifications on parcel progress, enabling customers to view current status.
+CWILL (formerly ParcelPanel) Shipment Tracking offers proactive updates and notifications on parcel progress, enabling customers to view current status.
 By offering product recommendations and controlling the customer experience, you can open up new marketing channels and increase sales.
 
 ### Free to install & Free plan available & No-credit-card trial
 
-- ParcelWILL (formerly ParcelPanel) Shipment Tracking is a Free plan available with key features available and 20 quota/month!
+- CWILL (formerly ParcelPanel) Shipment Tracking is a Free plan available with key features available and 20 quota/month!
 
 ### Your brand, Your tracking page
 
-- ParcelWILL (formerly ParcelPanel) Order Tracking automatically creates a branded tracking page under your store domain (SEO friendly) with plenty of customizable elements. No more "Where is my order?" inquiries—bring customers back to your store and boost sales effortlessly.
+- CWILL (formerly ParcelPanel) Order Tracking automatically creates a branded tracking page under your store domain (SEO friendly) with plenty of customizable elements. No more "Where is my order?" inquiries—bring customers back to your store and boost sales effortlessly.
 
 [youtube https://www.youtube.com/watch?v=eja-IuEViJs]
 
@@ -142,22 +142,22 @@ By offering product recommendations and controlling the customer experience, you
 - Drive Traffic to Your Site - redirect customers to your WooCommerce site instead of the carrier site, increasing organic search traffic.
 
 ### Account page tracking
-- With ParcelWILL (formerly ParcelPanel) Order Tracking, you can easily add a track button to your order history page, enabling your customers to conveniently track their order status with just one click there.
+- With CWILL (formerly ParcelPanel) Order Tracking, you can easily add a track button to your order history page, enabling your customers to conveniently track their order status with just one click there.
 
 ### Shipping notifications
 
 **Add an order tracking section to WooCommerce email notifications**
-Automatically insert ParcelWILL (formerly ParcelPanel) Shipment Tracking section to email notifications base on order status, so customers can easily track shipments in their email.
+Automatically insert CWILL (formerly ParcelPanel) Shipment Tracking section to email notifications base on order status, so customers can easily track shipments in their email.
 
-**ParcelWILL (formerly ParcelPanel) shipping notifications**
+**CWILL (formerly ParcelPanel) shipping notifications**
 
-- Developed and sent by ParcelWILL (formerly ParcelPanel) tracking
+- Developed and sent by CWILL (formerly ParcelPanel) tracking
     - Stay informed with 5 smart notifications triggered by key shipping updates, keeping customers up-to-date on order progress.
     - Customize email design and content to match your brand, providing a seamless post-purchase experience.
     - Boost revenue with upsell and product recommendations directly within the email.
-    - Automatically ParcelWILL (formerly ParcelPanel) tracking shipping notifications in the customer's language based on country for a seamless shopping experience worldwide.
-- Developed by ParcelWILL (formerly ParcelPanel) but sent by WooCommerce
-    - Easily set up WooCommerce's standard email system [`wp_mail()`](https://developer.wordpress.org/reference/functions/wp_mail/) or ParcelWILL (formerly ParcelPanel) shipping emails (sent by WooCommerce) if preferred.
+    - Automatically CWILL (formerly ParcelPanel) tracking shipping notifications in the customer's language based on country for a seamless shopping experience worldwide.
+- Developed by CWILL (formerly ParcelPanel) Order Tracking but sent by WooCommerce
+    - Easily set up WooCommerce's standard email system [`wp_mail()`](https://developer.wordpress.org/reference/functions/wp_mail/) or CWILL (formerly ParcelPanel) Order Tracking shipping emails (sent by WooCommerce) if preferred.
 
 
 ### Comprehensive dashboard insights
@@ -172,22 +172,22 @@ Automatically insert ParcelWILL (formerly ParcelPanel) Shipment Tracking section
 - Manually update order status, ideal for merchants with their own shipping or local delivery teams.
 
 ### Shipping providers
-- ParcelWILL (formerly ParcelPanel) Order Tracking support [1,500+ carriers](https://www.parcelpanel.com/couriers/) worldwide:
+- CWILL (formerly ParcelPanel) Order Tracking support [1,500+ carriers](https://www.parcelpanel.com/couriers/) worldwide:
 USPS, Yun Express, AliExpress Standard Shipping, 4PX, UPS, DHL, Fedex, Delhivery, DHL Express, Australia Post, YANWEN, Brazil Correios, UK Royal Mail, CNE Express, YDH, China Post, La Poste and many more....
 
 ### Translations
 
-- The ParcelWILL (formerly ParcelPanel) Order Tracking plugin is localized and translatable by default. we support translation to the following languages: **Chinese (Simplified), Chinese Traditional, English – default, French(France), German, Italian, Spanish(Spain), Portuguese(Portugal), Dutch, and Greek.**
+- The CWILL (formerly ParcelPanel) Order Tracking plugin is localized and translatable by default. we support translation to the following languages: **Chinese (Simplified), Chinese Traditional, English – default, French(France), German, Italian, Spanish(Spain), Portuguese(Portugal), Dutch, and Greek.**
 
 ### 24/7 Live chat support
 
 - Live chat or email: Need help? Don't hesitate to contact us via live chat or email at [support@parcelpanel.org](mailto:support@parcelpanel.org).
- - ParcelWILL (formerly ParcelPanel) values your privacy. Our live chat, powered by Intercom, is disabled by default. We don't collect private information about your store or customers without your permission. Click to learn more about our [Privacy Policy](https://www.parcelpanel.com/privacy-policy/).
+ - CWILL (formerly ParcelPanel) Order Tracking values your privacy. Our live chat, powered by Intercom, is disabled by default. We don't collect private information about your store or customers without your permission. Click to learn more about our [Privacy Policy](https://www.parcelpanel.com/privacy-policy/).
 - [Support Forum](https://wordpress.org/support/plugin/parcelpanel/) is an excellent resource for discussing and solving problems.
-- [ParcelWILL help center](https://docs.parcelpanel.com/woocommerce/) is another valuable resource where you can find more information and detailed tutorials.
+- [CWILL (formerly ParcelPanel) Order Tracking help center](https://docs.parcelpanel.com/woocommerce/) is another valuable resource where you can find more information and detailed tutorials.
 
 ### 8,000+ Happy Customers
-Join over 8,000 happy customers and elevate your post-purchase experience with ParcelWILL (formerly ParcelPanel) today. Here's what our customers have to say:
+Join over 8,000 happy customers and elevate your post-purchase experience with CWILL (formerly ParcelPanel) Order Tracking today. Here's what our customers have to say:
 
 ⭐⭐⭐⭐⭐
 > "I'd install this tracking plugin in any store without hesitation. It's incredibly useful, easy to use, customizable, and does its job perfectly. Plus, the support team is fast and friendly. Give it a try—you won't regret it!"
@@ -205,56 +205,56 @@ Join over 8,000 happy customers and elevate your post-purchase experience with P
 > "This tracking plugin has everything a small e-commerce website needs. The tracking option simplifies things for both shop managers and customers. Extra settings like a branded tracking page, cross-selling recommendations, and end-to-end tracking make life even easier. Overall, it's the go-to solution for shipment tracking needs."
 
 ### Getting started
-[ParcelWILL Help Center](https://docs.parcelpanel.com/woocommerce/): While ParcelWILL (formerly Parcel Panel) Shipment Tracking is already easy to set up, our tutorials, guides, and knowledge bases are here to ensure you get started smoothly.
-[Support Ticket Forum](https://wordpress.org/support/plugin/parcelpanel/): Our dedicated forum offers support for any issues you encounter with ParcelWILL (formerly Parcel Panel) Shipment Tracking. We prioritize user experience and aim to promptly address all queries on the forum.
-[Frequently Asked Questions](https://wordpress.org/plugins/parcelpanel/#faq-header): Find answers to common questions about ParcelWILL (formerly Parcel Panel) Order Tracking, covering features, pricing, and more.
+[CWILL (formerly Parcel Panel) Order Tracking Help Center](https://docs.parcelpanel.com/woocommerce/): While CWILL (formerly Parcel Panel) Shipment Tracking is already easy to set up, our tutorials, guides, and knowledge bases are here to ensure you get started smoothly.
+[Support Ticket Forum](https://wordpress.org/support/plugin/parcelpanel/): Our dedicated forum offers support for any issues you encounter with CWILL (formerly Parcel Panel) Shipment Tracking. We prioritize user experience and aim to promptly address all queries on the forum.
+[Frequently Asked Questions](https://wordpress.org/plugins/parcelpanel/#faq-header): Find answers to common questions about CWILL (formerly Parcel Panel) Order Tracking, covering features, pricing, and more.
 
 == FAQ ==
 
-**How does ParcelWILL (formerly ParcelPanel) Order Tracking work in WooCommerce?**
+**How does CWILL (formerly ParcelPanel) Order Tracking work in WooCommerce?**
 
-1. ParcelWILL (formerly ParcelPanel) syncs your order data from the Orders section of your WooCommerce admin.
-2. Once an order is placed, it's automatically synced to the ParcelWILL (formerly ParcelPanel) Shipments tab without a tracking number.
-3. When you manually add a tracking number and select the correct courier, it's synced to ParcelWILL (formerly ParcelPanel).
+1. CWILL (formerly ParcelPanel) Order Tracking syncs your order data from the Orders section of your WooCommerce admin.
+2. Once an order is placed, it's automatically synced to the CWILL (formerly ParcelPanel) Order Tracking Shipments tab without a tracking number.
+3. When you manually add a tracking number and select the correct courier, it's synced to CWILL (formerly ParcelPanel) Order Tracking.
 4. Our smart system automatically retrieves tracking details from the courier's official website.
 5. The tracking details are then displayed on the tracking page for easy access.
 
-**How many couriers does ParcelWILL (formerly ParcelPanel) Shipment Tracking support?**
+**How many couriers does CWILL (formerly ParcelPanel) Shipment Tracking support?**
 
-ParcelWILL (formerly ParcelPanel) Shipment Tracking supports over [1,500+ carriers](https://www.parcelpanel.com/couriers/) worldwide, including well-known logistics companies such as USPS, UPS, DHL, FedEx, Australia Post, Royal Mail, UBI, CNE, Yanwen, DPD, La Poste, GLS, and others. It also covers commonly used couriers by dropshipping merchants, like AliExpress Standard Shipping (Cainiao tracking), YunExpress, 4PX, CJ Packet, ePacket tracking (China Post, China EMS), and more.
+CWILL (formerly ParcelPanel) Shipment Tracking supports over [1,500+ carriers](https://www.parcelpanel.com/couriers/) worldwide, including well-known logistics companies such as USPS, UPS, DHL, FedEx, Australia Post, Royal Mail, UBI, CNE, Yanwen, DPD, La Poste, GLS, and others. It also covers commonly used couriers by dropshipping merchants, like AliExpress Standard Shipping (Cainiao tracking), YunExpress, 4PX, CJ Packet, ePacket tracking (China Post, China EMS), and more.
 
 **Where can my customers track their shipments?**
 
-ParcelWILL (formerly Parcel Panel) Shipment Tracking creates a branded tracking page on your WooCommerce store domain. Your customers can use this page to track their shipments. Simply add the tracking page to your store menus for easy access.
+CWILL (formerly Parcel Panel) Shipment Tracking creates a branded tracking page on your WooCommerce store domain. Your customers can use this page to track their shipments. Simply add the tracking page to your store menus for easy access.
 
 **Will it automatically track my orders and notify my customers?**
 
-Absolutely! ParcelWILL (formerly ParcelPanel) Shipment Tracking automatically matches couriers to accurately track your orders and update shipment statuses. With built-in shipping notifications and WooCommerce email alerts, you and your customers stay informed throughout the process.
+Absolutely! CWILL (formerly ParcelPanel) Shipment Tracking automatically matches couriers to accurately track your orders and update shipment statuses. With built-in shipping notifications and WooCommerce email alerts, you and your customers stay informed throughout the process.
 
-**Why do I see a "Failed to connect to ParcelWILL. Can not connect website." error?**
+**Why do I see a "Failed to connect to CWILL (formerly ParcelPanel) Order Tracking. Can not connect website." error?**
 
 - Check for active security plugins: Sometimes security plugins block connections to websites. Try disabling them and see if it resolves the issue.
-- Contact your web host: Your host might have a firewall that's blocking ParcelWILL. Ask them to **whitelist ParcelWILL's IPs** or disable the firewall.
+- Contact your web host: Your host might have a firewall that's blocking CWILL (formerly ParcelPanel) Order Tracking. Ask them to **whitelist CWILL's IPs** or disable the firewall.
 - Reach out to customer service: If the problem persists, contact our customer service via live chat or email for assistance. We're here to help!
 
-**Which themes does ParcelWILL's tracking page support?**
-ParcelWILL (formerly ParcelPanel) has been tested with numerous WordPress themes and is compatible with all major WordPress themes. If you encounter any issues after installing ParcelWILL (formerly ParcelPanel), please contact our support team, and we'll assist you in resolving them.
+**Which themes does CWILL's tracking page support?**
+CWILL (formerly ParcelPanel) Order Tracking has been tested with numerous WordPress themes and is compatible with all major WordPress themes. If you encounter any issues after installing CWILL (formerly ParcelPanel), please contact our support team, and we'll assist you in resolving them.
 
-**Does ParcelWILL (formerly Parcel Panel) Order Tracking adhere to a privacy policy?**
-ParcelWILL (formerly ParcelPanel) prioritizes user privacy. We do not gather private information about your store or customers without your consent. Additionally, our plugin is ISO 27001 certified and GDPR compliant. Click to read more about our [Privacy Policy](https://www.parcelpanel.com/privacy-policy/).
+**Does CWILL (formerly Parcel Panel) Order Tracking adhere to a privacy policy?**
+CWILL (formerly ParcelPanel) Order Tracking prioritizes user privacy. We do not gather private information about your store or customers without your consent. Additionally, our plugin is ISO 27001 certified and GDPR compliant. Click to read more about our [Privacy Policy](https://www.parcelpanel.com/privacy-policy/).
 
 == Installation ==
 
-By installing ParcelWILL (formerly ParcelPanel) for free you agree to our [Privacy Policy](https://www.parcelpanel.com/privacy-policy/).
+By installing CWILL (formerly ParcelPanel) Order Tracking for free you agree to our [Privacy Policy](https://www.parcelpanel.com/privacy-policy/).
 
-### ParcelWILL (formerly ParcelPanel) is committed to providing an out-of-the-box user experience:
+### CWILL (formerly ParcelPanel) Order Tracking is committed to providing an out-of-the-box user experience:
 
 #### DOWNLOAD STEPS
 
 1. Visit Plugins page→ **Add New**
-2. Search for **ParcelWILL**
-3. **Install** ParcelWILL once it appears
-4. **Activate** ParcelWILL from your Plugins page
+2. Search for **CWILL (formerly ParcelPanel)**
+3. **Install** CWILL (formerly ParcelPanel) once it appears
+4. **Activate** CWILL (formerly ParcelPanel) from your Plugins page
 5. Go to "after activation" below
 
 You might also want to refer to the following video:
@@ -264,29 +264,33 @@ You might also want to refer to the following video:
 #### MANUALLY
 
 1. Upload the **parcelpanel** folder to the **/wp-content/plugins/** directory
-2. **Activate** the ParcelWILL Order Tracking for WooCommerce plugin through the "Plugins" menu in WordPress
+2. **Activate** the CWILL (formerly ParcelPanel) Order Tracking for WooCommerce plugin through the "Plugins" menu in WordPress
 3. Go to "after activation" below
 
 #### AFTER ACTIVATION
 
 1. Add the tracking page to your WooCommerce store navigation menu
-2. Import tracking numbers of your orders with ParcelWILL Import Widget or using a CSV file, or directly sync them from dropshipping apps like Ali2Woo
-3. Now ParcelWILL will automatically track and update your shipment status, and timely send email notifications to customers by your needs
+2. Import tracking numbers of your orders with CWILL (formerly ParcelPanel) Order Tracking Import Widget or using a CSV file, or directly sync them from dropshipping apps like Ali2Woo
+3. Now CWILL (formerly ParcelPanel) Order Tracking will automatically track and update your shipment status, and timely send email notifications to customers by your needs
 
 
 == Screenshots ==
 
-1. Why ParcelWILL (formerly Parcel Panel) order tracking
+1. Why CWILL (formerly Parcel Panel) order tracking
 2. No More "Where is my order?"
 3. Enhance Customer Satisfaction
 4. More Traffic, More Revenue
 5. Data-driven Decisions
 6. Seamless Integration
 7. Responsive Design
-8. ParcelWILL shipments dashboard
+8. CWILL (formerly Parcel Panel) order tracking shipments dashboard
 
 
 == Changelog ==
+
+= 4.5.8 – 2026-07-24 =
+
+- Changed – We're gradually introducing our new brand identity across the app.
 
 = 4.5.7 – 2026-06-05 =
 
