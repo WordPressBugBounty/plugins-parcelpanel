@@ -1,7 +1,7 @@
 === CWILL (Formerly ParcelPanel) – Shipment Tracking, Tracking & Order Tracking for WooCommerce ===
 Contributors: parcelpanel
 Tags: tracking, shipment tracking, order tracking, track order, woocommerce shipment tracking
-Stable Tag: 4.5.8
+Stable Tag: 4.5.9
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.4
@@ -287,6 +287,10 @@ You might also want to refer to the following video:
 
 
 == Changelog ==
+
+= 4.5.9 – 2026-08-07 =
+
+- Fix – Fixed some known issues
 
 = 4.5.8 – 2026-07-24 =
 

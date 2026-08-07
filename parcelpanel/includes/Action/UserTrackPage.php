@@ -13,6 +13,12 @@ class UserTrackPage
 {
     use Singleton;
 
+    private const RECOMMEND_PRODUCTS_LIMIT = 10;
+
+    private const RECOMMEND_CANDIDATE_LIMIT = 30;
+
+    private const RECOMMEND_CANDIDATE_LIMIT_MAX = 100;
+
     private $order = null;
 
     private $order_id = 0;
@@ -461,9 +467,13 @@ class UserTrackPage
 
         // get products
         $PRODUCT_RECOMMEND = !empty($tracking_config['productRec']) ? $tracking_config['productRec'] : [];
+        if (empty($PRODUCT_RECOMMEND['enabled'])) {
+            return $recommend_products;
+        }
+
         $base_pro = !empty($PRODUCT_RECOMMEND['base_pro']) ? $PRODUCT_RECOMMEND['base_pro'] : 1;
         $PRODUCT_RECOMMEND_advanced = $base_pro == 2; // 1 : Based on order items   2: Based on specific category
-        $PRODUCT_RECOMMEND_CAT_ID = $PRODUCT_RECOMMEND['product_cat_id'];
+        $PRODUCT_RECOMMEND_CAT_ID = $PRODUCT_RECOMMEND['product_cat_id'] ?? 0;
         if (!empty($PRODUCT_RECOMMEND_advanced) && !empty($PRODUCT_RECOMMEND_CAT_ID)) {
             $back = self::get_recommend_products_by_cate_ids($recommend_products, $order_products, $PRODUCT_RECOMMEND_CAT_ID);
             return $back['recommend_products'] ?? [];
@@ -612,6 +622,12 @@ class UserTrackPage
                 "select_ids" => $product_cat_ids,
             ];
         }
+
+        // Do not query products when product recommendations are disabled.
+        if (empty($product_recommend['enabled'])) {
+            return $recommend_products;
+        }
+
         $base_pro = !empty($product_recommend['base_pro']) ? $product_recommend['base_pro'] : 1;
         $base_select = !empty($product_recommend['base_select']) ? $product_recommend['base_select'] : 1;
         $select_ids = !empty($product_recommend['select_ids']) ? $product_recommend['select_ids'] : array();
@@ -885,6 +901,17 @@ class UserTrackPage
     public static function compare_arrays($a, $b)
     {
         return $a['id'] - $b['id'];
+    }
+
+    /**
+     * Keep recommendation queries bounded while leaving room to skip order items.
+     */
+    private static function get_recommend_candidate_limit($order_products = array())
+    {
+        $limit = count($order_products) + self::RECOMMEND_PRODUCTS_LIMIT;
+        $limit = max(self::RECOMMEND_CANDIDATE_LIMIT, $limit);
+
+        return min(self::RECOMMEND_CANDIDATE_LIMIT_MAX, $limit);
     }
 
     // update shipment pro message
@@ -1490,8 +1517,7 @@ class UserTrackPage
     // get recommend_products list
     private static function get_recommend_products_by_cate_ids($recommend_products, $order_products, $cateIds)
     {
-        // recommend_products count
-        $count_pro = count($order_products) + 20;
+        $count_pro = self::get_recommend_candidate_limit($order_products);
 
         // @codingStandardsIgnoreStart
         $query_args = [
@@ -1499,6 +1525,14 @@ class UserTrackPage
             'post_type' => 'product',
             'post_status' => 'publish',
             'posts_per_page' => $count_pro,
+            'no_found_rows' => true,
+            'ignore_sticky_posts' => true,
+            'meta_query' => [
+                [
+                    'key' => '_stock_status',
+                    'value' => 'instock',
+                ],
+            ],
             'tax_query' => [
                 [
                     'taxonomy' => 'product_cat',
@@ -1576,10 +1610,22 @@ class UserTrackPage
             ];
         }
 
+        $query_limit = self::get_recommend_candidate_limit($order_products);
+
         $args = array(
+            'fields' => 'ids',
             'post_type' => 'product',
+            'post_status' => 'publish',
             'post__in' => $product_ids,
-            'posts_per_page' => -1,
+            'posts_per_page' => $query_limit,
+            'no_found_rows' => true,
+            'ignore_sticky_posts' => true,
+            'meta_query' => array(
+                array(
+                    'key' => '_stock_status',
+                    'value' => 'instock',
+                ),
+            ),
         );
 
         $WP_Query = new \WP_Query($args);
@@ -1646,14 +1692,21 @@ class UserTrackPage
             ];
         }
 
-        // recommend_products count
-        $count_pro = count($order_products) + 20;
+        $count_pro = self::get_recommend_candidate_limit($order_products);
         // @codingStandardsIgnoreStart
         $query_args = [
             'fields' => 'ids',
             'post_type' => 'product',
             'post_status' => 'publish',
-            'posts_per_page' => -1, // all pros -1  or $count_pro
+            'posts_per_page' => $count_pro,
+            'no_found_rows' => true,
+            'ignore_sticky_posts' => true,
+            'meta_query' => [
+                [
+                    'key' => '_stock_status',
+                    'value' => 'instock',
+                ],
+            ],
             'tax_query' => [
                 [
                     'taxonomy' => 'product_cat',
@@ -1725,14 +1778,21 @@ class UserTrackPage
             ];
         }
 
-        // recommend_products count
-        $count_pro = count($order_products) + 20;
+        $count_pro = self::get_recommend_candidate_limit($order_products);
         // @codingStandardsIgnoreStart
         $query_args = [
             'fields' => 'ids',
             'post_type' => 'product',
             'post_status' => 'publish',
-            'posts_per_page' => -1, // all pros -1  or $count_pro
+            'posts_per_page' => $count_pro,
+            'no_found_rows' => true,
+            'ignore_sticky_posts' => true,
+            'meta_query' => [
+                [
+                    'key' => '_stock_status',
+                    'value' => 'instock',
+                ],
+            ],
             'tax_query' => [
                 [
                     'taxonomy' => 'product_tag',

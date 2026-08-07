@@ -3382,7 +3382,7 @@ SQL;
     private function init_app_1006_integration()
     {
         // is active
-        $isActivePlugins = is_plugin_active('woocommerce-services/woocommerce-services.php');
+        $isActivePlugins = is_plugin_active('woocommerce-services/woocommerce-services.php') || is_plugin_active('woocommerce-shipping/woocommerce-shipping.php');
         if (!AdminIntegration::get_app_integrated(1006) || !$isActivePlugins) {
             return;
         }

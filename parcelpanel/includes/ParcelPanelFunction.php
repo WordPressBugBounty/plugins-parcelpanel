@@ -767,11 +767,32 @@ final class ParcelPanelFunction
         include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 
         if (is_plugin_active('custom-order-numbers-for-woocommerce/custom-order-numbers-for-woocommerce.php')) {
-            $alg_wc_custom_order_numbers_enabled = get_option('alg_wc_custom_order_numbers_enabled');
-            $alg_wc_custom_order_numbers_prefix = get_option('alg_wc_custom_order_numbers_prefix');
-            $new_order_id = str_replace($alg_wc_custom_order_numbers_prefix, '', $order_id);
+            $settings = get_option('con_general_settings', null);
 
-            if ('yes' == $alg_wc_custom_order_numbers_enabled) {
+            if (is_array($settings)) {
+                // 2.0.0+
+                $enabled = ! empty($settings['enabled']);
+
+                $prefix = class_exists('\Tyche\CON\Functions')
+                    ? \Tyche\CON\Functions::get_rule_prefix_by_type('custom', '')
+                    : '';
+            } else {
+                $enabled = 'yes' === get_option(
+                    'alg_wc_custom_order_numbers_enabled',
+                    'no'
+                );
+
+                $prefix = get_option(
+                    'alg_wc_custom_order_numbers_prefix',
+                    ''
+                );
+            }
+
+            //$alg_wc_custom_order_numbers_enabled = get_option('alg_wc_custom_order_numbers_enabled');
+            //$alg_wc_custom_order_numbers_prefix = get_option('alg_wc_custom_order_numbers_prefix');
+            $new_order_id = str_replace($prefix, '', $order_id);
+
+            if ($enabled) {
                 // @codingStandardsIgnoreStart
                 $order_ids = wc_get_orders([
                     'limit'      => 1,
