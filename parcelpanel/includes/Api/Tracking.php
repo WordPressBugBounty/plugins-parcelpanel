@@ -677,15 +677,19 @@ class Tracking
 
                     $itemHasAllShipped = true;
                     $order = wc_get_order($orderId);
-                    $items = $ppFunction->getOrderItems($order);
+                    $items = $ppFunction->getShipmentOrderItems($order, '', array_keys($items_f));
 
-                    foreach ($items as $item_id => $item) {
-                        $product_quantity = $item->get_quantity();
-                        if (isset($items_f[$item_id]) && ($items_f[$item_id] == $product_quantity || $items_f[$item_id] == 0)) {
-                            continue;
+                    // Item ID 0 represents an order-level shipment and covers
+                    // every shippable item in the order.
+                    if (!array_key_exists(0, $items_f)) {
+                        foreach ($items as $item_id => $item) {
+                            $product_quantity = $item->get_quantity();
+                            if (isset($items_f[$item_id]) && ($items_f[$item_id] == $product_quantity || $items_f[$item_id] == 0)) {
+                                continue;
+                            }
+                            $itemHasAllShipped = false;
+                            break;
                         }
-                        $itemHasAllShipped = false;
-                        break;
                     }
                 }
 

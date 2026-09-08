@@ -1206,7 +1206,7 @@ class TrackingNumberCSVImporter
                 }
                 if (empty($shipment_line_items)) {
                     // Populate all order items and let subsequent steps adapt to the quantity of items
-                    foreach ($items as $item) {
+                    foreach ($ppFunction->getShippableOrderItems($order, 'line_item') as $item) {
                         $shipment_line_items[] = [
                             'id' => $item->get_id(),
                             'name' => $item->get_name(),

@@ -302,7 +302,7 @@ class AdminShipment
 
                 if (empty($shipment_line_items)) {
                     // Populate all order items and let subsequent steps adapt to the quantity of items
-                    foreach ($items as $item) {
+                    foreach ($ppFunction->getShippableOrderItems($order, 'line_item') as $item) {
                         $product = $item->get_product();
 
                         $_sku = '';

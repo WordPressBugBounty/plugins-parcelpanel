@@ -318,7 +318,7 @@
             },
 
             req_get_tracking_items: () => {
-                const URL_GET_TRACKING_ITEMS = `${ajaxurl}?action=pp_get_tracking_items&order_id=${pp_wc_shipment_tracking_items.order_id}&_ajax_nonce=${parcelpanel_admin_wc_meta_boxes.get_shipment_item_nonce}`
+                const URL_GET_TRACKING_ITEMS = `${ajaxurl}?action=pp_get_tracking_items&order_id=${pp_wc_shipment_tracking_items.order_id}&tracking_id=${pp_wc_shipment_tracking_items.tracking_id}&_ajax_nonce=${parcelpanel_admin_wc_meta_boxes.get_shipment_item_nonce}`
                 return fetch(URL_GET_TRACKING_ITEMS)
                     .then(res => res.json())
                     .catch((e) => {
@@ -545,6 +545,10 @@ input.pp-number-input-input[data-v-ubw820r6]{margin:0;padding:0 0 0 8px;width:10
 .pp-modal .components-modal__header {height: 60px;font-size:16px}
 .pp-modal .components-modal__header .components-modal__header-heading {font-size:16px;line-height: 24px;font-weight: 600;}
 .pp-modal .components-modal__content {display:flex;flex-direction:column;margin-top: 60px;}
+#pp-tk-select2-root{position:fixed;top:0;right:0;bottom:0;left:0;z-index:100010;pointer-events:none}
+#pp-tk-select2-root .select2-container,#pp-tk-select2-root .select2-dropdown,#pp-tk-select2-root .select2-search__field{pointer-events:auto}
+#pp-tk-select2-root>.select2-container{position:fixed!important}
+body:has(#PP-Modal-UVSNWm) #ui-datepicker-div{z-index:100020!important}
 
 </style>
 <div role="dialog" tabindex="-1" class="components-modal__frame" style="border-radius: 2px;">
@@ -626,16 +630,101 @@ ${item_block_markup}
                 let frequently_used_carriers = window.parcelpanel_admin.strings.frequently_used_carriers ?? 'FREQUENTLY USED CARRIERS'
                 let other_carriers = window.parcelpanel_admin.strings.other_carriers ?? 'OTHER CARRIERS'
 
-                $('#PP-Modal-UVSNWm #pp-tk-slc-courier').append('<option value disabled>'+frequently_used_carriers+'</option>');
-                $('#PP-Modal-UVSNWm #pp-tk-slc-courier').selectWoo({data: get_couriers_list_enabled(), width: 'auto'})
-                $('#PP-Modal-UVSNWm #pp-tk-slc-courier').append('<option value="new-category" disabled>'+other_carriers+'</option>');
-                $('#PP-Modal-UVSNWm #pp-tk-slc-courier').selectWoo({data: get_couriers_list(), width: 'auto'})
+                const $courierSelect = $('#PP-Modal-UVSNWm #pp-tk-slc-courier')
+                const $courierDropdownRoot = $('<div id="pp-tk-select2-root"></div>').appendTo(document.body)
+                const courierSelectWooOptions = {
+                    width: '100%',
+                    dropdownParent: $courierDropdownRoot,
+                }
+                $courierSelect.append('<option value disabled>'+frequently_used_carriers+'</option>');
+                $courierSelect.selectWoo({data: get_couriers_list_enabled(), ...courierSelectWooOptions})
+                $courierSelect.append('<option value="new-category" disabled>'+other_carriers+'</option>');
+                $courierSelect.selectWoo({data: get_couriers_list(), ...courierSelectWooOptions})
 
-                // $('#PP-Modal-UVSNWm #pp-tk-slc-mark-order-as').selectWoo({
-                //     data: window.parcelpanel_admin_wc_meta_boxes.mark_order_as_select_list,
-                //     width: 'auto'
-                // })
+                const positionCourierDropdown = () => {
+                    const selection = $courierSelect.next('.select2-container').find('.select2-selection').get(0)
+                    const $dropdown = $courierDropdownRoot.children('.select2-container')
+                    if (!selection || !$dropdown.length) {
+                        return
+                    }
+                    const rect = selection.getBoundingClientRect()
+                    const $inner = $dropdown.find('.select2-dropdown')
+                    const above = $inner.hasClass('select2-dropdown--above')
+                    const height = $inner.outerHeight() || 0
+                    const top = above ? Math.max(0, rect.top - height) : rect.bottom
+                    const el = $dropdown.get(0)
+                    if (
+                        el.style.position === 'fixed' &&
+                        Math.abs(parseFloat(el.style.top) - top) < 1 &&
+                        Math.abs(parseFloat(el.style.left) - rect.left) < 1
+                    ) {
+                        return
+                    }
+                    el.style.position = 'fixed'
+                    el.style.top = `${top}px`
+                    el.style.left = `${rect.left}px`
+                    el.style.width = `${rect.width}px`
+                    el.style.zIndex = '100010'
+                }
+                let courierDropdownObserver = null
+                const unbindCourierDropdownPosition = () => {
+                    window.removeEventListener('scroll', positionCourierDropdown, true)
+                    window.removeEventListener('resize', positionCourierDropdown)
+                    if (courierDropdownObserver) {
+                        courierDropdownObserver.disconnect()
+                        courierDropdownObserver = null
+                    }
+                }
+                const bindCourierDropdownPosition = () => {
+                    positionCourierDropdown()
+                    requestAnimationFrame(positionCourierDropdown)
+                    window.addEventListener('scroll', positionCourierDropdown, true)
+                    window.addEventListener('resize', positionCourierDropdown)
+                    const node = $courierDropdownRoot.children('.select2-container').get(0)
+                    if (node && !courierDropdownObserver) {
+                        courierDropdownObserver = new MutationObserver(positionCourierDropdown)
+                        courierDropdownObserver.observe(node, { attributes: true, attributeFilter: ['style', 'class'] })
+                    }
+                }
+                pp_wc_shipment_tracking_items._unbindCourierDropdown = unbindCourierDropdownPosition
+                $courierSelect.on('select2:open', bindCourierDropdownPosition)
+                $courierSelect.on('select2:closing', unbindCourierDropdownPosition)
+
                 $(document.body).trigger('wc-init-datepickers')
+
+                const positionDatepicker = () => {
+                    const input = document.getElementById('pp-tk-ipt-date-shipped')
+                    const dp = document.getElementById('ui-datepicker-div')
+                    if (!input || !dp || dp.style.display === 'none') {
+                        return
+                    }
+                    const rect = input.getBoundingClientRect()
+                    const height = dp.offsetHeight || 0
+                    const top = (window.innerHeight - rect.bottom < height && rect.top > height)
+                        ? rect.top - height
+                        : rect.bottom
+                    dp.style.position = 'fixed'
+                    dp.style.top = `${top}px`
+                    dp.style.left = `${rect.left}px`
+                    dp.style.zIndex = '100020'
+                }
+                const unbindDatepickerPosition = () => {
+                    window.removeEventListener('scroll', positionDatepicker, true)
+                    window.removeEventListener('resize', positionDatepicker)
+                }
+                const bindDatepickerPosition = () => {
+                    positionDatepicker()
+                    requestAnimationFrame(positionDatepicker)
+                    setTimeout(positionDatepicker, 0)
+                    window.addEventListener('scroll', positionDatepicker, true)
+                    window.addEventListener('resize', positionDatepicker)
+                }
+                const $dateShipped = $('#pp-tk-ipt-date-shipped')
+                if ($dateShipped.hasClass('hasDatepicker')) {
+                    $dateShipped.datepicker('option', 'beforeShow', bindDatepickerPosition)
+                    $dateShipped.datepicker('option', 'onClose', unbindDatepickerPosition)
+                }
+                pp_wc_shipment_tracking_items._unbindDatepicker = unbindDatepickerPosition
 
                 $('#PP-Modal-UVSNWm')
                     // .on('click', '#pp-tk-btn-shipped-label-toggle', () => {
@@ -843,7 +932,17 @@ ${item_block_markup}
             // },
 
             close_add_tracking_modal: () => {
-                $('#PP-Modal-UVSNWm').remove()
+                if (pp_wc_shipment_tracking_items._unbindCourierDropdown) {
+                    pp_wc_shipment_tracking_items._unbindCourierDropdown()
+                }
+                if (pp_wc_shipment_tracking_items._unbindDatepicker) {
+                    pp_wc_shipment_tracking_items._unbindDatepicker()
+                }
+                const $dateShippedInput = $('#pp-tk-ipt-date-shipped')
+                if ($dateShippedInput.hasClass('hasDatepicker')) {
+                    $dateShippedInput.datepicker('hide')
+                }
+                $('#PP-Modal-UVSNWm, #pp-tk-select2-root').remove()
                 pp_wc_shipment_tracking_items.is_open_modal = false
             },
 

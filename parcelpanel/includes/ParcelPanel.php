@@ -640,6 +640,49 @@ final class ParcelPanel
     public $delete_list = [];
     public $add_list = [];
 
+    private function filter_valid_tracking_items(array $items): array
+    {
+        $order_item_context = [];
+        $result = [];
+
+        foreach ($items as $item) {
+            $order_id = absint($item['order_id'] ?? 0);
+            if (!array_key_exists($order_id, $order_item_context)) {
+                $order = wc_get_order($order_id);
+                $order_item_context[$order_id] = [
+                    'all_item_ids' => [],
+                    'has_shippable_items' => false,
+                ];
+                if ($order) {
+                    $all_order_items = (new ParcelPanelFunction())->getOrderItems($order, 'line_item');
+                    $order_items = (new ParcelPanelFunction())->getShippableOrderItems($order, 'line_item');
+                    $order_item_context[$order_id]['all_item_ids'] = array_fill_keys(array_map(function ($order_item) {
+                        return $order_item->get_id();
+                    }, $all_order_items), true);
+                    $order_item_context[$order_id]['has_shippable_items'] = !empty($order_items);
+                }
+            }
+
+            $order_item_id = absint($item['order_item_id'] ?? 0);
+            if (!$order_item_id) {
+                // An order-level shipment is implicit, so it requires at least
+                // one non-virtual product.
+                if ($order_item_context[$order_id]['has_shippable_items']) {
+                    $result[] = $item;
+                }
+                continue;
+            }
+
+            // Explicit item-level integrations are allowed to bind virtual
+            // products as long as the item belongs to this order.
+            if (isset($order_item_context[$order_id]['all_item_ids'][$order_item_id])) {
+                $result[] = $item;
+            }
+        }
+
+        return $result;
+    }
+
     public function __destruct()
     {
         global $wpdb;
@@ -650,6 +693,7 @@ final class ParcelPanel
         $add_list = array_filter($this->add_list, function ($item) {
             return $item['success'] ?? false;
         });
+        $add_list = $this->filter_valid_tracking_items($add_list);
         $delete_list = array_filter($this->delete_list, function ($item) {
             return $item['success'] ?? false;
         });
@@ -1174,6 +1218,9 @@ final class ParcelPanel
         add_action('wp_ajax_pp_connect', [$this, 'connect_endpoint_ajax']);
         add_action('wp_ajax_pp_version_upgrade', [$this, 'version_upgrade_ajax']);
         add_action('wp_ajax_pp_popup_action', [$this, 'popup_action_ajax']);
+
+        // web & ParcelPanel binding
+        add_action('wp_ajax_pp_bind', [$this, 'bind_account_ajax']);
 
         add_action('wp_ajax_pp_live_chat_connect', [$this, 'live_chat_connect_ajax']);
         add_action('wp_ajax_pp_live_chat_disable', [$this, 'live_chat_disable_ajax']);
@@ -3643,6 +3690,8 @@ SQL;
             }
             if (!empty($proRes)) {
                 $order = wc_get_order($order_id);
+                // Product names parsed from the comment are explicit choices,
+                // so virtual items are valid here.
                 $items = (new ParcelPanelFunction())->getOrderItems($order);
                 foreach ($items as $item_key => $item) {
                     $data = $item->get_data();

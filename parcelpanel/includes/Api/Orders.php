@@ -15,6 +15,8 @@ class Orders
 {
     use Singleton;
 
+    private static $tracked_order_item_ids = [];
+
     /**
      * 获取所有订单
      */
@@ -174,6 +176,9 @@ class Orders
         }
 
         $order_tracking_data = array_fill_keys($order_ids, []);
+        foreach ($order_ids as $id) {
+            self::$tracked_order_item_ids[(int)$id] = [];
+        }
 
         // @codingStandardsIgnoreStart
         $placeholder_str = (new ParcelPanelFunction)->parcelpanel_get_prepare_placeholder_str($order_ids, '%d');
@@ -206,6 +211,10 @@ class Orders
 
             if (empty($tracking_number)) {
                 continue;
+            }
+
+            if ($_order_item_id) {
+                self::$tracked_order_item_ids[$_order_id][$_order_item_id] = true;
             }
 
             if (!empty($_order_item_id)) {
@@ -263,6 +272,61 @@ class Orders
         }
 
         return $order_tracking_data_new;
+    }
+
+    private static function get_tracked_order_item_ids($order_id): array
+    {
+        global $wpdb;
+
+        $order_id = (int)$order_id;
+        if (array_key_exists($order_id, self::$tracked_order_item_ids)) {
+            return array_keys(self::$tracked_order_item_ids[$order_id]);
+        }
+
+        $TABLE_TRACKING_ITEMS = Table::$tracking_items;
+        // @codingStandardsIgnoreStart
+        $item_ids = array_map('intval', (array)$wpdb->get_col($wpdb->prepare(
+            "SELECT DISTINCT order_item_id
+            FROM {$TABLE_TRACKING_ITEMS}
+            WHERE order_id=%d AND tracking_id>0 AND order_item_id>0",
+            $order_id
+        )));
+        // @codingStandardsIgnoreEnd
+
+        self::$tracked_order_item_ids[$order_id] = array_fill_keys($item_ids, true);
+
+        return $item_ids;
+    }
+
+    public static function preload_tracked_order_item_ids(array $order_ids)
+    {
+        global $wpdb;
+
+        $order_ids = array_values(array_unique(array_map('intval', $order_ids)));
+        if (empty($order_ids)) {
+            return;
+        }
+
+        foreach ($order_ids as $order_id) {
+            self::$tracked_order_item_ids[$order_id] = [];
+        }
+
+        $TABLE_TRACKING_ITEMS = Table::$tracking_items;
+        $placeholder_str = (new ParcelPanelFunction)->parcelpanel_get_prepare_placeholder_str($order_ids, '%d');
+        // @codingStandardsIgnoreStart
+        $tracked_items = (array)$wpdb->get_results($wpdb->prepare(
+            "SELECT DISTINCT order_id,order_item_id
+            FROM {$TABLE_TRACKING_ITEMS}
+            WHERE order_id IN ({$placeholder_str}) AND tracking_id>0 AND order_item_id>0",
+            $order_ids
+        ));
+        // @codingStandardsIgnoreEnd
+
+        foreach ($tracked_items as $tracked_item) {
+            $order_id = (int)$tracked_item->order_id;
+            $order_item_id = (int)$tracked_item->order_item_id;
+            self::$tracked_order_item_ids[$order_id][$order_item_id] = true;
+        }
     }
 
 
@@ -650,7 +714,11 @@ class Orders
                     $data['meta_data'] = $order->get_meta_data();
                     break;
                 case 'line_items':
-                    $data['line_items'] = $ppFunction->getOrderItems($order, 'line_item');
+                    $data['line_items'] = $ppFunction->getShipmentOrderItems(
+                        $order,
+                        'line_item',
+                        self::get_tracked_order_item_ids($order->get_id())
+                    );
                     break;
                 case 'tax_lines':
                     $data['tax_lines'] = $ppFunction->getOrderItems($order, 'tax');

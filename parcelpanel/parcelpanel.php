@@ -4,7 +4,7 @@
  * Plugin Name: CWILL (formerly ParcelPanel) Order Tracking for WooCommerce
  * Plugin URI: https://docs.parcelpanel.com/woocommerce
  * Description: The best order tracking plugin specially designed for WooCommerce, driving customer loyalty and more sales by providing the best post-purchase experience.
- * Version: 4.5.9
+ * Version: 4.6.0
  * Author: CWILL Order Tracking
  * Author URI: https://www.parcelpanel.com
  * Developer: CWILL Order Tracking
@@ -20,7 +20,7 @@
  * @copyright 2018-2026 CWILL Order Tracking
  */
 
-define('ParcelPanel\VERSION', '4.5.9');
+define('ParcelPanel\VERSION', '4.6.0');
 define('ParcelPanel\DB_VERSION', '2.9.0');
 
 define('ParcelPanel\PLUGIN_FILE', __FILE__);

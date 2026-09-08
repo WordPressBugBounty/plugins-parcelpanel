@@ -780,8 +780,12 @@ class ShopOrder
             (new ParcelPanelFunction)->parcelpanel_json_response([], 'All items have been fulfilled', false);
         }
 
-        // Get product information of current order
-        $order_line_items = $this->get_order_item_data($order_id);
+        // Get product information of current order. Virtual products are only
+        // included while editing a shipment that already contains them.
+        $included_item_ids = array_map(function ($item) {
+            return (int)$item->order_item_id;
+        }, $current_tracking_items);
+        $order_line_items = $this->get_order_item_data($order_id, $included_item_ids);
         $order_line_items_quantity_by_id = array_column($order_line_items, 'quantity', 'id');
 
         if ($is_enable_quantity) {
@@ -1007,13 +1011,26 @@ class ShopOrder
         check_ajax_referer('pp-get-shipment-item');
 
         $order_id = absint($_GET['order_id'] ?? 0);
+        $tracking_id = absint($_GET['tracking_id'] ?? 0);
 
         $wc_order = wc_get_order($order_id);
 
-        // get order line items
-        $order_line_items = $this->get_order_item_data($order_id);
-
         $shipment_items = self::get_shipment_items($order_id, true);
+
+        $included_item_ids = [];
+        if ($tracking_id) {
+            foreach ($shipment_items as $shipment) {
+                if ((int)$shipment->tracking_id !== $tracking_id) {
+                    continue;
+                }
+                $included_item_ids = array_column($shipment->line_items, 'id');
+                break;
+            }
+        }
+
+        // New shipments only show shippable items. Editing also shows virtual
+        // items that are already associated with the current shipment.
+        $order_line_items = $this->get_order_item_data($order_id, $included_item_ids);
 
         $order_items_quantity = array_column($order_line_items, 'quantity', 'id');
 
@@ -1086,7 +1103,7 @@ class ShopOrder
     /**
      * Get order item detail
      */
-    private function get_order_item_data($order_id)
+    private function get_order_item_data($order_id, array $included_item_ids = [])
     {
         $line_items = [];
         $order = wc_get_order($order_id);
@@ -1094,8 +1111,11 @@ class ShopOrder
             return $line_items;
         }
 
-        $items = (new ParcelPanelFunction())->getOrderItems($order);
+        $items = (new ParcelPanelFunction())->getShipmentOrderItems($order, '', $included_item_ids);
         foreach ($items as $item_key => $item) {
+            /** @var \WC_Product|null $product */
+            $product = is_callable([$item, 'get_product']) ? $item->get_product() : null;
+
             $data = $item->get_data();
             $format_decimal = ['subtotal', 'subtotal_tax', 'total', 'total_tax', 'tax_total', 'shipping_tax_total'];
 
@@ -1108,13 +1128,12 @@ class ShopOrder
 
             // Add SKU and PRICE to products.
             if (is_callable([$item, 'get_product'])) {
-                $data['sku'] = $item->get_product() ? $item->get_product()->get_sku() : null;
+                $data['sku'] = $product ? $product->get_sku() : null;
                 $data['price'] = $item->get_quantity() ? $item->get_total() / $item->get_quantity() : 0;
             }
 
             // Add parent_name if the product is a variation.
-            /** @var \WC_Product $product */
-            if (is_callable([$item, 'get_product']) && $product = $item->get_product()) {
+            if ($product) {
                 if (is_callable([$product, 'get_parent_data'])) {
                     $data['parent_name'] = $product->get_title();
                 } else {
@@ -1599,7 +1618,7 @@ class ShopOrder
     {
         $wc_order = wc_get_order($order_id);
         $order_items_quantity = [];
-        $items = (new ParcelPanelFunction())->getOrderItems($wc_order);
+        $items = (new ParcelPanelFunction())->getShippableOrderItems($wc_order);
         foreach ($items as $item) {
             $order_items_quantity[$item->get_id()] = $item->get_quantity();
         }
@@ -2364,6 +2383,8 @@ class ShopOrder
             $post__not_in = array_merge($post__not_in, $post_ids);
 
             if (!$is_no_quota) {
+
+                Orders::preload_tracked_order_item_ids($post_ids);
 
                 foreach ($post_ids as $id) {
                     $orders[] = Orders::get_formatted_item_data(wc_get_order($id));

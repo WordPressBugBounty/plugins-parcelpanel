@@ -1392,4 +1392,38 @@ final class ParcelPanelFunction
 
         return apply_filters("parcelpanel_order_get_items", $items, $order);
     }
+
+    /**
+     * Get order items that require shipment tracking.
+     *
+     * Products that no longer exist are retained because their shipping type
+     * cannot be determined from the order item alone.
+     */
+    public function getShippableOrderItems($order, $params = "")
+    {
+        return $this->getShipmentOrderItems($order, $params);
+    }
+
+    /**
+     * Get items used by shipment flows, optionally retaining explicitly
+     * selected virtual order items.
+     */
+    public function getShipmentOrderItems($order, $params = "", array $included_item_ids = [])
+    {
+        $included_item_ids = array_fill_keys(array_map('absint', $included_item_ids), true);
+
+        return array_filter($this->getOrderItems($order, $params), function ($item) use ($included_item_ids) {
+            if (isset($included_item_ids[$item->get_id()])) {
+                return true;
+            }
+
+            if (!is_callable([$item, 'get_product'])) {
+                return true;
+            }
+
+            $product = $item->get_product();
+
+            return !$product || !$product->is_virtual();
+        });
+    }
 }
